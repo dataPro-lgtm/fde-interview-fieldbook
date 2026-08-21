@@ -55,6 +55,19 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 - [x] Expand English translations of the highest-use chapters
 - [x] Evaluate a generated documentation site after the content hierarchy stabilizes
 
+## v0.5 — Role-targeted interview campaigns
+
+- [x] Add a JD-to-evidence method that separates public facts, practice hypotheses, and personal evidence
+- [x] Add AI/Agent, data-platform, and regulated-deployment role playbooks
+- [x] Add a completed synthetic campaign and reusable job-targeting worksheet pack
+- [x] Add an English high-use chapter without implying full translation parity
+- [x] Machine-check sourced role signals, evidence boundaries, and practice-asset paths
+- [x] Publish an automated validation record that keeps human-outcome validation explicit
+- [x] Add three spoiler-separated role-targeted mock loops and a shared evidence score sheet
+- [x] Add a privacy-preserving pilot protocol with author-independence release rules
+- [ ] Pilot the campaign workflow with at least three job-seeking readers from different engineering backgrounds
+- [ ] Revise any exercise whose evidence level or completion rule needs author explanation
+
 ## v1.0 — Mature fieldbook
 
 - [ ] Full English and Chinese parity

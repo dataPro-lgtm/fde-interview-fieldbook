@@ -19,7 +19,7 @@ Classify external claims as one of:
 2. **Corroborated** — at least two credible, independent sources agree.
 3. **Community** — practitioner experience that is useful but not authoritative.
 
-For time-sensitive claims, add or update an entry in `data/sources.json` with `last_checked`. Quarterly role observations belong in `data/role-radar/<year>-Q<quarter>.json`; MCP, A2A, observability, and agent-security changes belong in `data/technology-baselines.json`. Do not turn a single community interview report into a company-wide statement.
+For time-sensitive claims, add or update an entry in `data/sources.json` with `last_checked`. Quarterly role observations belong in `data/role-radar/<year>-Q<quarter>.json`; MCP, A2A, observability, and agent-security changes belong in `data/technology-baselines.json`. Role-playbook signals belong in `data/role-playbooks.json` and must point to registered sources; interview surfaces remain labeled hypotheses until first-party confirmation. Do not turn a single community interview report into a company-wide statement.
 
 If credible sources conflict, do not silently choose one. Follow the [claim-review process](docs/research/claim-review-process.md), preserve the disputed scope, and state what evidence would resolve it.
 
@@ -39,10 +39,12 @@ If credible sources conflict, do not silently choose one. Follow the [claim-revi
 - [ ] Official facts and personal experience are labeled separately.
 - [ ] Internal links work.
 - [ ] Case-pack files and staged artifacts are registered in `data/case-packs.json`.
+- [ ] Role-targeted mocks keep candidate briefs separate from interviewer evidence and follow the anonymous pilot protocol.
 - [ ] The change adds no proprietary material or personal data.
 - [ ] `python3 scripts/validate_repo.py` passes.
 - [ ] `python3 scripts/validate_case_packs.py` passes when cases change.
 - [ ] `python3 scripts/validate_research_data.py` passes when role-radar or baseline data changes.
+- [ ] `python3 scripts/validate_role_playbooks.py` passes when role-targeting assets change.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 - [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 

@@ -6,6 +6,12 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- A JD-to-evidence chapter that separates public facts, interview hypotheses, direct evidence, adjacent evidence, exercises, and real gaps
+- Role-targeting playbooks for AI/Agent, data-platform, and regulated AI deployment FDE paths
+- A completed synthetic targeting campaign plus reusable role brief, evidence matrix, practice board, red-team cards, and debrief templates
+- An English job-targeting high-use chapter and a machine-checked role-playbook manifest
+- A v0.5 validation record separating automated acceptance from pending learner outcome validation
+- Three spoiler-separated, 75-minute role-targeted mock loops with a shared evidence score sheet and anonymous pilot protocol
 - A versioned 2026 Q3 role-radar dataset and archive with evidence-bounded geography views
 - A machine-readable MCP, A2A, OpenTelemetry GenAI, and OWASP Agentic Security baseline ledger
 - A disputed-claim review process, structured Issue form, and documentation-site decision record
@@ -18,6 +24,8 @@ All notable changes to the fieldbook are recorded here.
 
 ### Changed
 
+- Entry points now route readers with a live JD into role-specific evidence and practice instead of broad rereading
+- Content-quality CI now validates role-playbook source references, evidence boundaries, and practice-asset paths
 - Role evidence no longer treats volatile official search totals as a labor-market metric
 - The A2A source now points to the stable 1.0 documentation; OpenTelemetry GenAI tracking follows its dedicated specification repository
 - Content-quality CI now validates quarterly snapshots, technology baselines, and all Python test files

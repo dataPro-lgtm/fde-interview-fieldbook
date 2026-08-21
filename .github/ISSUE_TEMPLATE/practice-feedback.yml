@@ -14,6 +14,10 @@ body:
         - Field Case Lab — air-gapped AI deployment
         - Field Case Lab — production incident
         - Mock interview loop
+        - Role-targeting worksheet
+        - Role-targeted mock — AI / Agent FDE
+        - Role-targeted mock — data-platform FDE
+        - Role-targeted mock — regulated AI deployment FDE
         - Scorecard
         - Field operating playbook or worksheets
         - Study plan
@@ -39,6 +43,24 @@ body:
     attributes:
       label: Where did the material fail to help?
       description: Point to a section, missing constraint, or unrealistic assumption.
+    validations:
+      required: true
+  - type: dropdown
+    id: facilitation
+    attributes:
+      label: How was the practice run?
+      options:
+        - Solo practice
+        - Peer facilitated
+        - Facilitated by someone who did not author the material
+        - Other or not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: author_dependency
+    attributes:
+      label: Did any step require author explanation?
+      description: Name the release rule, evidence level, prompt, or scoring anchor that was not independently usable. Write “none” if not applicable.
     validations:
       required: true
   - type: textarea

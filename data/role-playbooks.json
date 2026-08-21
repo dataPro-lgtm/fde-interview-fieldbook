@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-08-21",
+  "scope_note": "These playbooks translate bounded first-party role signals into practice priorities. Interview surfaces remain hypotheses until confirmed by the employer or recruiter.",
+  "playbooks": [
+    {
+      "id": "ai-agent-fde",
+      "title": "AI / Agent FDE",
+      "guide": "interview-kits/role-playbooks/ai-agent-fde.md",
+      "observable_signals": [
+        {
+          "id": "workflow-to-production",
+          "summary": "Own discovery, scoping, build, rollout, adoption, and field feedback as one delivery chain.",
+          "source_ids": [
+            "openai-fde-seattle-2026"
+          ],
+          "candidate_proof": [
+            "A workflow baseline and a deliberately scoped first release",
+            "Production rollout, adoption evidence, and a field-to-product decision"
+          ]
+        },
+        {
+          "id": "agent-artifacts",
+          "summary": "Build production LLM artifacts such as MCP servers, sub-agents, skills, or controlled agent workflows.",
+          "source_ids": [
+            "anthropic-fde-2026",
+            "vercel-fde-2026"
+          ],
+          "candidate_proof": [
+            "Tool contracts with identity, authorization, idempotency, and failure handling",
+            "A clear boundary between a design exercise and production ownership"
+          ]
+        },
+        {
+          "id": "evaluation-and-guardrails",
+          "summary": "Treat evaluations, regression, tracing, guardrails, and the choice not to use an agent as production engineering.",
+          "source_ids": [
+            "diligent-fde-2026"
+          ],
+          "candidate_proof": [
+            "A sliced golden set with release gates and rollback conditions",
+            "A diagnosis that separates data, retrieval, model, tool, and adoption failures"
+          ]
+        },
+        {
+          "id": "enablement-and-reuse",
+          "summary": "Leave customer teams able to operate the solution and turn repeatable field patterns into reusable capability.",
+          "source_ids": [
+            "openai-fde-seattle-2026",
+            "vercel-fde-2026"
+          ],
+          "candidate_proof": [
+            "An operating handoff with recovery evidence",
+            "A documented decision about product, extension, template, or retained customization"
+          ]
+        }
+      ],
+      "interview_hypotheses": [
+        "Project depth may test the path from workflow selection to production adoption.",
+        "Coding may emphasize applied integration or debugging, but the format must be confirmed.",
+        "System design may probe evaluation, tool side effects, human intervention, and rollback.",
+        "Customer scenarios may test refusal, alternatives, and evidence-based scope control."
+      ],
+      "readiness_evidence": [
+        {
+          "id": "choose-automation-level",
+          "claim": "Can choose among rules, retrieval, generation, controlled workflows, and agents.",
+          "accepted_artifacts": [
+            "A trade-off memo tied to workflow risk and baseline",
+            "A recorded customer explanation with a narrower alternative"
+          ],
+          "boundary": "Tool or framework familiarity alone does not prove workflow judgment."
+        },
+        {
+          "id": "ship-evaluable-system",
+          "claim": "Can ship an end-to-end AI workflow with evaluation and release controls.",
+          "accepted_artifacts": [
+            "A system diagram with data, control, and evidence flows",
+            "A versioned evaluation set and staged rollout plan"
+          ],
+          "boundary": "A successful demo or aggregate accuracy score is insufficient."
+        },
+        {
+          "id": "control-tool-effects",
+          "claim": "Can control identity, authorization, retries, idempotency, and audit for tool actions.",
+          "accepted_artifacts": [
+            "A tested tool executor",
+            "A threat or failure analysis covering partial execution"
+          ],
+          "boundary": "A tool schema without execution-state controls is insufficient."
+        },
+        {
+          "id": "diagnose-regression",
+          "claim": "Can attribute an AI regression using fixed requests and versioned dependencies.",
+          "accepted_artifacts": [
+            "A replay matrix across data, prompt, model, policy, and tool versions",
+            "A regression case added after the fix"
+          ],
+          "boundary": "Changing several variables at once does not establish a cause."
+        },
+        {
+          "id": "drive-adoption-and-reuse",
+          "claim": "Can connect technical delivery to user adoption and reusable product learning.",
+          "accepted_artifacts": [
+            "An adoption investigation with user behavior evidence",
+            "A field-to-product memo with ownership and non-goals"
+          ],
+          "boundary": "Training attendance and copied customer code do not establish adoption or reuse."
+        }
+      ],
+      "mock_loop": {
+        "duration_minutes": 75,
+        "candidate_brief": "interview-kits/mock-loops/role-targeted/ai-agent-fde/candidate-brief.md",
+        "interviewer_guide": "interview-kits/mock-loops/role-targeted/ai-agent-fde/interviewer-guide.md"
+      },
+      "practice_assets": [
+        "interview-kits/mock-loops/ai-fde-90-minute.md",
+        "interview-kits/mock-loops/role-targeted/ai-agent-fde/candidate-brief.md",
+        "interview-kits/mock-loops/role-targeted/ai-agent-fde/interviewer-guide.md",
+        "interview-kits/cases/production-incident/README.md",
+        "interview-kits/cases/air-gapped-ai-deployment/README.md",
+        "interview-kits/rubrics/master-scorecard.md",
+        "interview-kits/worksheets/job-targeting-pack.md"
+      ],
+      "limits": [
+        "The sources support capability directions, not a universal AI FDE interview loop.",
+        "Protocol names and agent frameworks must not displace coding, state, permission, and rollout fundamentals.",
+        "Exercises must be labeled as exercises when the candidate has not owned a production agent."
+      ]
+    },
+    {
+      "id": "data-platform-fde",
+      "title": "Data Platform FDE",
+      "guide": "interview-kits/role-playbooks/data-platform-fde.md",
+      "observable_signals": [
+        {
+          "id": "customer-data-infrastructure",
+          "summary": "Build customer- and operator-specific data infrastructure that delivers high-quality data with low turnaround time.",
+          "source_ids": [
+            "scale-genai-fde-2026"
+          ],
+          "candidate_proof": [
+            "A data contract and recoverable synchronization path",
+            "An operator workflow for detecting and recovering failed deliveries"
+          ]
+        },
+        {
+          "id": "full-stack-delivery",
+          "summary": "Deliver across data processing, backend systems, infrastructure, and customer-facing operating surfaces.",
+          "source_ids": [
+            "scale-genai-fde-2026"
+          ],
+          "candidate_proof": [
+            "A user-to-data-flow architecture with explicit system ownership",
+            "A working slice that exposes status, failure, retry, and recovery"
+          ]
+        },
+        {
+          "id": "scale-and-experimentation",
+          "summary": "Combine large-scale processing and distributed-system judgment with rapid, high-quality experiments.",
+          "source_ids": [
+            "scale-genai-fde-2026"
+          ],
+          "candidate_proof": [
+            "A capacity and failure model tied to measured workload",
+            "An experiment that protects downstream correctness while reducing time to learn"
+          ]
+        },
+        {
+          "id": "end-to-end-adoption",
+          "summary": "Connect technical delivery to production adoption and measurable workflow impact.",
+          "source_ids": [
+            "openai-fde-seattle-2026"
+          ],
+          "candidate_proof": [
+            "A migration or rollout with customer behavior evidence",
+            "A handoff and recovery exercise completed by the operating team"
+          ]
+        }
+      ],
+      "interview_hypotheses": [
+        "Coding may emphasize SQL, Python, APIs, data transformation, or debugging.",
+        "System design may probe data contracts, state, idempotency, backfill, consistency, and operator workflows.",
+        "Project depth may test semantic changes, incidents, migration, and customer handoff.",
+        "Customer discovery may test whether the candidate can connect data quality to a real decision."
+      ],
+      "readiness_evidence": [
+        {
+          "id": "define-data-contract",
+          "claim": "Can define identity, update, deletion, schema, and ownership semantics.",
+          "accepted_artifacts": [
+            "A machine-checked data contract",
+            "A change policy covering compatibility and consumer notification"
+          ],
+          "boundary": "A table schema without lifecycle semantics is insufficient."
+        },
+        {
+          "id": "build-recoverable-sync",
+          "claim": "Can build incremental, idempotent, replayable synchronization.",
+          "accepted_artifacts": [
+            "Tests for duplicates, late data, partial failure, tombstones, and replay",
+            "A reconciliation report that detects silent loss"
+          ],
+          "boundary": "A one-time batch import does not prove synchronization ownership."
+        },
+        {
+          "id": "operate-data-quality",
+          "claim": "Can protect downstream decisions when data quality or semantics fail.",
+          "accepted_artifacts": [
+            "A quarantine and replay workflow",
+            "An impact analysis linked to source, batch, tenant, and consumer"
+          ],
+          "boundary": "Task success and generic non-null checks do not prove semantic correctness."
+        },
+        {
+          "id": "migrate-with-evidence",
+          "claim": "Can dual-run, reconcile, cut over, roll back, and retire a data path.",
+          "accepted_artifacts": [
+            "A migration state machine and release gates",
+            "A consumer sign-off and rollback rehearsal"
+          ],
+          "boundary": "Moving data without moving consumers and operations is not a completed migration."
+        },
+        {
+          "id": "productize-connectors",
+          "claim": "Can separate reusable connector behavior from source-specific adaptation.",
+          "accepted_artifacts": [
+            "A connector contract with version and compatibility rules",
+            "A decision record explaining what remains configuration or customization"
+          ],
+          "boundary": "Copying an integration and renaming fields is not platformization."
+        }
+      ],
+      "mock_loop": {
+        "duration_minutes": 75,
+        "candidate_brief": "interview-kits/mock-loops/role-targeted/data-platform-fde/candidate-brief.md",
+        "interviewer_guide": "interview-kits/mock-loops/role-targeted/data-platform-fde/interviewer-guide.md"
+      },
+      "practice_assets": [
+        "interview-kits/mock-loops/classic-fde-60-minute.md",
+        "interview-kits/mock-loops/role-targeted/data-platform-fde/candidate-brief.md",
+        "interview-kits/mock-loops/role-targeted/data-platform-fde/interviewer-guide.md",
+        "interview-kits/cases/data-platform-migration/README.md",
+        "interview-kits/cases/production-incident/README.md",
+        "interview-kits/rubrics/master-scorecard.md",
+        "interview-kits/worksheets/job-targeting-pack.md"
+      ],
+      "limits": [
+        "The sample is concentrated in public technology-company roles and is not a census of data FDE hiring.",
+        "Named infrastructure products are not treated as universal requirements.",
+        "Pipeline completion must not be substituted for customer adoption or semantic correctness."
+      ]
+    },
+    {
+      "id": "regulated-ai-fde",
+      "title": "Regulated AI Deployment FDE",
+      "guide": "interview-kits/role-playbooks/regulated-ai-fde.md",
+      "observable_signals": [
+        {
+          "id": "regulated-agent-lifecycle",
+          "summary": "Build reliable agent workflows for risk, audit, and compliance environments with evaluation and regression controls.",
+          "source_ids": [
+            "diligent-fde-2026"
+          ],
+          "candidate_proof": [
+            "A risk-sliced evaluation and release contract",
+            "A responsibility model connecting system suggestion, human review, and final action"
+          ]
+        },
+        {
+          "id": "lifecycle-risk-governance",
+          "summary": "Manage GenAI risk across design, development, deployment, measurement, and governance.",
+          "source_ids": [
+            "nist-ai-600-1"
+          ],
+          "candidate_proof": [
+            "A risk register with owners, measurement, and review dates",
+            "A staged deployment whose controls change with risk and evidence"
+          ]
+        },
+        {
+          "id": "agentic-threats",
+          "summary": "Address goal hijack, tool misuse, identity abuse, supply-chain risk, memory poisoning, and cascading failures.",
+          "source_ids": [
+            "owasp-agentic-top10-2026"
+          ],
+          "candidate_proof": [
+            "A threat model with trust boundaries and abuse paths",
+            "Tests for malicious context, unauthorized tools, and partial execution"
+          ]
+        },
+        {
+          "id": "evidence-and-human-responsibility",
+          "summary": "Keep evidence, guardrails, tracing, and human responsibility explicit in high-risk workflows.",
+          "source_ids": [
+            "diligent-fde-2026",
+            "nist-ai-600-1"
+          ],
+          "candidate_proof": [
+            "A replayable decision evidence model with retention boundaries",
+            "A human-review design that specifies timing, information, override, and escalation"
+          ]
+        }
+      ],
+      "interview_hypotheses": [
+        "System design may probe trust boundaries, identity, evidence, approval, change control, and rollback.",
+        "Security review may probe abuse paths and whether controls remain effective after system changes.",
+        "Customer scenarios may test how the candidate preserves progress without hiding risk.",
+        "Behavioral depth may test escalation, bad-news communication, and responsibility under executive pressure."
+      ],
+      "readiness_evidence": [
+        {
+          "id": "model-responsibility",
+          "claim": "Can assign responsibility across system suggestion, professional judgment, approval, and execution.",
+          "accepted_artifacts": [
+            "A responsibility and decision-rights matrix",
+            "A workflow state model showing irreversible-action gates"
+          ],
+          "boundary": "Adding a generic human review box does not establish effective control."
+        },
+        {
+          "id": "enforce-end-to-end-authorization",
+          "claim": "Can carry authorization through retrieval, generation, tools, caches, and exports.",
+          "accepted_artifacts": [
+            "An identity and policy propagation diagram",
+            "Tests for revocation, tenant isolation, and unauthorized export"
+          ],
+          "boundary": "Authentication at the application entry point is insufficient."
+        },
+        {
+          "id": "replay-decision-evidence",
+          "claim": "Can reconstruct a consequential AI-assisted decision with versioned evidence.",
+          "accepted_artifacts": [
+            "A trace linking request, identity, evidence, policy, model, tool, review, and outcome",
+            "A retention and access policy that avoids indiscriminate raw-data storage"
+          ],
+          "boundary": "A timestamped application log without versions and decision context is insufficient."
+        },
+        {
+          "id": "stage-risk-and-authority",
+          "claim": "Can expand system authority only as evidence and operational readiness improve.",
+          "accepted_artifacts": [
+            "Shadow, assist, limited-action, and expanded-action gates",
+            "Explicit stop, rollback, and human escalation conditions"
+          ],
+          "boundary": "A single launch approval does not replace staged evidence."
+        },
+        {
+          "id": "respond-to-agent-abuse",
+          "claim": "Can contain and investigate prompt injection or tool misuse without relying on prompt-only fixes.",
+          "accepted_artifacts": [
+            "An incident timeline and preserved authorization chain",
+            "Layered fixes with adversarial regression cases"
+          ],
+          "boundary": "A stronger system prompt alone does not control identity or tool authority."
+        }
+      ],
+      "mock_loop": {
+        "duration_minutes": 75,
+        "candidate_brief": "interview-kits/mock-loops/role-targeted/regulated-ai-fde/candidate-brief.md",
+        "interviewer_guide": "interview-kits/mock-loops/role-targeted/regulated-ai-fde/interviewer-guide.md"
+      },
+      "practice_assets": [
+        "interview-kits/mock-loops/ai-fde-90-minute.md",
+        "interview-kits/mock-loops/role-targeted/regulated-ai-fde/candidate-brief.md",
+        "interview-kits/mock-loops/role-targeted/regulated-ai-fde/interviewer-guide.md",
+        "interview-kits/cases/air-gapped-ai-deployment/README.md",
+        "interview-kits/cases/production-incident/README.md",
+        "interview-kits/rubrics/master-scorecard.md",
+        "interview-kits/worksheets/job-targeting-pack.md"
+      ],
+      "limits": [
+        "The guidance is an engineering interview aid, not legal or compliance advice.",
+        "Controls must be adapted to the actual jurisdiction, organization, workflow, and risk owner.",
+        "Synthetic portfolio data must not be presented as customer or regulated production data."
+      ]
+    }
+  ]
+}

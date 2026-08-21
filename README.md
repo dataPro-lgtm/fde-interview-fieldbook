@@ -2,7 +2,7 @@
 
 > A source-backed, production-first field guide for Forward Deployed Engineer interviews.
 
-[简体中文](README.zh-CN.md) · [English reading map](docs/en/reading-map.md) · [Start here](docs/en/start-here.md) · [Chinese learning map](docs/zh-CN/reading-map.md) · [Field Case Lab (Chinese)](interview-kits/cases/README.md) · [Contributing](CONTRIBUTING.md)
+[简体中文](README.zh-CN.md) · [English reading map](docs/en/reading-map.md) · [Job targeting](docs/en/job-targeting.md) · [Start here](docs/en/start-here.md) · [Role playbooks (Chinese)](interview-kits/role-playbooks/README.md) · [Field Case Lab (Chinese)](interview-kits/cases/README.md) · [Contributing](CONTRIBUTING.md)
 
 FDE interviews do not only ask whether you can write code. They test whether you can enter an ambiguous customer environment, find the real workflow, ship a thin but valuable system, keep it reliable in production, and turn field learning into reusable product capability.
 
@@ -54,6 +54,7 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 | 7 days | Follow the [7-day sprint](docs/zh-CN/10-study-plans.md#七天冲刺) and run one [Field Case Lab](interview-kits/cases/README.md) | One recorded mock plus one scored case memo |
 | 30 days | Follow the [30-day plan](docs/zh-CN/10-study-plans.md#三十天计划), run three mock loops, and build a portfolio narrative | Interview-ready evidence across all dimensions |
 | Already interviewing | Use the [question bank](docs/zh-CN/08-question-bank.md), [worked cases](docs/zh-CN/07-casebook.md), and [blind case labs](interview-kits/cases/README.md) | Targeted practice, not broad rereading |
+| One target role | Turn its public JD into an [evidence-based campaign](docs/en/job-targeting.md), then select one [role playbook](interview-kits/role-playbooks/README.md) | A role brief, evidence matrix, and ten scored sessions |
 
 English-first readers can use the [English reading map](docs/en/reading-map.md) for the translated high-use path. The project labels untranslated depth instead of implying full parity.
 
@@ -78,6 +79,8 @@ English-first readers can use the [English reading map](docs/en/reading-map.md) 
 | [Answer calibration pack](docs/zh-CN/12-answer-calibration.md)                   | Compare weak, independent, and leverage-creating answers using evidence                    |
 | [Enterprise field operating playbook](docs/zh-CN/13-field-operating-playbook.md) | Carry interview reasoning into discovery, launch, incidents, handoff, and product feedback |
 
+The Chinese core path continues with [job targeting and role-specific interview campaigns](docs/zh-CN/14-job-targeting.md).
+
 ### English high-use path
 
 - [Start here](docs/en/start-here.md)
@@ -86,6 +89,7 @@ English-first readers can use the [English reading map](docs/en/reading-map.md) 
 - [Workflow-first system design](docs/en/system-design.md)
 - [Production AI in 2026](docs/en/production-ai-2026.md)
 - [Resume, portfolio, and project evidence](docs/en/portfolio-evidence.md)
+- [Turn one job description into an evidence-based campaign](docs/en/job-targeting.md)
 
 ### Practice kits
 
@@ -98,6 +102,9 @@ English-first readers can use the [English reading map](docs/en/reading-map.md) 
 - [60-minute classic FDE mock loop](interview-kits/mock-loops/classic-fde-60-minute.md)
 - [Reviewer calibration guide](interview-kits/rubrics/reviewer-calibration.md)
 - [Field delivery worksheet pack](interview-kits/worksheets/field-delivery-pack.md)
+- [Role-targeting playbooks for AI, data-platform, and regulated deployment FDEs](interview-kits/role-playbooks/README.md)
+- [Job-targeting worksheet pack](interview-kits/worksheets/job-targeting-pack.md)
+- [Three role-targeted blind mock loops and pilot protocol](interview-kits/mock-loops/role-targeted/README.md)
 
 ### Research and maintenance
 
@@ -108,6 +115,7 @@ English-first readers can use the [English reading map](docs/en/reading-map.md) 
 - [Claim-review process](docs/research/claim-review-process.md)
 - [Documentation-site evaluation](docs/research/documentation-site-evaluation.md)
 - [v0.1 validation record](docs/research/release-validation-0.1.md)
+- [v0.5 role-targeting validation record](docs/research/release-validation-0.5.md)
 - [Roadmap](ROADMAP.md)
 - [Accessibility](ACCESSIBILITY.md)
 
@@ -121,7 +129,7 @@ English-first readers can use the [English reading map](docs/en/reading-map.md) 
 
 ## Living-project contract
 
-Time-sensitive claims carry a source and `last_checked` date. Quarterly role snapshots are immutable additions, while protocol and security baselines keep a dated change log. Monthly source-freshness and weekly public-link audits open maintenance issues when evidence ages out or a URL is confirmed dead. Changed Mermaid diagrams are rendered in CI, and versioned research data is machine-checked. Contributors can propose a role update or dispute an overbroad claim using structured forms. Material changes are recorded in the changelog.
+Time-sensitive claims carry a source and `last_checked` date. Quarterly role snapshots are immutable additions, while protocol and security baselines keep a dated change log. Role playbooks separately register first-party signals, interview hypotheses, evidence boundaries, and practice assets. Monthly source-freshness and weekly public-link audits open maintenance issues when evidence ages out or a URL is confirmed dead. Changed Mermaid diagrams are rendered in CI, and versioned research and practice data is machine-checked. Contributors can propose a role update or dispute an overbroad claim using structured forms. Material changes are recorded in the changelog.
 
 The project follows three confidence labels:
 

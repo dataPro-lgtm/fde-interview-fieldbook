@@ -2,7 +2,7 @@
 
 > 一部有来源、重生产、可持续更新的 Forward Deployed Engineer 面试指南。
 
-[English](README.md) · [学习地图](docs/zh-CN/reading-map.md) · [从这里开始](docs/zh-CN/00-start-here.md) · [岗位雷达](docs/research/role-radar/README.md) · [Field Case Lab](interview-kits/cases/README.md) · [参与共建](CONTRIBUTING.md)
+[English](README.md) · [学习地图](docs/zh-CN/reading-map.md) · [从这里开始](docs/zh-CN/00-start-here.md) · [岗位定向作战包](interview-kits/role-playbooks/README.md) · [岗位雷达](docs/research/role-radar/README.md) · [Field Case Lab](interview-kits/cases/README.md) · [参与共建](CONTRIBUTING.md)
 
 FDE 面试真正难的地方，不是“既考代码又考沟通”这么简单。它要确认一件更现实的事：当客户只给你一个模糊目标、混乱数据、复杂权限和紧迫时间时，你能否找准问题，亲手把最小闭环做出来，让它稳定进入生产，并把一次项目经验沉淀成下一次可以复用的产品能力。
 
@@ -23,6 +23,7 @@ FDE 面试真正难的地方，不是“既考代码又考沟通”这么简单�
 - **知识不少，但回答仍然很散：** 使用[答案校准](docs/zh-CN/12-answer-calibration.md)，看清 2 分、3 分和 4 分回答的证据差异。
 - **系统设计总是先画技术架构：** 进入[完整案例](docs/zh-CN/07-casebook.md)，练习从工作流、约束和风险推导方案。
 - **案例已经看懂，想检验现场反应：** 进入[Field Case Lab](interview-kits/cases/README.md)，让同伴按轮释放证据，不提前打开答案。
+- **已经拿到一条具体 JD：** 使用[岗位定向方法](docs/zh-CN/14-job-targeting.md)和[三类角色包](interview-kits/role-playbooks/README.md)，把公开要求变成个人证据与十次训练。
 - **想把面试方法带进企业项目：** 使用[企业落地作战手册](docs/zh-CN/13-field-operating-playbook.md)和九份现场模板。
 
 ## 先记住一条主线：FIELD
@@ -55,7 +56,7 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 ## 完整目录
 
 <details>
-<summary>展开十四章完整目录</summary>
+<summary>展开十五章完整目录</summary>
 
 1. [开始之前：如何使用这套指南](docs/zh-CN/00-start-here.md)
 2. [FDE 到底负责什么](docs/zh-CN/01-role-map.md)
@@ -71,6 +72,7 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 12. [简历、作品集与项目叙事](docs/zh-CN/11-portfolio.md)
 13. [十二道核心题的答案校准](docs/zh-CN/12-answer-calibration.md)
 14. [企业落地作战手册](docs/zh-CN/13-field-operating-playbook.md)
+15. [从一条 JD 到一场有证据的面试](docs/zh-CN/14-job-targeting.md)
 
 </details>
 
@@ -85,14 +87,17 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 - [60 分钟经典 FDE 模拟面试](interview-kits/mock-loops/classic-fde-60-minute.md)
 - [评审者校准指南](interview-kits/rubrics/reviewer-calibration.md)
 - [FDE 现场交付模板包](interview-kits/worksheets/field-delivery-pack.md)
+- [AI、数据平台与受监管部署岗位作战包](interview-kits/role-playbooks/README.md)
+- [岗位定向工作包](interview-kits/worksheets/job-targeting-pack.md)
+- [三套角色定向盲练与匿名试用协议](interview-kits/mock-loops/role-targeted/README.md)
 
 真正练过以后，如果某个示例仍然空泛、某项约束不符合企业现实，或者你的第二版回答没有改善，请提交[练习反馈](https://github.com/dataPro-lgtm/fde-interview-fieldbook/issues/new?template=practice-feedback.yml)。反馈重点是“哪里没有帮助”，不需要提供公司名称或真实面试题。
 
 ## 项目如何保持更新
 
-所有时效性事实都进入 [`data/sources.json`](data/sources.json)，记录来源类型和最近核验日期。季度岗位雷达只新增、不覆盖；MCP、A2A、OpenTelemetry GenAI 和 Agent 安全使用带日期的[技术基线账本](docs/research/technology-baseline-changelog.md)。项目按月检查来源新鲜度、按周检查公开链接健康；变更过的 Mermaid 会实际渲染，研究数据会做契约校验。对事实范围有异议时，使用[争议评审流程](docs/research/claim-review-process.md)，而不是把社区经验直接改成官方结论。
+所有时效性事实都进入 [`data/sources.json`](data/sources.json)，记录来源类型和最近核验日期。季度岗位雷达只新增、不覆盖；MCP、A2A、OpenTelemetry GenAI 和 Agent 安全使用带日期的[技术基线账本](docs/research/technology-baseline-changelog.md)。岗位作战包将一手信号、训练假设和练习资产分开登记，并由机器检查来源与文件契约。项目按月检查来源新鲜度、按周检查公开链接健康；变更过的 Mermaid 会实际渲染。对事实范围有异议时，使用[争议评审流程](docs/research/claim-review-process.md)，而不是把社区经验直接改成官方结论。
 
-研究和维护入口：[岗位雷达档案](docs/research/role-radar/README.md) · [来源政策](docs/research/source-policy.md) · [素材审计](docs/research/corpus-audit.md) · [站点评估](docs/research/documentation-site-evaluation.md) · [无障碍说明](ACCESSIBILITY.md) · [v0.1 验证记录](docs/research/release-validation-0.1.md)。
+研究和维护入口：[岗位雷达档案](docs/research/role-radar/README.md) · [来源政策](docs/research/source-policy.md) · [素材审计](docs/research/corpus-audit.md) · [站点评估](docs/research/documentation-site-evaluation.md) · [无障碍说明](ACCESSIBILITY.md) · [v0.1 验证记录](docs/research/release-validation-0.1.md) · [v0.5 验收记录](docs/research/release-validation-0.5.md)。
 
 ## 许可与声明
 

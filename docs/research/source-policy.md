@@ -27,7 +27,9 @@ FDE 是一个快速扩张且定义仍在分化的岗位。同一个标题，在 
 
 `data/sources.json` 是唯一的时效登记入口。正文不单独维护第二套日期。
 
-季度岗位观察引用来源 ID，写入 `data/role-radar/<year>-Q<quarter>.json`；技术规范和安全基线写入 `data/technology-baselines.json`。这两个文件不能新造一套 URL 或核验日期，只能引用来源登记表。
+季度岗位观察引用来源 ID，写入 `data/role-radar/<year>-Q<quarter>.json`；技术规范和安全基线写入 `data/technology-baselines.json`；岗位定向信号写入 `data/role-playbooks.json`。这些文件不能新造一套 URL 或核验日期，只能引用来源登记表。
+
+岗位作战包必须另外保留三层边界：`observable_signals` 是来源支持的公开信号，`interview_hypotheses` 是待招聘方确认的训练推断，`readiness_evidence` 是本项目的教学建议。三者不能相互升级：一项建议出现在角色包里，不代表雇主使用同样的面试题或评分标准。
 
 ## 4. 地域结论的额外约束
 
@@ -59,4 +61,4 @@ FDE 是一个快速扩张且定义仍在分化的岗位。同一个标题，在 
 
 ## 7. 当前来源清单
 
-机器可读清单见 [`data/sources.json`](../../data/sources.json)。当期角色结论见 [2026 Q3 岗位雷达](role-radar/2026-Q3.md)，协议与安全状态见[技术基线变更账本](technology-baseline-changelog.md)。
+机器可读清单见 [`data/sources.json`](../../data/sources.json)。当期角色结论见 [2026 Q3 岗位雷达](role-radar/2026-Q3.md)，协议与安全状态见[技术基线变更账本](technology-baseline-changelog.md)，岗位信号到训练证据的映射见 [`data/role-playbooks.json`](../../data/role-playbooks.json)。

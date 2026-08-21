@@ -278,4 +278,4 @@ flowchart TD
 
 ---
 
-[← 答案校准](12-answer-calibration.md) · [学习地图](reading-map.md) · [现场交付模板包 →](../../interview-kits/worksheets/field-delivery-pack.md)
+[← 答案校准](12-answer-calibration.md) · [现场交付模板包](../../interview-kits/worksheets/field-delivery-pack.md) · [下一章：岗位定向 →](14-job-targeting.md)
