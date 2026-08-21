@@ -21,5 +21,9 @@ jobs:
           python-version: "3.12"
       - name: Validate repository structure, links, and sources
         run: python3 scripts/validate_repo.py
+      - name: Validate runnable case-pack contract and artifacts
+        run: python3 scripts/validate_case_packs.py
+      - name: Lint Markdown with repository-specific rules
+        run: npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"
       - name: Compile maintenance scripts
         run: python3 -m py_compile scripts/*.py

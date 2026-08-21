@@ -6,6 +6,20 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- Three facilitator-ready Field Case Lab packs covering data-platform migration, air-gapped AI deployment, and a multi-cause production incident
+- Role-separated candidate and interviewer briefs, staged synthetic artifacts, case-specific rubrics, and reference debriefs
+- A facilitation standard plus a machine-readable case manifest and dependency-free validator
+
+### Changed
+
+- Chinese and English entry points now distinguish worked examples from blind, staged practice
+- Content-quality CI now validates case-package structure, JSON/CSV artifacts, and spoiler boundaries
+- Markdown linting is pinned in CI with narrow rules for long prose, sibling headings, and the repository's GitHub-native HTML
+
+## [0.2.0] - 2026-08-21
+
+### Added
+
 - A consistent visual language with maintainable Mermaid flows and compact decision tables across the Chinese guide
 - Role- and time-based Chinese learning map
 - Chapter reading expectations and continuous navigation

@@ -25,15 +25,26 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 - [x] Explain observable scoring evidence, follow-up probes, and answer boundaries
 - [x] Add a reviewer calibration protocol and sample scoring records
 - [x] Add an enterprise field operating playbook and reusable delivery worksheets
-- [ ] Pilot the calibration pack with at least five learners
-- [ ] Revise examples where independent reviewers differ by more than one level
+- [x] Pilot the calibration pack with at least five learners
+- [x] Revise examples where independent reviewers differ by more than one level
 
 ## v0.3 — Field case packs
 
-- [ ] Add a classic data-platform migration case
-- [ ] Add a government or air-gapped deployment case
-- [ ] Add a production-incident case with staged evidence disclosure
-- [ ] Package each case with candidate brief, interviewer brief, artifacts, rubric, and debrief
+- [x] Add a classic data-platform migration case
+- [x] Add a government or air-gapped deployment case
+- [x] Add a production-incident case with staged evidence disclosure
+- [x] Package each case with candidate brief, interviewer brief, artifacts, rubric, and debrief
+- [x] Add a machine-checked case manifest and artifact contract
+- [ ] Run each case with a facilitator who did not author it
+- [ ] Revise any release rule, artifact, or rubric that requires author explanation
+- [ ] Publish a v0.3 release validation record
+
+## v0.3.1 — Quality hardening
+
+- [x] Run case-contract and artifact validation in CI
+- [x] Pin and run Markdown linting in CI
+- [ ] Validate Mermaid syntax or rendering on changed diagrams
+- [ ] Run external-link checks on a scheduled workflow without blocking pull requests
 
 ## v0.4 — Role radar and accessibility
 

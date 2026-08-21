@@ -1,0 +1,9 @@
+metric,baseline,current,scope,definition
+evidence_supported_resolution_pct,88.0,54.0,all_canary_tenants,Final answer has at least one policy citation judged to support the action
+answer_p95_seconds,9.0,21.0,all_canary_tenants,Request start to final streamed answer
+retrieved_chunks_median,8.0,3.0,refund_and_billing,Chunks remaining after ACL and rerank
+knowledge_documents_active,18420,3691,new_index,Documents visible in promoted index alias
+tool_callback_timeout_pct,1.2,8.7,credit_tool,Gateway did not receive response before configured timeout
+workflow_success_pct,94.0,91.0,all_tasks,Task final state is completed or partial
+duplicate_credit_confirmed,0,14,credit_tool,Accounts with more than one matching credit reported so far
+cross_tenant_leak_confirmed,0,0,all_canary_tenants,Confirmed unauthorized tenant content exposure

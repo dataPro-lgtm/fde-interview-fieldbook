@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "data-platform-migration",
+      "title": "经典数据平台迁移",
+      "duration_minutes": 75,
+      "candidate_brief": "interview-kits/cases/data-platform-migration/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/data-platform-migration/interviewer-brief.md",
+      "rubric": "interview-kits/cases/data-platform-migration/rubric.md",
+      "debrief": "interview-kits/cases/data-platform-migration/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/data-platform-migration/artifacts/round-1-system-inventory.md"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/data-platform-migration/artifacts/round-2-data-profile.csv"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/data-platform-migration/artifacts/round-2-reconciliation.csv"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/data-platform-migration/artifacts/round-3-cutover-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "air-gapped-ai-deployment",
+      "title": "隔离环境 AI 部署",
+      "duration_minutes": 75,
+      "candidate_brief": "interview-kits/cases/air-gapped-ai-deployment/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/air-gapped-ai-deployment/interviewer-brief.md",
+      "rubric": "interview-kits/cases/air-gapped-ai-deployment/rubric.md",
+      "debrief": "interview-kits/cases/air-gapped-ai-deployment/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/air-gapped-ai-deployment/artifacts/round-1-environment.md"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/air-gapped-ai-deployment/artifacts/round-2-evaluation.csv"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/air-gapped-ai-deployment/artifacts/round-3-security-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "production-incident",
+      "title": "生产事故指挥",
+      "duration_minutes": 60,
+      "candidate_brief": "interview-kits/cases/production-incident/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/production-incident/interviewer-brief.md",
+      "rubric": "interview-kits/cases/production-incident/rubric.md",
+      "debrief": "interview-kits/cases/production-incident/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/production-incident/artifacts/round-1-incident-timeline.md"
+        },
+        {
+          "round": 1,
+          "path": "interview-kits/cases/production-incident/artifacts/round-1-dashboard.csv"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/production-incident/artifacts/round-2-traces.json"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/production-incident/artifacts/round-3-change-log.md"
+        }
+      ]
+    }
+  ]
+}
