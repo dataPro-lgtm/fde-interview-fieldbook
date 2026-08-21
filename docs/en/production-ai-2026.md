@@ -45,4 +45,6 @@ Build a golden set from normal, boundary, adversarial, multi-step, and historica
 
 Use identity-bound access, least privilege, untrusted-content isolation, structured tool validation, approval, sandboxing, action budgets, supply-chain controls, adversarial evals, and an incident response path. “Add a guardrail” is not a design until the enforced invariant and failure behaviour are explicit.
 
-See the full Chinese chapter: [2026 生产 AI 必修课](../zh-CN/06-production-ai.md).
+Current MCP, A2A, OpenTelemetry GenAI, and agent-security states are versioned in the [machine-readable baseline ledger](../../data/technology-baselines.json); the detailed narrative is maintained in [Chinese](../research/technology-baseline-changelog.md).
+
+See the full Chinese chapter: [2026 生产 AI 必修课](../zh-CN/06-production-ai.md). Continue with [portfolio evidence](portfolio-evidence.md) or return to the [English reading map](reading-map.md).

@@ -30,7 +30,25 @@
       "last_checked": "2026-08-21",
       "refresh_days": 30,
       "topics": ["role_growth", "geography", "verticalization"],
-      "note": "Snapshot showed 22 matching roles across general, healthcare, government, security, software engineering, deployment leadership, and multiple regions. This is not a labor-market census."
+      "note": "The live index showed general, vertical, software-engineering, and deployment-leadership roles across multiple regions. Search totals are intentionally not retained as a market metric because the result set changes quickly."
+    },
+    {
+      "id": "openai-fde-tokyo-2026",
+      "publisher": "OpenAI",
+      "title": "Forward Deployed Engineer - Tokyo",
+      "url": "https://openai.com/careers/forward-deployed-engineer-tokyo-tokyo-japan/",
+      "source_kind": "official_job_posting",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 30,
+      "topics": [
+        "role_scope",
+        "geography",
+        "bilingual_delivery",
+        "travel",
+        "adoption"
+      ],
+      "note": "Tokyo-specific posting requiring Japanese-English bilingual delivery and mainly domestic travel while retaining end-to-end production, adoption, and product-feedback ownership."
     },
     {
       "id": "anthropic-fde-2026",
@@ -152,8 +170,8 @@
     {
       "id": "a2a-spec-1-0",
       "publisher": "A2A Protocol Project",
-      "title": "Agent2Agent Protocol Specification",
-      "url": "https://github.com/a2aproject/A2A/blob/main/docs/specification.md",
+      "title": "Agent2Agent Protocol 1.0",
+      "url": "https://a2a-protocol.org/v1.0.0/",
       "source_kind": "official_specification",
       "authority": "official",
       "last_checked": "2026-08-21",
@@ -165,7 +183,7 @@
         "streaming",
         "push_notifications"
       ],
-      "note": "Defines messages, tasks, streaming updates, subscriptions, authorization scoping, and push notifications for disconnected or long-running work."
+      "note": "First stable release, covering multiple bindings, version negotiation, multi-tenancy, signed Agent Cards, task lifecycle, polling, streaming, and webhooks."
     },
     {
       "id": "anthropic-context-engineering",
@@ -204,9 +222,9 @@
     {
       "id": "otel-genai-semconv-2026",
       "publisher": "OpenTelemetry",
-      "title": "Generative AI semantic conventions",
-      "url": "https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/",
-      "source_kind": "official_specification",
+      "title": "OpenTelemetry GenAI Semantic Conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai",
+      "source_kind": "official_specification_repository",
       "authority": "official",
       "last_checked": "2026-08-21",
       "refresh_days": 45,
@@ -218,7 +236,7 @@
         "token_usage",
         "privacy"
       ],
-      "note": "Defines GenAI telemetry attributes and explicitly warns that prompts, retrieval queries, tool arguments, and outputs can contain sensitive information."
+      "note": "GenAI conventions moved to this dedicated repository. It covers GenAI clients, agents, MCP, provider signals, spans, metrics, and events; adopters should pin a revision while schema versioning remains in progress."
     },
     {
       "id": "owasp-agentic-top10-2026",

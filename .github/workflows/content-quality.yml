@@ -24,6 +24,8 @@ jobs:
         run: python3 scripts/validate_repo.py
       - name: Validate runnable case-pack contract and artifacts
         run: python3 scripts/validate_case_packs.py
+      - name: Validate versioned role radar and technology baselines
+        run: python3 scripts/validate_research_data.py
       - name: Lint Markdown with repository-specific rules
         run: npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"
       - name: Render Mermaid diagrams in changed Markdown
@@ -33,4 +35,4 @@ jobs:
       - name: Test maintenance-script boundaries
         run: python3 -m unittest discover -s tests -v
       - name: Compile maintenance scripts
-        run: python3 -m py_compile scripts/*.py
+        run: python3 -m py_compile scripts/*.py tests/*.py

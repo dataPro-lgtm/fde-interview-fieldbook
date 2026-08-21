@@ -6,6 +6,11 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- A versioned 2026 Q3 role-radar dataset and archive with evidence-bounded geography views
+- A machine-readable MCP, A2A, OpenTelemetry GenAI, and OWASP Agentic Security baseline ledger
+- A disputed-claim review process, structured Issue form, and documentation-site decision record
+- English reading map plus interview-loop, workflow-first system-design, and portfolio-evidence chapters
+- A documented accessibility baseline and automated research-data contract validation
 - Three facilitator-ready Field Case Lab packs covering data-platform migration, air-gapped AI deployment, and a multi-cause production incident
 - Role-separated candidate and interviewer briefs, staged synthetic artifacts, case-specific rubrics, and reference debriefs
 - A facilitation standard plus a machine-readable case manifest and dependency-free validator
@@ -13,6 +18,9 @@ All notable changes to the fieldbook are recorded here.
 
 ### Changed
 
+- Role evidence no longer treats volatile official search totals as a labor-market metric
+- The A2A source now points to the stable 1.0 documentation; OpenTelemetry GenAI tracking follows its dedicated specification repository
+- Content-quality CI now validates quarterly snapshots, technology baselines, and all Python test files
 - Chinese and English entry points now distinguish worked examples from blind, staged practice
 - Content-quality CI now validates case-package structure, JSON/CSV artifacts, and spoiler boundaries
 - Markdown linting is pinned in CI with narrow rules for long prose, sibling headings, and the repository's GitHub-native HTML
