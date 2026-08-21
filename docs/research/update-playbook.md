@@ -19,6 +19,12 @@ GitHub Actions 每月检查 `data/sources.json` 的 `last_checked`。每个来�
 python3 scripts/validate_research_data.py
 ```
 
+若来源被岗位作战包引用，还要逐条检查公开信号是否仍成立。页面措辞变化时，先缩窄或删除信号，再调整候选人证据建议；不得为了保留原有训练内容而扩大来源含义。完成后运行：
+
+```bash
+python3 scripts/validate_role_playbooks.py
+```
+
 ## 每周外链巡检
 
 定时工作流每周检查正文链接和 `data/sources.json` 中登记的来源。它与来源时效检查解决不同问题：时效检查判断“多久没有人工复核”，外链检查判断“地址现在是否还能到达”。
@@ -63,6 +69,21 @@ python3 scripts/validate_mermaid.py --files docs/zh-CN/06-production-ai.md
 MCP、A2A、OpenTelemetry GenAI 和 Agent 安全只记录会改变生产设计的正式变化。每条记录包含当前基线、稳定状态、来源 ID、变化、生产影响、待观察项和日期化 change log。
 
 以下内容不进入基线账本：单个 SDK 补丁、厂商营销命名、未经验证的社区预测和没有迁移影响的措辞调整。
+
+## 岗位作战包维护
+
+`data/role-playbooks.json` 不是第二份岗位雷达。它只把已登记的一手岗位信号连接到候选人可展示的证据和仓库练习资产。维护时遵守以下顺序：
+
+1. 在 `data/sources.json` 复核原始页面和日期；
+2. 判断变化影响的是岗位事实、训练假设还是建议产物；
+3. 只在一手来源支持时修改 `observable_signals`；
+4. 将公司内部轮次、题型和评分方式保留为待确认假设；
+5. 检查 `accepted_artifacts` 是否真的能证明 claim，并保留 boundary；
+6. 角色模拟必须继续分离 candidate brief 与 interviewer guide，候选人材料不得出现私有证据、释放顺序或剧透链接；
+7. 检查模拟文件是否登记为 `mock_loop` 和 `practice_assets`，工作表、角色包正文与导航是否仍一致；
+8. 运行角色包校验器、仓库校验器和全部单元测试。
+
+来源下线时不要立即删除整个角色包。先确认该信号是否还有其他已登记的一手来源；没有支持时，删除或降级信号，并在 changelog 说明候选人准备应怎样调整。
 
 ## 争议事实
 

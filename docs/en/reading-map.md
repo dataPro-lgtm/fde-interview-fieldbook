@@ -11,6 +11,7 @@ The English path covers the highest-use decisions. It is not yet a translation o
 | My designs become cloud-service lists | [System design](system-design.md) | One design with data, control, and evidence flows |
 | My resume lists tools but not outcomes | [Portfolio evidence](portfolio-evidence.md) | Three rewritten bullets and a ten-slide project spine |
 | I need current agent-production depth | [Production AI](production-ai-2026.md) | One governed workflow design with failure boundaries |
+| I have one live job description | [Job targeting](job-targeting.md) | A role brief, evidence matrix, and ten-session campaign |
 | I need to start from zero | [Start here](start-here.md) | A three-item practice backlog |
 
 ## Choose by time
@@ -48,5 +49,6 @@ Use the English chapters for structure and the Chinese practice materials for de
 4. [Workflow-first system design](system-design.md)
 5. [Production AI for FDE interviews](production-ai-2026.md)
 6. [Resume, portfolio, and project evidence](portfolio-evidence.md)
+7. [Turn one job description into an evidence-based campaign](job-targeting.md)
 
 The full Chinese path remains available through the [Chinese learning map](../zh-CN/reading-map.md).

@@ -21,6 +21,8 @@ Write one sentence:
 
 If you cannot fill that sentence, do not start with a generic question bank.
 
+If you already have a live posting, continue with the [job-targeting workflow](job-targeting.md) and label each item as a public fact, practice hypothesis, or personal evidence.
+
 ## 2. Run a baseline
 
 Use the [master scorecard](../../interview-kits/rubrics/master-scorecard.md). Score only evidence you can explain or demonstrate:
@@ -89,4 +91,4 @@ You are ready when you can consistently:
 - explain one failure without blame or false certainty;
 - distinguish official hiring evidence from community reports.
 
-Next: [Role map](role-map.md) · [English reading map](reading-map.md).
+Next: [Role map](role-map.md) · [Job targeting](job-targeting.md) · [English reading map](reading-map.md).
