@@ -41,6 +41,7 @@ For time-sensitive claims, add or update an entry in `data/sources.json` with `l
 - [ ] `python3 scripts/validate_repo.py` passes.
 - [ ] `python3 scripts/validate_case_packs.py` passes when cases change.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
+- [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 
 ## Visual language
 
@@ -53,6 +54,8 @@ Use a diagram or table only when it makes a relationship faster to understand th
 - Introduce every visual with the question it answers, and explain the operational takeaway after it.
 - Do not rely on color alone. Labels and arrow direction must preserve the meaning in dark mode, print, and assistive reading.
 - A visual should not invent precision, replace necessary caveats, or repeat nearby prose without reducing cognitive load.
+
+Changed Mermaid blocks are rendered in CI with a pinned CLI. Public links are checked separately on a weekly schedule so transient network failures do not block ordinary pull requests. Only public HTTPS links are accepted; localhost, private-network targets, and non-standard ports are rejected before a request is sent.
 
 ## Good first contributions
 

@@ -14,6 +14,7 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = {
+    ".github/workflows/external-link-health.yml",
     "README.md",
     "README.zh-CN.md",
     "LICENSE",
@@ -33,6 +34,9 @@ REQUIRED = {
     "interview-kits/cases/README.md",
     "interview-kits/cases/facilitation-standard.md",
     "interview-kits/worksheets/field-delivery-pack.md",
+    "scripts/check_external_links.py",
+    "scripts/validate_mermaid.py",
+    "tests/test_maintenance_scripts.py",
 }
 FORBIDDEN_PUBLIC_EXTENSIONS = {
     ".7z",

@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -25,5 +26,11 @@ jobs:
         run: python3 scripts/validate_case_packs.py
       - name: Lint Markdown with repository-specific rules
         run: npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"
+      - name: Render Mermaid diagrams in changed Markdown
+        env:
+          MERMAID_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python3 scripts/validate_mermaid.py --base "$MERMAID_BASE" --no-browser-sandbox
+      - name: Test maintenance-script boundaries
+        run: python3 -m unittest discover -s tests -v
       - name: Compile maintenance scripts
         run: python3 -m py_compile scripts/*.py
