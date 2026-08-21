@@ -1,0 +1,7 @@
+batch_id,tenant_id,source_id,external_doc_id,source_version,content_hash,permission_version,observed_state,snapshot_complete
+b-104,tenant-a,ticketing,KB-17,91,h-a1,acl-7,present,true
+b-104,tenant-a,docs,KB-17,12,h-b8,acl-2,present,true
+b-104,tenant-b,docs,POL-9,31,h-c4,acl-19,present,true
+b-105,tenant-b,docs,POL-9,31,h-c4,acl-20,present,true
+b-105,tenant-c,objects,manual.pdf,etag-8,h-d2,bucket-3,missing,false
+b-105,tenant-c,objects,faq.pdf,etag-4,h-e9,bucket-3,present,false

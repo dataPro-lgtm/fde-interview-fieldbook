@@ -41,6 +41,7 @@ If credible sources conflict, do not silently choose one. Follow the [claim-revi
 - [ ] Official facts and personal experience are labeled separately.
 - [ ] Internal links work.
 - [ ] Case-pack files and staged artifacts are registered in `data/case-packs.json`.
+- [ ] Case metadata names difficulty, risk domains, FIELD skills, release gates, and honest human-validation status.
 - [ ] Role-targeted mocks keep candidate briefs separate from interviewer evidence and follow the anonymous pilot protocol.
 - [ ] The change adds no proprietary material or personal data.
 - [ ] `python3 scripts/validate_repo.py` passes.
@@ -70,7 +71,7 @@ The complete accessibility baseline is in [ACCESSIBILITY.md](ACCESSIBILITY.md). 
 
 ## Good first contributions
 
-See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. New case packs must follow the [facilitation standard](interview-kits/cases/facilitation-standard.md); a good pull request does not need to add a whole chapter.
+See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. New case packs must follow the [facilitation standard](interview-kits/cases/facilitation-standard.md); a good pull request does not need to add a whole chapter. Do not mark a case independently run without a real non-author facilitator and a privacy-safe evidence record.
 
 ## Practice feedback
 

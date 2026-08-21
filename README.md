@@ -95,7 +95,7 @@ The Chinese core path continues with [job targeting](docs/zh-CN/14-job-targeting
 
 ### Practice kits
 
-- [Field Case Lab: three facilitator-ready case packs](interview-kits/cases/README.md)
+- [Field Case Lab: ten production case packs with staged evidence](interview-kits/cases/README.md)
 - [Case facilitation standard](interview-kits/cases/facilitation-standard.md)
 - [Master scorecard](interview-kits/rubrics/master-scorecard.md)
 - [Customer discovery scorecard](interview-kits/rubrics/discovery-scorecard.md)

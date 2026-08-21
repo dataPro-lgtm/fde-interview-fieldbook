@@ -38,6 +38,7 @@ REQUIRED = {
     "docs/research/claim-review-process.md",
     "docs/research/documentation-site-evaluation.md",
     "docs/research/release-validation-0.6.md",
+    "docs/research/release-validation-0.7.md",
     "docs/research/role-radar/2026-Q3.md",
     "docs/research/release-validation-0.5.md",
     "docs/research/role-radar/README.md",
@@ -73,6 +74,7 @@ REQUIRED = {
     "scripts/validate_role_playbooks.py",
     "tests/test_maintenance_scripts.py",
     "tests/test_learning_paths.py",
+    "tests/test_case_packs.py",
     "tests/test_research_data.py",
     "tests/test_role_playbooks.py",
 }

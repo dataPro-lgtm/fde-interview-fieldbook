@@ -78,11 +78,11 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 
 ## v0.7 — Ten production Field Case Labs
 
-- [ ] Expand from three to ten original, spoiler-separated production cases
-- [ ] Cover agent side effects, knowledge lifecycle, durable execution, evaluation regression, cross-border delivery, adoption rescue, and connector productization
-- [ ] Strengthen the case contract with risk, skill, and release-gate metadata
-- [ ] Run every case through artifact, privacy, and facilitation-contract validation
-- [ ] Record independent-facilitator status separately from automated readiness
+- [x] Expand from three to ten original, spoiler-separated production cases
+- [x] Cover agent side effects, knowledge lifecycle, durable execution, evaluation regression, cross-border delivery, adoption rescue, and connector productization
+- [x] Strengthen the case contract with risk, skill, and release-gate metadata
+- [x] Run every case through artifact, privacy, and facilitation-contract validation
+- [x] Record independent-facilitator status separately from automated readiness
 
 ## v0.8 — Reviewer calibration and evidence quality
 

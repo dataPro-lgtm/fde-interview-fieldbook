@@ -1,0 +1,37 @@
+{
+  "case": "synthetic-agent-refund-incident",
+  "events": [
+    {
+      "timestamp": "2026-08-20T09:14:02Z",
+      "request_id": "chat-8821",
+      "instance": "copilot-03",
+      "tool_call_id": "tool-a91",
+      "order_id": "order-17031",
+      "amount_cny": 299,
+      "result": "gateway_timeout"
+    },
+    {
+      "timestamp": "2026-08-20T09:14:12Z",
+      "request_id": "chat-8821",
+      "instance": "copilot-09",
+      "tool_call_id": "tool-b17",
+      "order_id": "order-17031",
+      "amount_cny": 299,
+      "result": "accepted"
+    },
+    {
+      "timestamp": "2026-08-20T09:14:19Z",
+      "request_id": "chat-8821",
+      "instance": "copilot-03",
+      "tool_call_id": "tool-a91",
+      "order_id": "order-17031",
+      "amount_cny": 299,
+      "result": "completed_after_timeout"
+    }
+  ],
+  "reconciliation": {
+    "refund_records": 2,
+    "unique_order_ids": 1,
+    "customer_visible_refunds": 2
+  }
+}

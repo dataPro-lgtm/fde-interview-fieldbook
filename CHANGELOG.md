@@ -6,6 +6,9 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- Seven production Field Case Labs covering agent side effects, knowledge lifecycle, durable streaming, evaluation regression, cross-border AI, adoption rescue, and connector productization
+- Case-portfolio metadata for difficulty, risk domains, FIELD skills, release gates, and honest independent-facilitator status
+- Case-manifest v2 validation, ten risk-domain coverage, dedicated boundary tests, and a v0.7 validation record
 - Machine-readable 7-day, 14-day, and 30-day guided-practice paths with 29 ordered sessions
 - A Chinese route-selection chapter, an English high-use counterpart, and a reusable evidence-first practice journal
 - A dependency-free learning-path validator, boundary tests, CI integration, and a v0.6-to-v1.0 execution contract
@@ -28,6 +31,8 @@ All notable changes to the fieldbook are recorded here.
 
 ### Changed
 
+- Field Case Lab navigation now routes readers across ten plan, incident, adoption, governance, and productization scenarios
+- Case validation now requires ten complete packs and keeps automated readiness separate from human facilitation evidence
 - Entry points now route readers from time and role constraints to explicit artifacts and completion evidence
 - Content-quality CI now validates learning-path order, inputs, outputs, evidence checks, and path limits
 - Entry points now route readers with a live JD into role-specific evidence and practice instead of broad rereading

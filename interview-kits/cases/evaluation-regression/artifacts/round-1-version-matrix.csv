@@ -1,0 +1,9 @@
+dimension,previous_release,current_release,record_quality
+training_sync,sync-v17,sync-v18,exact
+label_schema,multi-label-v3,multi-label-v3,declared_only
+evaluation_code,eval-44,eval-44,exact
+router_prompt,prompt-21,prompt-22,exact
+model_alias,provider-model-latest,provider-model-latest,resolved_version_missing
+tool_schema,ticket-api-v5,ticket-api-v6,exact
+policy,route-policy-9,route-policy-9,exact
+traffic_window,2026-08-19,2026-08-20,exact

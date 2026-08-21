@@ -80,7 +80,7 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 
 ## 练习工具
 
-- [Field Case Lab：三套可主持的分轮案例](interview-kits/cases/README.md)
+- [Field Case Lab：十套带分轮证据的生产案例](interview-kits/cases/README.md)
 - [案例包运行与评分标准](interview-kits/cases/facilitation-standard.md)
 - [FDE 总评分表](interview-kits/rubrics/master-scorecard.md)
 - [客户发现评分表](interview-kits/rubrics/discovery-scorecard.md)
