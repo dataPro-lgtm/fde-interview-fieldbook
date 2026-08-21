@@ -12,20 +12,37 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 - [x] Seven-day and thirty-day study plans
 - [x] Source freshness and repository validation
 
+## v0.1.1 — Reading experience
+
+- [x] Add role- and time-based reading paths
+- [x] Add reading time, learner output, and continuous chapter navigation
+- [x] Add a visual FIELD overview and representative-content shortcuts
+- [ ] Add a restrained custom social preview after the content hierarchy stabilizes
+
 ## v0.2 — Calibration
 
-- [ ] Publish anonymized example responses at weak, competent, and strong levels
-- [ ] Add reviewer calibration notes for every scorecard dimension
-- [ ] Add classic data-platform and government FDE cases
-- [ ] Expand English translations of core chapters
-- [ ] Add audio-friendly mock interview prompts
+- [x] Publish weak, competent, and strong responses for twelve core questions
+- [x] Explain observable scoring evidence, follow-up probes, and answer boundaries
+- [x] Add a reviewer calibration protocol and sample scoring records
+- [x] Add an enterprise field operating playbook and reusable delivery worksheets
+- [ ] Pilot the calibration pack with at least five learners
+- [ ] Revise examples where independent reviewers differ by more than one level
 
-## v0.3 — Role radar
+## v0.3 — Field case packs
+
+- [ ] Add a classic data-platform migration case
+- [ ] Add a government or air-gapped deployment case
+- [ ] Add a production-incident case with staged evidence disclosure
+- [ ] Package each case with candidate brief, interviewer brief, artifacts, rubric, and debrief
+
+## v0.4 — Role radar and accessibility
 
 - [ ] Add quarterly snapshots instead of overwriting history
 - [ ] Track role archetypes by geography without inferring private hiring data
 - [ ] Add a change log for MCP, A2A, observability, and agent-security baselines
 - [ ] Add a community review process for disputed claims
+- [ ] Expand English translations of the highest-use chapters
+- [ ] Evaluate a generated documentation site after the content hierarchy stabilizes
 
 ## v1.0 — Mature fieldbook
 

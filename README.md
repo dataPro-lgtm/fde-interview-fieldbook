@@ -1,8 +1,8 @@
-# FDE Interview Fieldbook
+# Forward Deployed Engineer (FDE) Interview Fieldbook
 
 > A source-backed, production-first field guide for Forward Deployed Engineer interviews.
 
-[简体中文](README.zh-CN.md) · [Start here](docs/en/start-here.md) · [2026 role radar](docs/research/role-radar-2026-08.md) · [Contributing](CONTRIBUTING.md)
+[简体中文](README.zh-CN.md) · [Start here](docs/en/start-here.md) · [Chinese learning map](docs/zh-CN/reading-map.md) · [Answer calibration](docs/zh-CN/12-answer-calibration.md) · [Contributing](CONTRIBUTING.md)
 
 FDE interviews do not only ask whether you can write code. They test whether you can enter an ambiguous customer environment, find the real workflow, ship a thin but valuable system, keep it reliable in production, and turn field learning into reusable product capability.
 
@@ -59,20 +59,22 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 
 ### Core guide
 
-| Chapter                                                                   | What you should be able to do afterwards                                |
-| ------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [Start here](docs/zh-CN/00-start-here.md)                                 | Diagnose your target role and create a study backlog                    |
-| [What an FDE actually owns](docs/zh-CN/01-role-map.md)                    | Distinguish FDE archetypes and explain the field-to-product loop        |
-| [Interview loop and scoring](docs/zh-CN/02-interview-loop.md)             | Understand what each round is trying to observe                         |
-| [Discovery and decomposition](docs/zh-CN/03-discovery.md)                 | Turn a vague request into a bounded mission and acceptance criteria     |
-| [Coding, data, and delivery](docs/zh-CN/04-coding-data-delivery.md)       | Demonstrate fast, testable implementation and messy-data judgment       |
-| [System design](docs/zh-CN/05-system-design.md)                           | Design from workflow and risk, not from a memorized architecture        |
-| [Production AI in 2026](docs/zh-CN/06-production-ai.md)                   | Reason about RAG, agents, MCP, context, evals, security, and durability |
-| [Casebook](docs/zh-CN/07-casebook.md)                                     | Walk through three realistic customer problems end to end               |
-| [Question bank with guided answers](docs/zh-CN/08-question-bank.md)       | Practice high-signal answers without memorizing slogans                 |
-| [Behavioral, stakeholder, and demo recovery](docs/zh-CN/09-behavioral.md) | Show ownership, judgment, conflict handling, and calm under pressure    |
-| [7-day and 30-day study plans](docs/zh-CN/10-study-plans.md)              | Convert reading into observable interview performance                   |
-| [Resume and portfolio evidence](docs/zh-CN/11-portfolio.md)               | Present proof of field impact rather than a technology inventory        |
+| Chapter                                                                          | What you should be able to do afterwards                                                   |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [Start here](docs/zh-CN/00-start-here.md)                                        | Diagnose your target role and create a study backlog                                       |
+| [What an FDE actually owns](docs/zh-CN/01-role-map.md)                           | Distinguish FDE archetypes and explain the field-to-product loop                           |
+| [Interview loop and scoring](docs/zh-CN/02-interview-loop.md)                    | Understand what each round is trying to observe                                            |
+| [Discovery and decomposition](docs/zh-CN/03-discovery.md)                        | Turn a vague request into a bounded mission and acceptance criteria                        |
+| [Coding, data, and delivery](docs/zh-CN/04-coding-data-delivery.md)              | Demonstrate fast, testable implementation and messy-data judgment                          |
+| [System design](docs/zh-CN/05-system-design.md)                                  | Design from workflow and risk, not from a memorized architecture                           |
+| [Production AI in 2026](docs/zh-CN/06-production-ai.md)                          | Reason about RAG, agents, MCP, context, evals, security, and durability                    |
+| [Casebook](docs/zh-CN/07-casebook.md)                                            | Walk through three realistic customer problems end to end                                  |
+| [Question bank with guided answers](docs/zh-CN/08-question-bank.md)              | Practice high-signal answers without memorizing slogans                                    |
+| [Behavioral, stakeholder, and demo recovery](docs/zh-CN/09-behavioral.md)        | Show ownership, judgment, conflict handling, and calm under pressure                       |
+| [7-day and 30-day study plans](docs/zh-CN/10-study-plans.md)                     | Convert reading into observable interview performance                                      |
+| [Resume and portfolio evidence](docs/zh-CN/11-portfolio.md)                      | Present proof of field impact rather than a technology inventory                           |
+| [Answer calibration pack](docs/zh-CN/12-answer-calibration.md)                   | Compare weak, independent, and leverage-creating answers using evidence                    |
+| [Enterprise field operating playbook](docs/zh-CN/13-field-operating-playbook.md) | Carry interview reasoning into discovery, launch, incidents, handoff, and product feedback |
 
 ### Practice kits
 
@@ -81,6 +83,8 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 - [System design scorecard](interview-kits/rubrics/system-design-scorecard.md)
 - [90-minute AI FDE mock loop](interview-kits/mock-loops/ai-fde-90-minute.md)
 - [60-minute classic FDE mock loop](interview-kits/mock-loops/classic-fde-60-minute.md)
+- [Reviewer calibration guide](interview-kits/rubrics/reviewer-calibration.md)
+- [Field delivery worksheet pack](interview-kits/worksheets/field-delivery-pack.md)
 
 ### Research and maintenance
 
