@@ -48,12 +48,12 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 
 ## Choose your path
 
-| Time available       | Recommended path                                                                                                                   | Output                                         |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| 60 minutes           | Read the [role map](docs/en/role-map.md), then score yourself with the [master rubric](interview-kits/rubrics/master-scorecard.md) | A prioritized gap list                         |
-| 7 days               | Follow the [7-day sprint](docs/zh-CN/10-study-plans.md#七天冲刺) and run one [Field Case Lab](interview-kits/cases/README.md)        | One recorded mock plus one scored case memo    |
-| 30 days              | Follow the [30-day plan](docs/zh-CN/10-study-plans.md#三十天计划), run three mock loops, and build a portfolio narrative           | Interview-ready evidence across all dimensions |
-| Already interviewing | Use the [question bank](docs/zh-CN/08-question-bank.md), [worked cases](docs/zh-CN/07-casebook.md), and [blind case labs](interview-kits/cases/README.md) | Targeted practice, not broad rereading         |
+| Time available | Recommended path | Output |
+| --- | --- | --- |
+| 60 minutes | Read the [role map](docs/en/role-map.md), then score yourself with the [master rubric](interview-kits/rubrics/master-scorecard.md) | A prioritized gap list |
+| 7 days | Follow the [7-day sprint](docs/zh-CN/10-study-plans.md#七天冲刺) and run one [Field Case Lab](interview-kits/cases/README.md) | One recorded mock plus one scored case memo |
+| 30 days | Follow the [30-day plan](docs/zh-CN/10-study-plans.md#三十天计划), run three mock loops, and build a portfolio narrative | Interview-ready evidence across all dimensions |
+| Already interviewing | Use the [question bank](docs/zh-CN/08-question-bank.md), [worked cases](docs/zh-CN/07-casebook.md), and [blind case labs](interview-kits/cases/README.md) | Targeted practice, not broad rereading |
 
 English-first readers can use the [English reading map](docs/en/reading-map.md) for the translated high-use path. The project labels untranslated depth instead of implying full parity.
 
