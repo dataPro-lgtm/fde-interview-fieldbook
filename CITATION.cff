@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: FDE Interview Fieldbook
+message: If this fieldbook helps your work, please cite the repository and the release you used.
+type: dataset
+version: 0.1.0
+date-released: 2026-08-21
+authors:
+  - name: FDE Interview Fieldbook Contributors
+abstract: A source-backed, production-first field guide for Forward Deployed Engineer interviews.
+repository-code: https://github.com/dataPro-lgtm/fde-interview-fieldbook
+url: https://github.com/dataPro-lgtm/fde-interview-fieldbook
+license: MIT
+keywords:
+  - forward deployed engineer
+  - fde interview
+  - applied ai
+  - production ai
+  - customer engineering

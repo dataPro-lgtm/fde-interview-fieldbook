@@ -1,0 +1,31 @@
+name: Content gap or correction
+description: Report an unclear explanation, missing case, or factual problem
+title: "[Content]: "
+labels: ["content"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or section
+      placeholder: docs/zh-CN/06-production-ai.md — MCP
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is unclear or incorrect?
+      description: Include the reader decision that this problem affects.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement or evidence
+      description: A source is required for time-sensitive factual corrections.
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Content policy
+      options:
+        - label: This submission contains no confidential, leaked, paid, or personal material.
+          required: true

@@ -1,0 +1,50 @@
+name: Role or source update
+description: Propose a current FDE role signal backed by evidence
+title: "[Role update]: "
+labels: ["source-refresh"]
+body:
+  - type: dropdown
+    id: authority
+    attributes:
+      label: Evidence level
+      options:
+        - Official employer or standards source
+        - Corroborated by multiple independent sources
+        - Community experience
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Direct source URL
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Date checked
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What should change?
+      description: State the narrow claim supported by the source. Do not paste the full page.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Scope and uncertainty
+      description: Which team, level, geography, or version does this evidence cover?
+    validations:
+      required: true
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Content policy
+      options:
+        - label: This submission contains no confidential, leaked, paid, or personal material.
+          required: true

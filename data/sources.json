@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-08-21",
+  "sources": [
+    {
+      "id": "openai-fde-seattle-2026",
+      "publisher": "OpenAI",
+      "title": "Forward Deployed Engineer (FDE) - Seattle",
+      "url": "https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/",
+      "source_kind": "official_job_posting",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 30,
+      "topics": [
+        "role_scope",
+        "delivery",
+        "adoption",
+        "evals",
+        "product_feedback"
+      ],
+      "note": "Defines end-to-end ownership from discovery and scoping through build, rollout, adoption, and reusable field learning."
+    },
+    {
+      "id": "openai-fde-search-2026",
+      "publisher": "OpenAI",
+      "title": "OpenAI careers search: forward deployed",
+      "url": "https://openai.com/careers/search/?q=forward+deployed",
+      "source_kind": "official_job_index",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 30,
+      "topics": ["role_growth", "geography", "verticalization"],
+      "note": "Snapshot showed 22 matching roles across general, healthcare, government, security, software engineering, deployment leadership, and multiple regions. This is not a labor-market census."
+    },
+    {
+      "id": "anthropic-fde-2026",
+      "publisher": "Anthropic",
+      "title": "Forward Deployed Engineer",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5302966008",
+      "source_kind": "official_job_posting",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 30,
+      "topics": [
+        "mcp",
+        "subagents",
+        "agent_skills",
+        "production_ai",
+        "customer_embedding"
+      ],
+      "note": "Calls for production customer artifacts including MCP servers, sub-agents, and agent skills, alongside evals and production LLM delivery."
+    },
+    {
+      "id": "scale-genai-fde-2026",
+      "publisher": "Scale AI",
+      "title": "Forward Deployed Engineer, GenAI",
+      "url": "https://scale.com/careers/4593571005",
+      "source_kind": "official_job_posting",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 30,
+      "topics": [
+        "data_infrastructure",
+        "distributed_systems",
+        "full_stack",
+        "experimentation"
+      ],
+      "note": "Emphasizes high-quality data infrastructure, large-scale processing, customer-specific systems, full-stack delivery, and rapid experimentation."
+    },
+    {
+      "id": "vercel-fde-2026",
+      "publisher": "Vercel",
+      "title": "Forward-Deployed Engineer",
+      "url": "https://job-boards.greenhouse.io/vercel/jobs/5752684004",
+      "source_kind": "official_job_posting",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 30,
+      "topics": ["ai_agents", "mcp", "migrations", "typescript", "enablement"],
+      "note": "Separates AI-builder and Next.js-focused profiles while requiring embedded delivery, live code, production agents, MCP, and customer knowledge transfer."
+    },
+    {
+      "id": "diligent-fde-2026",
+      "publisher": "Diligent",
+      "title": "Forward Deployed Engineer",
+      "url": "https://job-boards.greenhouse.io/diligentcorporation/jobs/5829752004",
+      "source_kind": "official_job_posting",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 30,
+      "topics": [
+        "agent_lifecycle",
+        "golden_datasets",
+        "regression",
+        "regulated_workflows",
+        "guardrails"
+      ],
+      "note": "Highlights the production reliability cliff, full Agent Development Life Cycle, golden datasets, regressions, tracing, and judgment about whether a workflow needs an agent."
+    },
+    {
+      "id": "palantir-architecture-fde-2026",
+      "publisher": "Palantir",
+      "title": "Architecture center overview",
+      "url": "https://www.palantir.com/docs/foundry/architecture-center/overview",
+      "source_kind": "official_documentation",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 90,
+      "topics": [
+        "field_feedback",
+        "productization",
+        "ontology",
+        "operational_systems"
+      ],
+      "note": "Describes FDE as a human feedback mechanism that gets close to hard missions, synthesizes field learning, and ships product features."
+    },
+    {
+      "id": "palantir-ai-fde-2026",
+      "publisher": "Palantir",
+      "title": "AI FDE overview",
+      "url": "https://www.palantir.com/docs/foundry/ai-fde/overview",
+      "source_kind": "official_documentation",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 90,
+      "topics": [
+        "ai_assisted_delivery",
+        "context_control",
+        "permissions",
+        "closed_loop_validation"
+      ],
+      "note": "Shows an AI-assisted FDE model with controlled context, permission-respecting tools, closed-loop actions, previews, CI validation, and reviewed changes."
+    },
+    {
+      "id": "mcp-spec-2026-07-28",
+      "publisher": "Model Context Protocol",
+      "title": "The 2026-07-28 Specification",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "source_kind": "official_specification_release",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 45,
+      "topics": [
+        "mcp",
+        "authorization",
+        "tasks",
+        "stateless_infrastructure",
+        "caching"
+      ],
+      "note": "Current release notes cover stateless operation, routing headers, cacheable lists, authorization hardening, and the Tasks extension."
+    },
+    {
+      "id": "a2a-spec-1-0",
+      "publisher": "A2A Protocol Project",
+      "title": "Agent2Agent Protocol Specification",
+      "url": "https://github.com/a2aproject/A2A/blob/main/docs/specification.md",
+      "source_kind": "official_specification",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 45,
+      "topics": [
+        "a2a",
+        "agent_interoperability",
+        "task_lifecycle",
+        "streaming",
+        "push_notifications"
+      ],
+      "note": "Defines messages, tasks, streaming updates, subscriptions, authorization scoping, and push notifications for disconnected or long-running work."
+    },
+    {
+      "id": "anthropic-context-engineering",
+      "publisher": "Anthropic",
+      "title": "Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "source_kind": "official_engineering_article",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 90,
+      "topics": [
+        "context_engineering",
+        "tool_design",
+        "examples",
+        "agentic_search"
+      ],
+      "note": "Frames context as a managed, scarce resource and argues for clear prompts, minimal non-overlapping tools, canonical examples, and just-in-time retrieval."
+    },
+    {
+      "id": "anthropic-agent-skills",
+      "publisher": "Anthropic",
+      "title": "Equipping agents for the real world with Agent Skills",
+      "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "source_kind": "official_engineering_article",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 90,
+      "topics": [
+        "agent_skills",
+        "progressive_disclosure",
+        "deterministic_tools",
+        "evaluation"
+      ],
+      "note": "Explains progressive disclosure through skill metadata, instructions, references, and deterministic scripts, with evaluation-first development."
+    },
+    {
+      "id": "otel-genai-semconv-2026",
+      "publisher": "OpenTelemetry",
+      "title": "Generative AI semantic conventions",
+      "url": "https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/",
+      "source_kind": "official_specification",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 45,
+      "topics": [
+        "observability",
+        "tracing",
+        "retrieval",
+        "tool_calls",
+        "token_usage",
+        "privacy"
+      ],
+      "note": "Defines GenAI telemetry attributes and explicitly warns that prompts, retrieval queries, tool arguments, and outputs can contain sensitive information."
+    },
+    {
+      "id": "owasp-agentic-top10-2026",
+      "publisher": "OWASP GenAI Security Project",
+      "title": "OWASP Top 10 for Agentic Applications",
+      "url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "source_kind": "official_security_guidance",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 90,
+      "topics": [
+        "agent_security",
+        "goal_hijack",
+        "tool_misuse",
+        "identity",
+        "supply_chain",
+        "memory_poisoning"
+      ],
+      "note": "Provides an agent-specific risk taxonomy spanning goal hijack, tool misuse, identity abuse, supply chain, code execution, memory poisoning, inter-agent communication, and cascading failures."
+    },
+    {
+      "id": "nist-ai-600-1",
+      "publisher": "NIST",
+      "title": "AI Risk Management Framework: Generative AI Profile",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "source_kind": "official_standard_guidance",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 90,
+      "topics": [
+        "risk_management",
+        "governance",
+        "measurement",
+        "genai_lifecycle"
+      ],
+      "note": "Cross-sector companion to the NIST AI RMF for incorporating trustworthiness into GenAI design, development, use, and evaluation."
+    },
+    {
+      "id": "temporal-durable-execution-2026",
+      "publisher": "Temporal",
+      "title": "Durable Execution Solutions",
+      "url": "https://temporal.io/",
+      "source_kind": "official_product_documentation",
+      "authority": "official",
+      "last_checked": "2026-08-21",
+      "refresh_days": 90,
+      "topics": [
+        "durable_execution",
+        "long_running_agents",
+        "retries",
+        "human_in_the_loop",
+        "state"
+      ],
+      "note": "Illustrates durable workflow state, retries, task queues, signals, timers, human intervention, and resumption after infrastructure failure. Vendor claims are treated as architectural examples, not neutral benchmarks."
+    }
+  ]
+}

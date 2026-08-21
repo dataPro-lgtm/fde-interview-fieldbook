@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+.coverage
+.DS_Store
+.idea/
+.vscode/
+.work/
+source-health.json
+
+# The private research bundle is never part of this public repository.
+*.pdf
+*.docx
+*.xlsx
+*.xls
+*.xlsm
+*.ppt
+*.pptx
+*.zip
+*.rar
+*.7z
