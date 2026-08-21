@@ -1,5 +1,10 @@
 # 从工作流出发做系统设计
 
+> [!NOTE]
+> **适合谁：** 系统设计容易变成组件清单，或者上线、权限和回退总在最后补的人<br>
+> **首次通读：** 15 分钟；建议练习 45 分钟<br>
+> **完成后产出：** 一张同时包含数据流、控制流和证据流的系统图
+
 ## 1. 系统设计不是云服务记忆比赛
 
 FDE 系统设计的难点，是在需求不完整、数据复杂和上线压力下做一组有边界的决策。面试官通常不期待唯一架构，而是观察你是否：
@@ -204,4 +209,6 @@ Across the path: trace, versions, evals, audit, freshness SLO
 
 练习时使用[系统设计评分表](../../interview-kits/rubrics/system-design-scorecard.md)。
 
-下一步：阅读[2026 生产 AI 必修课](06-production-ai.md)。
+---
+
+[← 上一章：编码与数据](04-coding-data-delivery.md) · [学习地图](reading-map.md) · [下一章：生产 AI →](06-production-ai.md)

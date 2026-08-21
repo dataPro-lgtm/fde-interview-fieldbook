@@ -42,3 +42,9 @@ For time-sensitive claims, add or update an entry in `data/sources.json` with `l
 ## Good first contributions
 
 See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. Small corrections are valuable; a good pull request does not need to add a whole chapter.
+
+## Practice feedback
+
+You do not need to write code or a chapter to contribute. After using a case, scorecard, or calibration exercise, open the structured [practice feedback form](https://github.com/dataPro-lgtm/fde-interview-fieldbook/issues/new?template=practice-feedback.yml). Describe what changed between your first and second attempt, and where the material still failed to help.
+
+Remove employer-confidential details, personal data, leaked questions, and paid material. A useful report can describe the skill and failure pattern without naming the company or interview process.

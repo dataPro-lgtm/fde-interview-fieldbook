@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import html
 import json
 import re
 import sys
@@ -24,7 +25,11 @@ REQUIRED = {
     "docs/zh-CN/06-production-ai.md",
     "docs/zh-CN/07-casebook.md",
     "docs/zh-CN/08-question-bank.md",
+    "docs/zh-CN/12-answer-calibration.md",
+    "docs/zh-CN/13-field-operating-playbook.md",
     "interview-kits/rubrics/master-scorecard.md",
+    "interview-kits/rubrics/reviewer-calibration.md",
+    "interview-kits/worksheets/field-delivery-pack.md",
 }
 FORBIDDEN_PUBLIC_EXTENSIONS = {
     ".7z",
@@ -39,6 +44,7 @@ FORBIDDEN_PUBLIC_EXTENSIONS = {
     ".zip",
 }
 MARKDOWN_LINK = re.compile(r"!?(?:\[[^\]]*\])\(([^)]+)\)")
+MARKDOWN_HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$")
 PRIVATE_PATH = re.compile("(?:/" + "Users/|[A-Za-z]:\\\\Users\\\\)")
 REQUIRED_SOURCE_FIELDS = {
     "id",
@@ -68,17 +74,37 @@ def validate_forbidden_files(errors: list[str]) -> None:
             errors.append(f"proprietary/binary source file is forbidden: {path.relative_to(ROOT)}")
 
 
+def github_markdown_anchors(path: Path) -> set[str]:
+    anchors: set[str] = set()
+    occurrences: dict[str, int] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        match = MARKDOWN_HEADING.match(line)
+        if not match:
+            continue
+        heading = match.group(1)
+        heading = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", heading)
+        heading = re.sub(r"<[^>]+>", "", heading)
+        heading = html.unescape(heading).lower()
+        heading = re.sub(r"[`*_~]", "", heading)
+        base = re.sub(r"[^\w\- ]", "", heading).replace(" ", "-")
+        occurrence = occurrences.get(base, 0)
+        occurrences[base] = occurrence + 1
+        anchors.add(base if occurrence == 0 else f"{base}-{occurrence}")
+    return anchors
+
+
 def validate_markdown_links(errors: list[str]) -> None:
+    anchor_cache: dict[Path, set[str]] = {}
     for path in sorted(ROOT.rglob("*.md")):
         text = path.read_text(encoding="utf-8")
         for raw_target in MARKDOWN_LINK.findall(text):
             target = raw_target.strip().split(maxsplit=1)[0].strip("<>")
-            if not target or target.startswith(("http://", "https://", "mailto:", "#")):
+            if not target or target.startswith(("http://", "https://", "mailto:")):
                 continue
-            local_part = unquote(target.split("#", 1)[0])
-            if not local_part:
-                continue
-            resolved = (path.parent / local_part).resolve()
+            local_target, separator, raw_fragment = target.partition("#")
+            local_part = unquote(local_target)
+            fragment = unquote(raw_fragment).lower()
+            resolved = path.resolve() if not local_part else (path.parent / local_part).resolve()
             try:
                 resolved.relative_to(ROOT)
             except ValueError:
@@ -86,6 +112,11 @@ def validate_markdown_links(errors: list[str]) -> None:
                 continue
             if not resolved.exists():
                 errors.append(f"broken local link: {path.relative_to(ROOT)} -> {target}")
+                continue
+            if separator and fragment and resolved.suffix.lower() == ".md":
+                anchors = anchor_cache.setdefault(resolved, github_markdown_anchors(resolved))
+                if fragment not in anchors:
+                    errors.append(f"broken local anchor: {path.relative_to(ROOT)} -> {target}")
 
 
 def validate_text_hygiene(errors: list[str]) -> None:
@@ -98,10 +129,35 @@ def validate_text_hygiene(errors: list[str]) -> None:
         relative = path.relative_to(ROOT)
         if text and not text.endswith("\n"):
             errors.append(f"text file must end with a newline: {relative}")
-        if any(line.endswith((" ", "\t")) for line in text.splitlines()):
+        lines = text.splitlines()
+        markdown_hard_break = path.suffix.lower() == ".md"
+        invalid_trailing = any(
+            line.endswith("\t")
+            or (
+                len(line) - len(line.rstrip(" ")) > 0
+                and not (markdown_hard_break and len(line) - len(line.rstrip(" ")) == 2)
+            )
+            for line in lines
+        )
+        if invalid_trailing:
             errors.append(f"trailing whitespace: {relative}")
         if PRIVATE_PATH.search(text):
             errors.append(f"private absolute path is forbidden: {relative}")
+
+
+def validate_markdown_structure(errors: list[str]) -> None:
+    for path in sorted(ROOT.rglob("*.md")):
+        if ".git" in path.parts:
+            continue
+        text = path.read_text(encoding="utf-8")
+        relative = path.relative_to(ROOT)
+        h1_count = sum(line.startswith("# ") for line in text.splitlines())
+        if h1_count != 1:
+            errors.append(f"Markdown file must contain exactly one H1: {relative} (found {h1_count})")
+        if text.count("<details>") != text.count("</details>"):
+            errors.append(f"unbalanced details blocks: {relative}")
+        if text.count("```") % 2:
+            errors.append(f"unbalanced fenced code blocks: {relative}")
 
 
 def validate_sources(errors: list[str]) -> None:
@@ -159,6 +215,7 @@ def main() -> int:
     validate_forbidden_files(errors)
     validate_markdown_links(errors)
     validate_text_hygiene(errors)
+    validate_markdown_structure(errors)
     validate_sources(errors)
 
     if errors:

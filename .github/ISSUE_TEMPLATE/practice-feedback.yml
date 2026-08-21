@@ -1,0 +1,52 @@
+name: Practice feedback
+description: Share what changed after using a case, scorecard, or calibration exercise
+title: "[Practice feedback]: "
+labels: ["learner-feedback"]
+body:
+  - type: dropdown
+    id: material
+    attributes:
+      label: Material used
+      options:
+        - Answer calibration pack
+        - Casebook
+        - Mock interview loop
+        - Scorecard
+        - Field operating playbook or worksheets
+        - Study plan
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Target role or skill
+      description: Keep this general; do not name a confidential interview process.
+      placeholder: AI FDE system design, customer discovery, production debugging
+    validations:
+      required: true
+  - type: textarea
+    id: before_after
+    attributes:
+      label: What changed between your first and second attempt?
+      description: Quote one behavior or decision that became more concrete. Scores are optional.
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: Where did the material fail to help?
+      description: Point to a section, missing constraint, or unrealistic assumption.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested revision
+      description: What example, boundary, or artifact would make the material more useful?
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy and content policy
+      options:
+        - label: I removed employer-confidential details, personal data, leaked questions, and paid material.
+          required: true
