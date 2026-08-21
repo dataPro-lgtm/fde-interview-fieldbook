@@ -28,16 +28,36 @@
 5. **证据平面**：trace、日志、评测、反馈、审计和业务指标；
 6. **治理平面**：身份、最小权限、数据用途、安全、合规和责任。
 
+```mermaid
+flowchart TD
+    G["治理平面<br/>身份、用途、合规与责任"] -. 约束 .-> D["数据平面<br/>事实、版本、权限与新鲜度"]
+    G -. 约束 .-> C["控制平面<br/>配置、策略、发布与预算"]
+    D --> X["上下文平面<br/>指令、工具、检索、历史与记忆"]
+    X --> E["执行平面<br/>模型、工作流、Agent、工具与审批"]
+    C --> E
+    E --> O["证据平面<br/>trace、评测、反馈、审计与业务指标"]
+    O --> C
+    O -. 发现数据与权限问题 .-> D
+```
+
+这六个平面不是六套独立系统。数据和上下文进入执行，控制面约束变更，证据面把运行结果反馈给数据和控制，也为治理判断提供依据。
+
 面试中如果只讨论模型和向量库，剩下五个平面会成为追问缺口。
 
 ## 2. RAG：先分层诊断，再谈优化
 
 ### 2.1 一条完整链路
 
-```text
-源数据 -> 变化捕获 -> 解析 -> 规范化 -> 切分 -> embedding/index
-     -> 权限过滤 -> 候选召回 -> 重排 -> 上下文组装
-     -> 生成 -> 引用校验 -> 产品呈现 -> 用户反馈
+```mermaid
+flowchart TD
+    A["源数据与变化事件"] --> B["解析、规范化、版本与删除"]
+    B --> C["切分、向量化与索引"]
+    C --> D["权限前置的候选召回"]
+    D --> E["重排与上下文组装"]
+    E --> F["生成、引用与策略校验"]
+    F --> G["产品呈现与用户动作"]
+    G --> H["失败分类、评测与发布门禁"]
+    H -. 按首次偏离层修复 .-> B
 ```
 
 每层都可能让最终答案失败。更强模型无法读取没进库的文档，也无法修复被错误权限过滤掉的政策。
@@ -204,22 +224,21 @@ A2A 1.0 定义 Agent 的发现、消息、任务、流式状态、订阅、推�
 
 典型结构：
 
-```text
-POST /tasks -> 返回 task_id
-                 |
-                 v
-durable workflow / queue + workers
-  - 持久状态
-  - checkpoint
-  - retries / backoff
-  - idempotency
-  - approval signals
-  - cancellation
-                 |
-                 v
-event store / artifacts
-                 |
-GET /tasks/{id} 或 SSE/WebSocket 重新订阅
+```mermaid
+sequenceDiagram
+    participant C as 客户端
+    participant A as 任意 API Pod
+    participant W as 工作流引擎 / Worker
+    participant E as 状态 / 事件存储
+    C->>A: POST /tasks
+    A->>W: 创建持久任务
+    A-->>C: 返回 task_id
+    W->>W: checkpoint、重试、审批、取消、幂等
+    W->>E: 写状态与带序号的输出事件
+    C->>A: 携 task_id + last_event_id 重连
+    A->>E: 鉴权后读取状态或订阅新事件
+    E-->>A: 回放缺失事件并继续推送
+    A-->>C: SSE / WebSocket / 轮询恢复展示
 ```
 
 浏览器连接只是观察通道，不是任务生命线。多 Pod 下无需粘性会话；任何 API Pod 都能根据 `task_id` 读取状态或订阅事件。Redis 可以做短期 pub/sub 或缓存，但任务事实、幂等与审计通常需要更耐久的数据库/工作流引擎。

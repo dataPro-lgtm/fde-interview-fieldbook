@@ -62,17 +62,16 @@
 
 高层链路：
 
-```text
-Docs/CRM/Tickets
-  -> incremental sync + reconciliation
-  -> canonical document(doc_id, version, tenant, ACL, valid_at, deleted_at)
-  -> parse/chunk/embed/index
-  -> retrieval gateway(user identity -> tenant/RBAC/ABAC filter -> retrieve)
-  -> rerank + version conflict handling
-  -> grounded answer + citations
-  -> policy/citation validation
-  -> agent desktop suggestion
-  -> accept/edit/reject feedback
+```mermaid
+flowchart TD
+    A["Docs / CRM / Tickets"] --> B["增量同步与快照对账"]
+    B --> C["标准文档<br/>doc_id、版本、租户、ACL、有效期、删除状态"]
+    C --> D["解析、切分、向量化与索引"]
+    D --> E["检索网关<br/>用户身份、租户、RBAC / ABAC 前置"]
+    E --> F["重排、版本冲突处理与上下文组装"]
+    F --> G["有依据的答案与引用"]
+    G --> H["策略与引用校验"]
+    H --> I["客服工作台建议<br/>记录采纳、改写与拒绝"]
 ```
 
 关键决策：
@@ -138,16 +137,16 @@ Docs/CRM/Tickets
 
 ### 先还原当前流程
 
-```text
-控制计划
-  -> 确定证据范围和时间窗
-  -> 向系统/负责人收集证据
-  -> 检查完整性和真实性
-  -> 对照控制标准判断
-  -> 记录例外与理由
-  -> reviewer 复核
-  -> 通知 owner 整改
-  -> 形成审计轨迹
+```mermaid
+flowchart TD
+    A["控制计划"] --> B["确定证据范围与时间窗"]
+    B --> C["向系统或负责人收集证据"]
+    C --> D["检查完整性与真实性"]
+    D --> E["对照控制标准判断"]
+    E --> F["记录例外与理由"]
+    F --> G["Reviewer 复核"]
+    G --> H["通知 Owner 整改"]
+    H --> I["形成可追溯审计记录"]
 ```
 
 这里至少有三类工作：确定性数据获取、需要语境的分析、受责任约束的最终判断。把三者都交给一个 Agent，会让权限和责任无法分清。
@@ -176,18 +175,18 @@ Docs/CRM/Tickets
 
 采用受约束工作流，而不是一个自由 Agent：
 
-```text
-Control task created
-  -> deterministic scope + identity binding
-  -> read-only evidence tools (MCP or typed APIs)
-  -> evidence normalization + hashes
-  -> completeness rules
-  -> model-assisted exception analysis
-  -> deterministic citation/coverage checks
-  -> draft workpaper
-  -> human review / request-more-evidence / reject
-  -> approved notification
-  -> immutable audit record
+```mermaid
+flowchart TD
+    A["创建控制测试任务"] --> B["确定性范围与任务身份绑定"]
+    B --> C["只读证据工具<br/>MCP 或 Typed API"]
+    C --> D["证据规范化与哈希"]
+    D --> E["确定性完整性规则"]
+    E --> F["模型辅助分析例外"]
+    F --> G["引用与覆盖率校验"]
+    G --> H["生成工作底稿草稿"]
+    H --> I{"人工复核"}
+    I -->|通过| J["发送获批通知并写入不可变审计记录"]
+    I -->|补证或拒绝| C
 ```
 
 关键控制：
@@ -271,16 +270,16 @@ Control task created
 
 先构建可解释的运营数据模型：
 
-```text
-ERP/MES/WMS/TMS/manual inputs
-  -> CDC/batch ingestion + source checkpoints
-  -> canonical IDs + event-time normalization
-  -> order-production-shipment relationship model
-  -> data-quality rules + quarantine
-  -> feature / rule layer
-  -> baseline risk ranking
-  -> explanation from governed reason codes + evidence
-  -> weekly action board(owner, next action, deadline, outcome)
+```mermaid
+flowchart TD
+    A["ERP / MES / WMS / TMS / 人工输入"] --> B["CDC 或批处理摄取<br/>源端 checkpoint"]
+    B --> C["统一业务 ID 与事件时间"]
+    C --> D["订单—生产—发运关系模型"]
+    D --> E["数据质量规则与隔离区"]
+    E --> F["特征与业务规则层"]
+    F --> G["可解释的延期风险排序"]
+    G --> H["受治理的原因码与证据"]
+    H --> I["每周行动板<br/>Owner、动作、期限、结果"]
 ```
 
 八周内先做规则/简单模型 baseline，不急着上复杂深度模型。原因解释优先由可审计 reason code 和证据生成；LLM 可以把结构化证据转换成适合销售或管理层的语言，但不能编造原因。

@@ -44,6 +44,12 @@ FDE 系统设计的难点，是在需求不完整、数据复杂和上线压力�
 
 ## 4. 同时画三条线
 
+| 视角   | 图上必须出现什么                        | 缺失后的直接后果                 |
+| ------ | --------------------------------------- | -------------------------------- |
+| 数据流 | 来源、版本、转换、存储、检索、权限继承  | 无法判断数据是否正确、最新、可见 |
+| 控制流 | 触发、状态、重试、审批、终止、补偿      | 只画出 happy path，故障无法恢复  |
+| 证据流 | trace、版本指纹、引用、评测、审计和反馈 | 回归、事故与责任只能靠猜         |
+
 ### 数据流
 
 数据从哪里产生，如何摄取、规范化、版本化、存储、检索和返回。标出敏感数据和权限继承。
@@ -163,18 +169,19 @@ FDE 系统设计的难点，是在需求不完整、数据复杂和上线压力�
 
 ### 高层设计
 
-```text
-Source systems
-  -> change capture / snapshot reconciliation
-  -> canonical document + version + ACL
-  -> parse / chunk / embed / index
-  -> retrieval gateway (identity + tenant + ACL first)
-  -> rerank / context assembly
-  -> answer generation
-  -> citation and policy validation
-  -> UI suggestion + feedback
-
-Across the path: trace, versions, evals, audit, freshness SLO
+```mermaid
+flowchart TD
+    A["源系统<br/>文档、CRM、工单"] --> B["变化捕获与快照对账"]
+    B --> C["标准文档<br/>doc_id、版本、ACL"]
+    C --> D["解析、切分、索引"]
+    D --> E["检索网关<br/>身份、租户、权限前置"]
+    E --> F["重排与上下文组装"]
+    F --> G["答案生成"]
+    G --> H["引用与策略校验"]
+    H --> I["工作台建议与反馈"]
+    J["证据控制面<br/>trace、版本、eval、审计、新鲜度 SLO"] -. 贯穿全链路 .-> B
+    J -.-> E
+    J -.-> H
 ```
 
 ### 两个深挖

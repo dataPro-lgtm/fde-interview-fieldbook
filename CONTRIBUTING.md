@@ -39,6 +39,18 @@ For time-sensitive claims, add or update an entry in `data/sources.json` with `l
 - [ ] The change adds no proprietary material or personal data.
 - [ ] `python3 scripts/validate_repo.py` passes.
 
+## Visual language
+
+Use a diagram or table only when it makes a relationship faster to understand than a short paragraph.
+
+- Prefer Mermaid so diagrams remain reviewable, searchable, theme-aware, and editable in Git.
+- Use top-to-bottom flows by default; wide left-to-right diagrams are difficult to read on phones.
+- Keep one diagram focused on one question, typically with five to nine primary steps; split larger diagrams by phase.
+- Use tables for comparisons, scoring anchors, ownership, and decision boundaries; avoid paragraph-sized cells.
+- Introduce every visual with the question it answers, and explain the operational takeaway after it.
+- Do not rely on color alone. Labels and arrow direction must preserve the meaning in dark mode, print, and assistive reading.
+- A visual should not invent precision, replace necessary caveats, or repeat nearby prose without reducing cognitive load.
+
 ## Good first contributions
 
 See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. Small corrections are valuable; a good pull request does not need to add a whole chapter.

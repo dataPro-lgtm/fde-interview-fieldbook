@@ -6,6 +6,7 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- A consistent visual language with maintainable Mermaid flows and compact decision tables across the Chinese guide
 - Role- and time-based Chinese learning map
 - Chapter reading expectations and continuous navigation
 - Twelve-question answer calibration pack with progressive disclosure
