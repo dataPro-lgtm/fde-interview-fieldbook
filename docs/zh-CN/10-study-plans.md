@@ -100,6 +100,7 @@
 任务：
 
 - 运行[90 分钟 AI FDE 模拟面试](../../interview-kits/mock-loops/ai-fde-90-minute.md)或经典版本；
+- 如果已有同伴主持，改用一套[Field Case Lab](../../interview-kits/cases/README.md)检验分轮决策；
 - 请同伴独立评分；
 - 只修两个最高风险行为；
 - 重新录制开场和最差的一题。
@@ -170,6 +171,7 @@
 任务：
 
 - 完成三份一页案例 memo；
+- 从[Field Case Lab](../../interview-kits/cases/README.md)选择至少一套完成盲练和专项评分；
 - 把最强项目做成 10 分钟 presentation；
 - 重写简历和作品集；
 - 运行两次不同风格模拟；
@@ -182,6 +184,7 @@
 - 三个项目故事；
 - 八类行为故事；
 - 三个案例；
+- 一套分轮盲练案例及专项评分；
 - 两次编码录像；
 - 两次系统设计录像；
 - 三次独立评分记录；

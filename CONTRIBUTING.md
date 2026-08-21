@@ -36,8 +36,11 @@ For time-sensitive claims, add or update an entry in `data/sources.json` with `l
 - [ ] Time-sensitive claims have a source and checked date.
 - [ ] Official facts and personal experience are labeled separately.
 - [ ] Internal links work.
+- [ ] Case-pack files and staged artifacts are registered in `data/case-packs.json`.
 - [ ] The change adds no proprietary material or personal data.
 - [ ] `python3 scripts/validate_repo.py` passes.
+- [ ] `python3 scripts/validate_case_packs.py` passes when cases change.
+- [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 
 ## Visual language
 
@@ -53,7 +56,7 @@ Use a diagram or table only when it makes a relationship faster to understand th
 
 ## Good first contributions
 
-See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. Small corrections are valuable; a good pull request does not need to add a whole chapter.
+See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. New case packs must follow the [facilitation standard](interview-kits/cases/facilitation-standard.md); a good pull request does not need to add a whole chapter.
 
 ## Practice feedback
 

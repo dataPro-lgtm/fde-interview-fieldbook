@@ -90,6 +90,8 @@ flowchart TD
 
 不要在一次复盘中修改十个问题。先处理会让面试官停止相信你的问题，例如：没有澄清就上架构、虚构指标、把所有流程 Agent 化、无法区分个人贡献、没有权限或回退方案。
 
+第一次学习某类问题时，可以先读[讲解型案例](07-casebook.md)理解推理主线；真正检验现场能力时，改用[Field Case Lab](../../interview-kits/cases/README.md)。后者把候选人材料、分轮证据和参考复盘分开，避免你因为提前读过答案而高估自己。
+
 ## 6. 推荐学习顺序
 
 ### 软件工程师转 FDE
@@ -102,7 +104,7 @@ flowchart TD
 
 ### 解决方案架构师/售前转 FDE
 
-先读[编码、数据与交付](04-coding-data-delivery.md)，准备能证明亲手实现和调试的材料；然后用[案例册](07-casebook.md)训练从白板走到验收和事故。
+先读[编码、数据与交付](04-coding-data-delivery.md)，准备能证明亲手实现和调试的材料；然后先用[案例册](07-casebook.md)理解主线，再用[Field Case Lab](../../interview-kits/cases/README.md)接受盲练追问。
 
 ### AI 应用工程师转 FDE
 

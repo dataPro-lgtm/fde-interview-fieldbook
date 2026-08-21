@@ -2,7 +2,7 @@
 
 > 一部有来源、重生产、可持续更新的 Forward Deployed Engineer 面试指南。
 
-[English](README.md) · [学习地图](docs/zh-CN/reading-map.md) · [从这里开始](docs/zh-CN/00-start-here.md) · [答案校准](docs/zh-CN/12-answer-calibration.md) · [参与共建](CONTRIBUTING.md)
+[English](README.md) · [学习地图](docs/zh-CN/reading-map.md) · [从这里开始](docs/zh-CN/00-start-here.md) · [Field Case Lab](interview-kits/cases/README.md) · [答案校准](docs/zh-CN/12-answer-calibration.md) · [参与共建](CONTRIBUTING.md)
 
 FDE 面试真正难的地方，不是“既考代码又考沟通”这么简单。它要确认一件更现实的事：当客户只给你一个模糊目标、混乱数据、复杂权限和紧迫时间时，你能否找准问题，亲手把最小闭环做出来，让它稳定进入生产，并把一次项目经验沉淀成下一次可以复用的产品能力。
 
@@ -11,7 +11,7 @@ FDE 面试真正难的地方，不是“既考代码又考沟通”这么简单�
 - 基于 2026 年官方岗位信息整理的 FDE 类型与能力模型；
 - 从岗位理解、客户发现、编码、数据、系统设计到生产 AI 的完整主线；
 - RAG、Agent、上下文工程、MCP、A2A、评测、可观测性、长任务恢复与安全治理；
-- 原创案例、逐步推演、问题详解、模拟面试脚本和可直接使用的评分表；
+- 原创讲解案例，以及分离候选人/面试官材料、按轮释放证据的 Field Case Lab；
 - 来源、时效和修改记录，让项目可以在 GitHub 上长期迭代，而不是发布后迅速过期。
 
 ## 第一次来，先不要通读
@@ -22,6 +22,7 @@ FDE 面试真正难的地方，不是“既考代码又考沟通”这么简单�
 - **一周内准备面试：** 执行[七天冲刺](docs/zh-CN/10-study-plans.md#七天冲刺)，完成一次录像模拟和一页复盘。
 - **知识不少，但回答仍然很散：** 使用[答案校准](docs/zh-CN/12-answer-calibration.md)，看清 2 分、3 分和 4 分回答的证据差异。
 - **系统设计总是先画技术架构：** 进入[完整案例](docs/zh-CN/07-casebook.md)，练习从工作流、约束和风险推导方案。
+- **案例已经看懂，想检验现场反应：** 进入[Field Case Lab](interview-kits/cases/README.md)，让同伴按轮释放证据，不提前打开答案。
 - **想把面试方法带进企业项目：** 使用[企业落地作战手册](docs/zh-CN/13-field-operating-playbook.md)和九份现场模板。
 
 ## 先记住一条主线：FIELD
@@ -75,6 +76,8 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 
 ## 练习工具
 
+- [Field Case Lab：三套可主持的分轮案例](interview-kits/cases/README.md)
+- [案例包运行与评分标准](interview-kits/cases/facilitation-standard.md)
 - [FDE 总评分表](interview-kits/rubrics/master-scorecard.md)
 - [客户发现评分表](interview-kits/rubrics/discovery-scorecard.md)
 - [系统设计评分表](interview-kits/rubrics/system-design-scorecard.md)

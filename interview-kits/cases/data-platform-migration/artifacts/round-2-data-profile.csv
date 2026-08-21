@@ -1,0 +1,7 @@
+source,entity,rows_sampled,duplicate_business_key_pct,null_required_pct,late_update_p99_hours,delete_mode,observed_note
+CoreOrder,order_header,5000000,0.00,0.02,1.2,mixed,Two regions store local time without zone
+CoreOrder,refund,820000,0.03,0.41,6.0,physical,Admin corrections absent from application log
+StoreHub,return_event,1100000,0.18,0.07,71.0,soft,Offline stores upload after reconnect
+PartnerPortal,order_header,730000,2.31,0.00,3.4,soft,Order ID overlaps with StoreHub namespace
+Fulfillment,shipment_event,6100000,0.00,1.62,9.5,append_only,Some split shipments lack order-line mapping
+NewOrder,order_header,5000000,0.84,0.02,0.0,soft,Import kept last row for colliding IDs

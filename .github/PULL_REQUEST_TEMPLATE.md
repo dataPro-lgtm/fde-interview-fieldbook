@@ -15,4 +15,5 @@ What can a reader do or understand better after this change?
 - [ ] Reasoning, trade-offs, and failure boundaries are explained.
 - [ ] No confidential, leaked, paid, personal, or copied material is included.
 - [ ] Internal links pass `python3 scripts/validate_repo.py`.
+- [ ] Case changes pass `python3 scripts/validate_case_packs.py`.
 - [ ] Material changes are noted in `CHANGELOG.md`.

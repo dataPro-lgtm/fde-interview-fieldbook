@@ -10,6 +10,9 @@ body:
       options:
         - Answer calibration pack
         - Casebook
+        - Field Case Lab — data-platform migration
+        - Field Case Lab — air-gapped AI deployment
+        - Field Case Lab — production incident
         - Mock interview loop
         - Scorecard
         - Field operating playbook or worksheets

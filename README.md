@@ -2,7 +2,7 @@
 
 > A source-backed, production-first field guide for Forward Deployed Engineer interviews.
 
-[简体中文](README.zh-CN.md) · [Start here](docs/en/start-here.md) · [Chinese learning map](docs/zh-CN/reading-map.md) · [Answer calibration](docs/zh-CN/12-answer-calibration.md) · [Contributing](CONTRIBUTING.md)
+[简体中文](README.zh-CN.md) · [Start here](docs/en/start-here.md) · [Chinese learning map](docs/zh-CN/reading-map.md) · [Field Case Lab (Chinese)](interview-kits/cases/README.md) · [Answer calibration](docs/zh-CN/12-answer-calibration.md) · [Contributing](CONTRIBUTING.md)
 
 FDE interviews do not only ask whether you can write code. They test whether you can enter an ambiguous customer environment, find the real workflow, ship a thin but valuable system, keep it reliable in production, and turn field learning into reusable product capability.
 
@@ -11,7 +11,7 @@ This repository is a living handbook for that whole job. It combines:
 - a current, source-backed map of FDE role archetypes;
 - a practical interview operating system rather than a leaked-question dump;
 - production AI coverage: RAG, agents, context engineering, MCP, A2A, evals, observability, durable execution, security, and data operations;
-- original cases, answer walkthroughs, scorecards, and study plans;
+- original walkthroughs and facilitator-ready case packs with staged evidence, role-separated briefs, and case-specific rubrics;
 - a transparent update process so time-sensitive claims can be reviewed and refreshed.
 
 ## Why another FDE guide?
@@ -51,9 +51,9 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 | Time available       | Recommended path                                                                                                                   | Output                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | 60 minutes           | Read the [role map](docs/en/role-map.md), then score yourself with the [master rubric](interview-kits/rubrics/master-scorecard.md) | A prioritized gap list                         |
-| 7 days               | Follow the [7-day sprint](docs/zh-CN/10-study-plans.md#七天冲刺) and complete Case 1                                               | One recorded mock plus one case memo           |
+| 7 days               | Follow the [7-day sprint](docs/zh-CN/10-study-plans.md#七天冲刺) and run one [Field Case Lab](interview-kits/cases/README.md)        | One recorded mock plus one scored case memo    |
 | 30 days              | Follow the [30-day plan](docs/zh-CN/10-study-plans.md#三十天计划), run three mock loops, and build a portfolio narrative           | Interview-ready evidence across all dimensions |
-| Already interviewing | Use the [question bank](docs/zh-CN/08-question-bank.md), [cases](docs/zh-CN/07-casebook.md), and company archetypes                | Targeted practice, not broad rereading         |
+| Already interviewing | Use the [question bank](docs/zh-CN/08-question-bank.md), [worked cases](docs/zh-CN/07-casebook.md), and [blind case labs](interview-kits/cases/README.md) | Targeted practice, not broad rereading         |
 
 ## Handbook map
 
@@ -78,6 +78,8 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 
 ### Practice kits
 
+- [Field Case Lab: three facilitator-ready case packs](interview-kits/cases/README.md)
+- [Case facilitation standard](interview-kits/cases/facilitation-standard.md)
 - [Master scorecard](interview-kits/rubrics/master-scorecard.md)
 - [Customer discovery scorecard](interview-kits/rubrics/discovery-scorecard.md)
 - [System design scorecard](interview-kits/rubrics/system-design-scorecard.md)

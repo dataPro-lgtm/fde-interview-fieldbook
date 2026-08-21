@@ -1,0 +1,6 @@
+segment,source_records,target_records,count_delta_pct,source_net_amount,target_net_amount,amount_delta_pct,missing_privacy_deletes,latest_event_lag_minutes
+North,842190,842190,0.000,68123044.18,68123044.18,0.000,0,12
+West,614882,609991,-0.796,47200811.66,47115220.04,-0.181,0,18
+Central,732041,732041,0.000,58391200.22,58391200.22,0.000,41,16
+Partner,193407,188936,-2.312,17003211.95,16610009.70,-2.313,0,37
+Returns,155803,155781,-0.014,-9011442.32,-8940211.87,0.790,7,284

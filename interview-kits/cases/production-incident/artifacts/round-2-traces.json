@@ -1,0 +1,57 @@
+{
+  "healthy_trace": {
+    "request_id": "req-healthy-017",
+    "tenant_id": "tenant-blue",
+    "case_id": "case-8841",
+    "workflow_run_id": "run-1001",
+    "model_version": "model-2026-07-18",
+    "prompt_version": "support-v31",
+    "knowledge_index": "kb-2026-08-10-full",
+    "knowledge_document_count": 18420,
+    "retrieved_document_ids": ["policy-refund-v12", "procedure-credit-v7"],
+    "answer_has_supported_citation": true,
+    "credit_action_requested": false
+  },
+  "failed_answer_trace": {
+    "request_id": "req-failed-221",
+    "tenant_id": "tenant-blue",
+    "case_id": "case-9914",
+    "workflow_run_id": "run-2004",
+    "model_version": "model-2026-07-18",
+    "prompt_version": "support-v31",
+    "knowledge_index": "kb-2026-08-18-full",
+    "knowledge_document_count": 3691,
+    "retrieved_document_ids": ["faq-credit-summary-v3"],
+    "expected_document_missing": "policy-refund-v12",
+    "answer_has_supported_citation": false,
+    "final_state": "partial"
+  },
+  "duplicate_credit_traces": [
+    {
+      "request_id": "req-credit-441",
+      "tenant_id": "tenant-green",
+      "case_id": "case-7730",
+      "workflow_run_id": "run-3010",
+      "tool_call_id": "call-8101",
+      "idempotency_key_sent": "run-3010:call-8101",
+      "gateway_timeout_seconds": 3,
+      "gateway_result": "timeout",
+      "provider_ledger_result": "applied",
+      "amount_usd": 30,
+      "started_at": "09:11:02"
+    },
+    {
+      "request_id": "req-credit-441-retry",
+      "tenant_id": "tenant-green",
+      "case_id": "case-7730",
+      "workflow_run_id": "run-3011",
+      "tool_call_id": "call-8102",
+      "idempotency_key_sent": "run-3011:call-8102",
+      "gateway_timeout_seconds": 3,
+      "gateway_result": "applied",
+      "provider_ledger_result": "applied",
+      "amount_usd": 30,
+      "started_at": "09:11:13"
+    }
+  ]
+}

@@ -20,6 +20,7 @@ REQUIRED = {
     "CONTRIBUTING.md",
     "CITATION.cff",
     "DISCLAIMER.md",
+    "data/case-packs.json",
     "data/sources.json",
     "docs/zh-CN/00-start-here.md",
     "docs/zh-CN/06-production-ai.md",
@@ -29,6 +30,8 @@ REQUIRED = {
     "docs/zh-CN/13-field-operating-playbook.md",
     "interview-kits/rubrics/master-scorecard.md",
     "interview-kits/rubrics/reviewer-calibration.md",
+    "interview-kits/cases/README.md",
+    "interview-kits/cases/facilitation-standard.md",
     "interview-kits/worksheets/field-delivery-pack.md",
 }
 FORBIDDEN_PUBLIC_EXTENSIONS = {
@@ -123,7 +126,7 @@ def validate_text_hygiene(errors: list[str]) -> None:
     for path in sorted(ROOT.rglob("*")):
         if ".git" in path.parts or not path.is_file():
             continue
-        if path.suffix.lower() not in {".cff", ".json", ".md", ".py", ".yml", ".yaml"}:
+        if path.suffix.lower() not in {".cff", ".csv", ".json", ".md", ".py", ".yml", ".yaml"}:
             continue
         text = path.read_text(encoding="utf-8")
         relative = path.relative_to(ROOT)
