@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "2026-Q3",
+  "as_of": "2026-08-21",
+  "methodology": {
+    "unit": "public official job posting or official role index",
+    "counting_rule": "Record observable role families, locations, and requirements; do not estimate market size or preserve volatile search-result totals as a trend metric.",
+    "limitations": [
+      "The sample is deliberately small and first-party; it is not a census of FDE hiring.",
+      "A listed job location does not prove the location of every customer engagement.",
+      "A requirement on one regional posting is not generalized to other regions unless another source supports it.",
+      "A removed posting proves only that the page is no longer available, not that a role family has disappeared."
+    ]
+  },
+  "observations": [
+    {
+      "id": "openai-role-index",
+      "source_id": "openai-fde-search-2026",
+      "employer": "OpenAI",
+      "role_family": "multi-archetype deployment organization",
+      "job_locations": [
+        {
+          "region": "North America",
+          "locations": ["New York City", "San Francisco", "Seattle"]
+        },
+        {
+          "region": "East Asia",
+          "locations": ["Seoul", "Tokyo"]
+        },
+        {
+          "region": "Southeast Asia",
+          "locations": ["Singapore"]
+        },
+        {
+          "region": "Australia",
+          "locations": ["Sydney"]
+        },
+        {
+          "region": "Middle East",
+          "locations": ["Abu Dhabi"]
+        }
+      ],
+      "archetypes": ["core_platform", "vertical", "software_engineering", "deployment_leadership"],
+      "signals": [
+        "The public index separates FDE, forward-deployed software engineering, and technical deployment leadership.",
+        "The checked index visibly separates general roles from healthcare and semiconductor variants while the live set continues to change.",
+        "The same official search result can change quickly, so this snapshot records role presence rather than treating a headline total as a market metric."
+      ],
+      "scope_note": "One employer's public index; useful for observing role-family structure, not total market demand."
+    },
+    {
+      "id": "openai-tokyo-fde",
+      "source_id": "openai-fde-tokyo-2026",
+      "employer": "OpenAI",
+      "role_family": "core-platform AI FDE",
+      "job_locations": [
+        {
+          "region": "East Asia",
+          "locations": ["Tokyo"]
+        }
+      ],
+      "archetypes": ["core_platform", "ai_lab"],
+      "signals": [
+        "The posting requires spoken and written Japanese and English.",
+        "Travel is expected mainly within Japan.",
+        "Success is tied to production adoption, measurable workflow impact, and eval-driven product feedback."
+      ],
+      "scope_note": "The bilingual and domestic-travel requirements apply to this Tokyo posting, not automatically to every role in Japan or Asia."
+    },
+    {
+      "id": "anthropic-us-fde",
+      "source_id": "anthropic-fde-2026",
+      "employer": "Anthropic",
+      "role_family": "AI-lab FDE",
+      "job_locations": [
+        {
+          "region": "North America",
+          "locations": ["New York City", "San Francisco", "Seattle"]
+        }
+      ],
+      "archetypes": ["ai_lab", "core_platform"],
+      "signals": [
+        "Production artifacts explicitly include MCP servers, sub-agents, and agent skills.",
+        "The role combines discovery, production LLM engineering, evaluation, enterprise deployment, and reusable pattern capture.",
+        "The posting estimates customer-site travel at 25 percent, depending on location."
+      ],
+      "scope_note": "A single US multi-location posting from one AI lab."
+    },
+    {
+      "id": "scale-us-genai-fde",
+      "source_id": "scale-genai-fde-2026",
+      "employer": "Scale AI",
+      "role_family": "data and model-supply-chain FDE",
+      "job_locations": [
+        {
+          "region": "North America",
+          "locations": ["New York City", "San Francisco"]
+        }
+      ],
+      "archetypes": ["data_infrastructure", "full_stack"],
+      "signals": [
+        "The role centers high-quality data infrastructure, customer and operator systems, and low-turnaround delivery.",
+        "Large-scale processing, distributed systems, full-stack delivery, and rapid experimentation remain explicit signals."
+      ],
+      "scope_note": "A US posting in a data-engine business; it should not be generalized to every AI FDE role."
+    },
+    {
+      "id": "vercel-us-fde",
+      "source_id": "vercel-fde-2026",
+      "employer": "Vercel",
+      "role_family": "migration and AI-builder FDE",
+      "job_locations": [
+        {
+          "region": "North America",
+          "locations": ["Austin", "New York City", "San Francisco"]
+        }
+      ],
+      "archetypes": ["migration_modernization", "ai_builder"],
+      "signals": [
+        "The posting explicitly separates a Next.js-focused profile from an AI-builder profile.",
+        "Production agents, MCP servers, migrations, code audits, performance work, and customer enablement coexist in one role family."
+      ],
+      "scope_note": "A US professional-services posting with employer-specific product depth."
+    },
+    {
+      "id": "diligent-uk-fde",
+      "source_id": "diligent-fde-2026",
+      "employer": "Diligent",
+      "role_family": "regulated vertical AI FDE",
+      "job_locations": [
+        {
+          "region": "Europe",
+          "locations": ["London"]
+        }
+      ],
+      "archetypes": ["vertical", "ai_lab"],
+      "signals": [
+        "The role focuses risk, audit, and compliance workflows with customers across Europe and the United States.",
+        "Golden datasets, regression infrastructure, tracing, guardrails, and judgment about whether a workflow needs an agent are explicit requirements."
+      ],
+      "scope_note": "One London-based vertical SaaS posting; customer footprint is not the same as job-location demand."
+    }
+  ],
+  "geography_views": [
+    {
+      "region": "North America",
+      "evidence_ids": ["openai-role-index", "anthropic-us-fde", "scale-us-genai-fde", "vercel-us-fde"],
+      "observed_signals": [
+        "The sample contains distinct core-platform, data-infrastructure, migration, AI-builder, vertical, and deployment-leadership roles.",
+        "Several postings make customer-facing production delivery and reusable field learning explicit rather than treating them as post-sales support."
+      ],
+      "candidate_implications": [
+        "Choose a primary engineering spine instead of presenting as a generic AI generalist.",
+        "Prepare evidence for hands-on production delivery, adoption, and product feedback in addition to model knowledge."
+      ],
+      "limitations": "The sample is concentrated in US technology employers and does not represent all North American industries or cities."
+    },
+    {
+      "region": "Europe",
+      "evidence_ids": ["diligent-uk-fde"],
+      "observed_signals": [
+        "The sampled London role combines regulated workflows, agent reliability, customer trust, and cross-region customer travel."
+      ],
+      "candidate_implications": [
+        "For a regulated vertical role, show how evidence, explainability, human responsibility, and regression control become system behavior."
+      ],
+      "limitations": "This quarter has one Europe-based official posting in the structured sample; it supports a role example, not a Europe-wide pattern."
+    },
+    {
+      "region": "East Asia",
+      "evidence_ids": ["openai-role-index", "openai-tokyo-fde"],
+      "observed_signals": [
+        "The official index shows Tokyo and Seoul role presence.",
+        "The Tokyo posting explicitly requires Japanese-English bilingual work and mainly domestic travel while keeping the same end-to-end production and adoption mandate."
+      ],
+      "candidate_implications": [
+        "Treat local-language discovery and cross-language technical communication as demonstrable delivery skills when the posting requires them.",
+        "Do not replace engineering evidence with cultural familiarity; the sampled role still requires full-stack production delivery."
+      ],
+      "limitations": "The detailed regional requirement comes from one Tokyo posting. No claim is made about every employer in Japan, Korea, or East Asia."
+    },
+    {
+      "region": "Other observed regions",
+      "evidence_ids": ["openai-role-index"],
+      "observed_signals": [
+        "The sampled official index also lists roles in Singapore, Sydney, and Abu Dhabi."
+      ],
+      "candidate_implications": [
+        "Read the live posting for language, travel, work authorization, and customer-footprint requirements rather than transferring assumptions from a US role."
+      ],
+      "limitations": "Presence in one employer index is the only supported conclusion; the sample is too thin for regional capability comparisons."
+    }
+  ]
+}

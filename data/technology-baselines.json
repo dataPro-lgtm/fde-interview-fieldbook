@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-08-21",
+  "entries": [
+    {
+      "id": "mcp-2026-07-28",
+      "technology": "MCP",
+      "baseline": "2026-07-28 specification",
+      "status": "current_release",
+      "source_ids": ["mcp-spec-2026-07-28"],
+      "changes": [
+        "The protocol core is stateless and no longer depends on an initialize session exchange.",
+        "Multi Round-Trip Requests replace server-initiated interactions that required a continuously held stream.",
+        "Method and tool headers enable gateway routing and policy enforcement without parsing request bodies.",
+        "List responses carry cache hints and deterministic ordering.",
+        "Tasks are an extension; authorization adds issuer validation and moves away from Dynamic Client Registration toward Client ID Metadata Documents.",
+        "Roots, Sampling, Logging, and legacy HTTP plus SSE are deprecated with a stated migration window."
+      ],
+      "production_implications": [
+        "Do not require sticky sessions merely to host a conformant remote MCP server.",
+        "Keep application task state explicit even though the transport core is stateless.",
+        "Validate authorization issuers, bind credentials to issuers, and plan migration away from deprecated registration patterns.",
+        "Version clients, servers, extensions, and tool contracts independently; protocol adoption does not remove tool-level authorization or idempotency work."
+      ],
+      "watch_items": [
+        "Extension interoperability and enterprise authorization adoption",
+        "SDK migration behavior across supported languages",
+        "Removal dates and replacement maturity for deprecated features"
+      ],
+      "change_log": [
+        {
+          "date": "2026-07-28",
+          "kind": "release",
+          "summary": "Adopted the stateless core, extensions framework, Tasks lifecycle, authorization hardening, cache hints, and formal deprecations as the project baseline."
+        }
+      ]
+    },
+    {
+      "id": "a2a-1-0",
+      "technology": "A2A",
+      "baseline": "1.0",
+      "status": "stable_release",
+      "source_ids": ["a2a-spec-1-0"],
+      "changes": [
+        "Version 1.0 is the first stable protocol release.",
+        "The release adds multiple protocol bindings, version negotiation, multi-tenancy support, and signed Agent Cards.",
+        "Task results can be consumed through polling, streaming, or webhooks.",
+        "A2A remains complementary to MCP: it addresses independent-agent interoperability rather than agent-to-tool access."
+      ],
+      "production_implications": [
+        "Use A2A when an agent boundary is also a product, platform, vendor, or organizational boundary; use an in-process contract for local decomposition.",
+        "Verify agent identity and metadata, negotiate versions, scope tenant identity, and persist task state independently of a live stream.",
+        "Treat webhook delivery, replay, authorization, and artifact retention as application responsibilities."
+      ],
+      "watch_items": [
+        "Language-SDK conformance and migration coverage",
+        "Operational guidance for signed Agent Cards and trust roots",
+        "Extension and custom-binding interoperability"
+      ],
+      "change_log": [
+        {
+          "date": "2026-08-21",
+          "kind": "release",
+          "summary": "Moved the project baseline from pre-1.0 drafts to the first stable release and recorded the enterprise migration implications."
+        }
+      ]
+    },
+    {
+      "id": "otel-genai-dedicated-repository",
+      "technology": "OpenTelemetry GenAI",
+      "baseline": "dedicated GenAI semantic-conventions repository",
+      "status": "evolving_specification",
+      "source_ids": ["otel-genai-semconv-2026"],
+      "changes": [
+        "GenAI semantic conventions moved out of the core semantic-conventions documentation into a dedicated OpenTelemetry repository.",
+        "The dedicated model covers GenAI client signals, agents, MCP, provider conventions, spans, metrics, and events.",
+        "The repository still identifies schema-version work as incomplete, so adopters should not imply a single frozen production schema."
+      ],
+      "production_implications": [
+        "Pin the semantic-convention revision used by instrumentation and record it with telemetry pipeline versions.",
+        "Translate provider-specific traces into a controlled internal contract instead of coupling every consumer to a moving upstream field set.",
+        "Collect prompts, retrieval queries, tool arguments, and outputs only under explicit privacy, retention, and access policies."
+      ],
+      "watch_items": [
+        "Published schema URL and versioning policy",
+        "Stability levels for agent and MCP signals",
+        "Reference implementation conformance coverage"
+      ],
+      "change_log": [
+        {
+          "date": "2026-08-21",
+          "kind": "repository_move",
+          "summary": "Updated the baseline to the dedicated OpenTelemetry GenAI semantic-conventions repository and marked it as evolving rather than stable."
+        }
+      ]
+    },
+    {
+      "id": "owasp-agentic-top10-2026",
+      "technology": "OWASP Agentic Security",
+      "baseline": "Top 10 for Agentic Applications 2026",
+      "status": "current_guidance",
+      "source_ids": ["owasp-agentic-top10-2026"],
+      "changes": [
+        "The project now has an agent-specific risk baseline rather than relying only on LLM application risks.",
+        "The taxonomy covers goal hijack, tool misuse, identity and privilege abuse, supply chain, unexpected code execution, memory poisoning, inter-agent communication, cascading failures, human-agent trust, and rogue agents."
+      ],
+      "production_implications": [
+        "Threat-model goals, tools, identities, memory, inter-agent boundaries, and cascading side effects as separate attack surfaces.",
+        "Connect design controls to adversarial tests, runtime detection, incident response, and recovery; a policy paragraph alone is not an enforced invariant.",
+        "Use the Top 10 as a coverage checklist, not proof that a system is secure or compliant."
+      ],
+      "watch_items": [
+        "Revisions to the threat and mitigation taxonomy",
+        "Crosswalks to other governance and security standards",
+        "New incident patterns that change control priorities"
+      ],
+      "change_log": [
+        {
+          "date": "2026-08-21",
+          "kind": "baseline",
+          "summary": "Established the 2026 Agentic Top 10 as the fieldbook's current agent-security coverage baseline."
+        }
+      ]
+    }
+  ]
+}

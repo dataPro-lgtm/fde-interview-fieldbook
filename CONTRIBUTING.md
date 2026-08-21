@@ -19,7 +19,9 @@ Classify external claims as one of:
 2. **Corroborated** — at least two credible, independent sources agree.
 3. **Community** — practitioner experience that is useful but not authoritative.
 
-For time-sensitive claims, add or update an entry in `data/sources.json` with `last_checked`. Do not turn a single community interview report into a company-wide statement.
+For time-sensitive claims, add or update an entry in `data/sources.json` with `last_checked`. Quarterly role observations belong in `data/role-radar/<year>-Q<quarter>.json`; MCP, A2A, observability, and agent-security changes belong in `data/technology-baselines.json`. Do not turn a single community interview report into a company-wide statement.
+
+If credible sources conflict, do not silently choose one. Follow the [claim-review process](docs/research/claim-review-process.md), preserve the disputed scope, and state what evidence would resolve it.
 
 ## Content rules
 
@@ -40,6 +42,7 @@ For time-sensitive claims, add or update an entry in `data/sources.json` with `l
 - [ ] The change adds no proprietary material or personal data.
 - [ ] `python3 scripts/validate_repo.py` passes.
 - [ ] `python3 scripts/validate_case_packs.py` passes when cases change.
+- [ ] `python3 scripts/validate_research_data.py` passes when role-radar or baseline data changes.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 - [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 
@@ -54,8 +57,11 @@ Use a diagram or table only when it makes a relationship faster to understand th
 - Introduce every visual with the question it answers, and explain the operational takeaway after it.
 - Do not rely on color alone. Labels and arrow direction must preserve the meaning in dark mode, print, and assistive reading.
 - A visual should not invent precision, replace necessary caveats, or repeat nearby prose without reducing cognitive load.
+- Every visual must have adjacent prose that preserves the conclusion for readers who cannot use the diagram or wide table.
 
 Changed Mermaid blocks are rendered in CI with a pinned CLI. Public links are checked separately on a weekly schedule so transient network failures do not block ordinary pull requests. Only public HTTPS links are accepted; localhost, private-network targets, and non-standard ports are rejected before a request is sent.
+
+The complete accessibility baseline is in [ACCESSIBILITY.md](ACCESSIBILITY.md). Translation changes must preserve certainty, warnings, and scope rather than optimizing only for fluent wording.
 
 ## Good first contributions
 

@@ -1,0 +1,78 @@
+name: Claim dispute or evidence review
+description: Challenge the accuracy, scope, freshness, translation, or safety of a published claim
+title: "[Claim review]: "
+labels: ["content"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Exact page and section
+      placeholder: docs/research/role-radar/2026-Q3.md — East Asia view
+    validations:
+      required: true
+  - type: dropdown
+    id: dispute_type
+    attributes:
+      label: Dispute type
+      options:
+        - Accuracy or unsupported claim
+        - Scope is too broad
+        - Source or version is stale
+        - Translation changed the meaning
+        - Production or security advice may be harmful
+        - Conflicting credible sources
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim under review
+      description: Quote only the shortest repository passage needed to identify the claim.
+    validations:
+      required: true
+  - type: dropdown
+    id: authority
+    attributes:
+      label: Strongest evidence level
+      options:
+        - Official employer, specification, or standards source
+        - Corroborated by multiple independent sources
+        - Community experience
+        - Reasoning or counterexample without an external source
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Direct evidence and date checked
+      description: Provide direct URLs, checked dates, and the narrow statement each source supports.
+      placeholder: https://... — checked YYYY-MM-DD — supports...
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Scope, conflict, and uncertainty
+      description: State the team, level, geography, protocol version, time period, exceptions, or counterevidence.
+    validations:
+      required: true
+  - type: dropdown
+    id: suggested_outcome
+    attributes:
+      label: Suggested outcome
+      options:
+        - Accept and correct
+        - Narrow the claim
+        - Split by condition
+        - Downgrade the evidence level
+        - Mark unresolved pending evidence
+        - Remove the claim
+    validations:
+      required: true
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Privacy and content policy
+      options:
+        - label: This report contains no confidential, leaked, paid, personal, or private hiring material.
+          required: true

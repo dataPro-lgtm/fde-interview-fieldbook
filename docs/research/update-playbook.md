@@ -13,6 +13,12 @@ GitHub Actions 每月检查 `data/sources.json` 的 `last_checked`。每个来�
 5. 更新 `last_checked` 和 `CHANGELOG.md`；
 6. 运行 `python3 scripts/validate_repo.py`。
 
+若来源同时被季度雷达或技术基线引用，还要运行：
+
+```bash
+python3 scripts/validate_research_data.py
+```
+
 ## 每周外链巡检
 
 定时工作流每周检查正文链接和 `data/sources.json` 中登记的来源。它与来源时效检查解决不同问题：时效检查判断“多久没有人工复核”，外链检查判断“地址现在是否还能到达”。
@@ -49,6 +55,20 @@ python3 scripts/validate_mermaid.py --files docs/zh-CN/06-production-ai.md
 - 减弱或消失的信号；
 - 对面试准备的调整；
 - 推断、成立条件和失效边界。
+
+机器数据放在 `data/role-radar/<year>-Q<quarter>.json`，阅读版放在 `docs/research/role-radar/`。必须区分岗位地点、客户覆盖和候选人要求；不得把公开搜索结果数解释为市场规模。完成后更新档案索引并运行研究数据校验器。
+
+## 技术基线变更
+
+MCP、A2A、OpenTelemetry GenAI 和 Agent 安全只记录会改变生产设计的正式变化。每条记录包含当前基线、稳定状态、来源 ID、变化、生产影响、待观察项和日期化 change log。
+
+以下内容不进入基线账本：单个 SDK 补丁、厂商营销命名、未经验证的社区预测和没有迁移影响的措辞调整。
+
+## 争议事实
+
+对岗位、地区、协议状态、安全建议或翻译含义存在争议时，使用结构化 Claim dispute Issue。先固定段落与 commit，再拆分事实、解释和建议，最后选择接受、缩窄、分拆、降级、未决或驳回。
+
+不要为了得到整齐结论而抹掉团队、地区、版本或时间差异。重大决定进入 `CHANGELOG.md`；未决项写清缺少的证据和下一次复核点。
 
 ## 问题与案例更新
 

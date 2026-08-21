@@ -48,12 +48,12 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 
 ## v0.4 — Role radar and accessibility
 
-- [ ] Add quarterly snapshots instead of overwriting history
-- [ ] Track role archetypes by geography without inferring private hiring data
-- [ ] Add a change log for MCP, A2A, observability, and agent-security baselines
-- [ ] Add a community review process for disputed claims
-- [ ] Expand English translations of the highest-use chapters
-- [ ] Evaluate a generated documentation site after the content hierarchy stabilizes
+- [x] Add quarterly snapshots instead of overwriting history
+- [x] Track role archetypes by geography without inferring private hiring data
+- [x] Add a change log for MCP, A2A, observability, and agent-security baselines
+- [x] Add a community review process for disputed claims
+- [x] Expand English translations of the highest-use chapters
+- [x] Evaluate a generated documentation site after the content hierarchy stabilizes
 
 ## v1.0 — Mature fieldbook
 

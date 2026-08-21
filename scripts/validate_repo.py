@@ -14,7 +14,9 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = {
+    ".github/ISSUE_TEMPLATE/claim-dispute.yml",
     ".github/workflows/external-link-health.yml",
+    "ACCESSIBILITY.md",
     "README.md",
     "README.zh-CN.md",
     "LICENSE",
@@ -22,7 +24,18 @@ REQUIRED = {
     "CITATION.cff",
     "DISCLAIMER.md",
     "data/case-packs.json",
+    "data/role-radar/2026-Q3.json",
     "data/sources.json",
+    "data/technology-baselines.json",
+    "docs/en/interview-loop.md",
+    "docs/en/portfolio-evidence.md",
+    "docs/en/reading-map.md",
+    "docs/en/system-design.md",
+    "docs/research/claim-review-process.md",
+    "docs/research/documentation-site-evaluation.md",
+    "docs/research/role-radar/2026-Q3.md",
+    "docs/research/role-radar/README.md",
+    "docs/research/technology-baseline-changelog.md",
     "docs/zh-CN/00-start-here.md",
     "docs/zh-CN/06-production-ai.md",
     "docs/zh-CN/07-casebook.md",
@@ -36,7 +49,9 @@ REQUIRED = {
     "interview-kits/worksheets/field-delivery-pack.md",
     "scripts/check_external_links.py",
     "scripts/validate_mermaid.py",
+    "scripts/validate_research_data.py",
     "tests/test_maintenance_scripts.py",
+    "tests/test_research_data.py",
 }
 FORBIDDEN_PUBLIC_EXTENSIONS = {
     ".7z",
