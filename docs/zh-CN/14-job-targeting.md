@@ -196,4 +196,4 @@ JD 信号
 
 ---
 
-[← 上一章：企业落地作战手册](13-field-operating-playbook.md) · [学习地图](reading-map.md) · [开始岗位定向训练 →](../../interview-kits/role-playbooks/README.md)
+[← 上一章：企业落地作战手册](13-field-operating-playbook.md) · [学习地图](reading-map.md) · [下一章：从阅读转向刻意训练 →](15-guided-practice.md)

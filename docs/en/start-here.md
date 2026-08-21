@@ -91,4 +91,4 @@ You are ready when you can consistently:
 - explain one failure without blame or false certainty;
 - distinguish official hiring evidence from community reports.
 
-Next: [Role map](role-map.md) · [Job targeting](job-targeting.md) · [English reading map](reading-map.md).
+Next: [Guided practice](guided-practice.md) · [Role map](role-map.md) · [Job targeting](job-targeting.md) · [English reading map](reading-map.md).

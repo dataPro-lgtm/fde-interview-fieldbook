@@ -21,6 +21,8 @@ Classify external claims as one of:
 
 For time-sensitive claims, add or update an entry in `data/sources.json` with `last_checked`. Quarterly role observations belong in `data/role-radar/<year>-Q<quarter>.json`; MCP, A2A, observability, and agent-security changes belong in `data/technology-baselines.json`. Role-playbook signals belong in `data/role-playbooks.json` and must point to registered sources; interview surfaces remain labeled hypotheses until first-party confirmation. Do not turn a single community interview report into a company-wide statement.
 
+Guided-practice routes belong in `data/learning-paths.json`. Every session must name existing repository inputs, an inspectable learner output, and at least two observable completion checks. Reading a page, spending time, or self-reporting confidence is not sufficient completion evidence.
+
 If credible sources conflict, do not silently choose one. Follow the [claim-review process](docs/research/claim-review-process.md), preserve the disputed scope, and state what evidence would resolve it.
 
 ## Content rules
@@ -45,6 +47,7 @@ If credible sources conflict, do not silently choose one. Follow the [claim-revi
 - [ ] `python3 scripts/validate_case_packs.py` passes when cases change.
 - [ ] `python3 scripts/validate_research_data.py` passes when role-radar or baseline data changes.
 - [ ] `python3 scripts/validate_role_playbooks.py` passes when role-targeting assets change.
+- [ ] `python3 scripts/validate_learning_paths.py` passes when guided-practice assets change.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 - [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 

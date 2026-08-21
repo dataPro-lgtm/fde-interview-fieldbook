@@ -6,6 +6,10 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- Machine-readable 7-day, 14-day, and 30-day guided-practice paths with 29 ordered sessions
+- A Chinese route-selection chapter, an English high-use counterpart, and a reusable evidence-first practice journal
+- A dependency-free learning-path validator, boundary tests, CI integration, and a v0.6-to-v1.0 execution contract
+- A v0.6 validation record that separates structural readiness from independent learner outcomes
 - A JD-to-evidence chapter that separates public facts, interview hypotheses, direct evidence, adjacent evidence, exercises, and real gaps
 - Role-targeting playbooks for AI/Agent, data-platform, and regulated AI deployment FDE paths
 - A completed synthetic targeting campaign plus reusable role brief, evidence matrix, practice board, red-team cards, and debrief templates
@@ -24,6 +28,8 @@ All notable changes to the fieldbook are recorded here.
 
 ### Changed
 
+- Entry points now route readers from time and role constraints to explicit artifacts and completion evidence
+- Content-quality CI now validates learning-path order, inputs, outputs, evidence checks, and path limits
 - Entry points now route readers with a live JD into role-specific evidence and practice instead of broad rereading
 - Content-quality CI now validates role-playbook source references, evidence boundaries, and practice-asset paths
 - Role evidence no longer treats volatile official search totals as a labor-market metric

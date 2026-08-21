@@ -68,13 +68,49 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 - [ ] Pilot the campaign workflow with at least three job-seeking readers from different engineering backgrounds
 - [ ] Revise any exercise whose evidence level or completion rule needs author explanation
 
+## v0.6 — Guided practice system
+
+- [x] Publish machine-readable 7-day, 14-day, and 30-day learning paths
+- [x] Give every session explicit inputs, learner output, and observable completion checks
+- [x] Add a reusable practice journal and a route-selection chapter in Chinese and English
+- [x] Validate path continuity, referenced assets, and minimum completion evidence in CI
+- [x] Publish an automated v0.6 release record without claiming learner outcomes
+
+## v0.7 — Ten production Field Case Labs
+
+- [ ] Expand from three to ten original, spoiler-separated production cases
+- [ ] Cover agent side effects, knowledge lifecycle, durable execution, evaluation regression, cross-border delivery, adoption rescue, and connector productization
+- [ ] Strengthen the case contract with risk, skill, and release-gate metadata
+- [ ] Run every case through artifact, privacy, and facilitation-contract validation
+- [ ] Record independent-facilitator status separately from automated readiness
+
+## v0.8 — Reviewer calibration and evidence quality
+
+- [ ] Publish cross-role scoring anchors and adjudication examples
+- [ ] Add machine-readable calibration scenarios and validator coverage
+- [ ] Provide a blind first-score, adjudication, and second-score protocol
+- [ ] Measure reviewer disagreement without fabricating external pilot results
+- [ ] Publish a v0.8 validation record separating internal calibration from independent review
+
+## v0.9 — Bilingual core parity and archival maintenance
+
+- [ ] Align the English and Chinese core outcomes, navigation, cases, and practice paths
+- [ ] Add a parity manifest so missing or intentionally condensed material is explicit
+- [ ] Archive the annual source ledger and release evidence without copying restricted content
+- [ ] Add release-manifest and archive-integrity validation
+- [ ] Complete a documentation-wide accessibility and terminology pass
+
 ## v1.0 — Mature fieldbook
 
-- [ ] Full English and Chinese parity
-- [ ] At least ten independently reviewed cases
-- [ ] Inter-rater calibration guidance for mock interviewers
-- [ ] A stable annual release with archived source evidence
-- [ ] A contributor group spanning FDE, applied AI, data, security, and product delivery
+- [ ] Publish a versioned v1.0 release candidate with a reproducible validation manifest
+- [ ] Maintain at least ten complete case packs; identify independent-review status per case
+- [ ] Provide stable learning, facilitation, scoring, source, and contribution contracts
+- [ ] Pass the full repository, content, case, research, practice, parity, and release test suite
+- [ ] Promote the release candidate only after all externally dependent gates are evidenced
+
+The detailed contract from v0.6 through v1.0 is maintained in the
+[version execution plan](docs/research/version-plan-0.6-to-1.0.md). Automated
+readiness and human outcome validation remain separate throughout the roadmap.
 
 ## What is intentionally out of scope
 

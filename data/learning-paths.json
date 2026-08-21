@@ -1,0 +1,480 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-08-21",
+  "scope_note": "These paths define practice outputs and completion evidence. They do not predict interview outcomes or replace role-specific recruiter guidance.",
+  "paths": [
+    {
+      "id": "interview-in-7-days",
+      "title": "7-day interview sprint",
+      "title_zh": "七天面试冲刺",
+      "audience": "A candidate with an interview within one week who needs a defensible core story and one scored rehearsal.",
+      "time_budget_days": 7,
+      "entry_evidence": [
+        "One target role or role family",
+        "One project the learner can discuss without confidentiality violations"
+      ],
+      "sessions": [
+        {
+          "order": 1,
+          "title": "Choose the two largest interview risks",
+          "goal": "Stop broad rereading and define a narrow practice backlog.",
+          "inputs": [
+            "docs/zh-CN/reading-map.md",
+            "interview-kits/rubrics/master-scorecard.md"
+          ],
+          "output": "A one-page baseline naming the target role, two highest-risk dimensions, and evidence currently available.",
+          "completion_checks": [
+            "Each risk cites an observable behavior rather than a technology label.",
+            "The learner removes at least one low-priority topic from the week."
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Build the strongest project spine",
+          "goal": "Turn one project into a FIELD narrative with personal decisions and boundaries.",
+          "inputs": [
+            "docs/zh-CN/11-portfolio.md",
+            "interview-kits/worksheets/practice-journal.md"
+          ],
+          "output": "A two-minute project narrative plus a fact, decision, artifact, result, and limit table.",
+          "completion_checks": [
+            "Team outcomes and personal contribution are stated separately.",
+            "At least one trade-off and one unresolved limitation are explicit."
+          ]
+        },
+        {
+          "order": 3,
+          "title": "Practice customer discovery",
+          "goal": "Frame workflow, baseline, risk, and non-goals before proposing architecture.",
+          "inputs": [
+            "docs/zh-CN/03-discovery.md",
+            "interview-kits/rubrics/discovery-scorecard.md"
+          ],
+          "output": "A recorded 15-minute discovery conversation and a written problem frame.",
+          "completion_checks": [
+            "The frame names a user action and current baseline.",
+            "The recording includes a non-goal and a decision-changing unknown."
+          ]
+        },
+        {
+          "order": 4,
+          "title": "Design from the workflow",
+          "goal": "Connect data, control, evidence, and operating paths to a thin release.",
+          "inputs": [
+            "docs/zh-CN/05-system-design.md",
+            "interview-kits/rubrics/system-design-scorecard.md"
+          ],
+          "output": "One architecture page with a staged release, failure paths, and rollback conditions.",
+          "completion_checks": [
+            "The design shows data, control, and evidence flows.",
+            "At least one simpler alternative and one stop condition are defended."
+          ]
+        },
+        {
+          "order": 5,
+          "title": "Defend production AI boundaries",
+          "goal": "Explain evaluation, tool safety, observability, and human intervention without hiding behind frameworks.",
+          "inputs": [
+            "docs/zh-CN/06-production-ai.md",
+            "docs/zh-CN/calibration/03-agent-systems.md"
+          ],
+          "output": "A release contract covering evaluation slices, authority, monitoring, rollback, and human escalation.",
+          "completion_checks": [
+            "Quality and safety gates are separated.",
+            "The learner can name a condition where an agent should not be used."
+          ]
+        },
+        {
+          "order": 6,
+          "title": "Run one blind mock",
+          "goal": "Produce evidence under time pressure without reading interviewer material.",
+          "inputs": [
+            "interview-kits/mock-loops/classic-fde-60-minute.md",
+            "interview-kits/rubrics/master-scorecard.md"
+          ],
+          "output": "A recording, an independent score sheet, and the two lowest behavior anchors.",
+          "completion_checks": [
+            "Scoring cites exact statements or artifacts from the session.",
+            "The debrief selects only two behaviors for repair."
+          ]
+        },
+        {
+          "order": 7,
+          "title": "Repair and rehearse the final version",
+          "goal": "Replace weak behaviors and leave a compact interview-day pack.",
+          "inputs": [
+            "docs/zh-CN/12-answer-calibration.md",
+            "interview-kits/worksheets/practice-journal.md"
+          ],
+          "output": "A second recording, score comparison, one-page interview map, and explicit claims boundary.",
+          "completion_checks": [
+            "The second attempt changes the two selected behaviors, not only wording.",
+            "Every portfolio claim is labeled direct, adjacent, exercise, or gap."
+          ]
+        }
+      ],
+      "exit_evidence": [
+        "One scored blind mock and one targeted re-recording",
+        "One project spine, one system-design page, and one release contract"
+      ],
+      "limits": [
+        "Seven days is a risk-reduction sprint, not complete FDE preparation.",
+        "A self-score is weaker than an independent score and must be labeled as such.",
+        "No exercise may be presented as production experience."
+      ]
+    },
+    {
+      "id": "role-targeting-14-days",
+      "title": "14-day role-targeting campaign",
+      "title_zh": "十四天岗位定向训练",
+      "audience": "A candidate with a specific public job description who needs to align evidence and practice without guessing the employer's private process.",
+      "time_budget_days": 14,
+      "entry_evidence": [
+        "A public job description captured with date and URL",
+        "A resume or project inventory that can be truthfully decomposed"
+      ],
+      "sessions": [
+        {
+          "order": 1,
+          "title": "Separate public facts from interview hypotheses",
+          "goal": "Create a bounded role brief before choosing practice topics.",
+          "inputs": [
+            "docs/zh-CN/14-job-targeting.md",
+            "interview-kits/worksheets/job-targeting-pack.md"
+          ],
+          "output": "A dated role brief with public facts, hypotheses, confirmation questions, and exclusions.",
+          "completion_checks": [
+            "No inferred interview round is written as a fact.",
+            "Every volatile requirement records its source and capture date."
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Grade the evidence honestly",
+          "goal": "Classify direct, adjacent, exercise, and gap evidence for the role.",
+          "inputs": [
+            "docs/zh-CN/14-job-targeting.md",
+            "interview-kits/role-playbooks/worked-example.md"
+          ],
+          "output": "A D/A/E/G evidence matrix with one accepted artifact and one boundary per claim.",
+          "completion_checks": [
+            "Direct evidence names personal ownership and an inspectable artifact.",
+            "Gaps remain visible instead of being rewritten as adjacent evidence."
+          ]
+        },
+        {
+          "order": 3,
+          "title": "Choose a role playbook",
+          "goal": "Select one primary role path and state why the other paths are secondary.",
+          "inputs": [
+            "interview-kits/role-playbooks/README.md",
+            "data/role-playbooks.json"
+          ],
+          "output": "A role selection memo with one primary path, one adjacent path, and two non-priorities.",
+          "completion_checks": [
+            "Selection is based on role signals and evidence, not title alone.",
+            "The learner records what information could change the selection."
+          ]
+        },
+        {
+          "order": 4,
+          "title": "Build a 90-second position",
+          "goal": "Connect engineering spine, customer outcome, and product leverage.",
+          "inputs": [
+            "docs/zh-CN/01-role-map.md",
+            "docs/zh-CN/09-behavioral.md"
+          ],
+          "output": "Two recorded 90-second introductions and a transcript with unsupported phrases removed.",
+          "completion_checks": [
+            "The introduction contains one concrete decision and outcome.",
+            "It avoids generic claims such as strong communication without evidence."
+          ]
+        },
+        {
+          "order": 5,
+          "title": "Deep-dive the strongest matching project",
+          "goal": "Prepare follow-up depth beyond the opening narrative.",
+          "inputs": [
+            "docs/zh-CN/11-portfolio.md",
+            "interview-kits/worksheets/practice-journal.md"
+          ],
+          "output": "A project evidence tree covering decisions, artifacts, alternatives, failure, operation, and reuse.",
+          "completion_checks": [
+            "Every claimed result has a measurement or an explicit evidence limit.",
+            "At least three likely follow-ups can be answered without inventing detail."
+          ]
+        },
+        {
+          "order": 6,
+          "title": "Complete the role-specific technical exercise",
+          "goal": "Produce a runnable or reviewable artifact for the largest technical gap.",
+          "inputs": [
+            "interview-kits/role-playbooks/ai-agent-fde.md",
+            "interview-kits/role-playbooks/data-platform-fde.md",
+            "interview-kits/role-playbooks/regulated-ai-fde.md"
+          ],
+          "output": "One role-specific implementation, design, or threat model with tests or review criteria.",
+          "completion_checks": [
+            "The artifact exposes failure and operating boundaries.",
+            "The learner labels it as production, adjacent, or exercise evidence."
+          ]
+        },
+        {
+          "order": 7,
+          "title": "Practice a customer pressure scenario",
+          "goal": "Make progress without overpromising unsafe scope.",
+          "inputs": [
+            "docs/zh-CN/03-discovery.md",
+            "docs/zh-CN/09-behavioral.md"
+          ],
+          "output": "A recorded refusal-and-alternative conversation with a concrete next experiment.",
+          "completion_checks": [
+            "The response names the risk instead of hiding behind policy language.",
+            "The alternative preserves customer progress and defines a decision date."
+          ]
+        },
+        {
+          "order": 8,
+          "title": "Run the role-targeted blind loop",
+          "goal": "Test the campaign under a consistent 75-minute protocol.",
+          "inputs": [
+            "interview-kits/mock-loops/role-targeted/README.md",
+            "interview-kits/mock-loops/role-targeted/score-sheet.md"
+          ],
+          "output": "A recording, independent score, evidence citations, and two veto-risk behaviors.",
+          "completion_checks": [
+            "Candidate material remained separate from interviewer evidence.",
+            "The score sheet records observable evidence and confidence."
+          ]
+        },
+        {
+          "order": 9,
+          "title": "Repair the two veto risks",
+          "goal": "Change decision behavior rather than polishing general fluency.",
+          "inputs": [
+            "docs/zh-CN/12-answer-calibration.md",
+            "interview-kits/mock-loops/role-targeted/score-sheet.md"
+          ],
+          "output": "Two short re-runs and a before-and-after evidence comparison.",
+          "completion_checks": [
+            "Each repair has a trigger, replacement behavior, and observable proof.",
+            "Unchanged or worse scores remain visible."
+          ]
+        },
+        {
+          "order": 10,
+          "title": "Assemble the interview campaign pack",
+          "goal": "Leave a compact, truthful operating pack for the actual interview.",
+          "inputs": [
+            "interview-kits/worksheets/job-targeting-pack.md",
+            "interview-kits/worksheets/practice-journal.md"
+          ],
+          "output": "A final role brief, evidence matrix, project routes, questions, risk list, and next-practice decision.",
+          "completion_checks": [
+            "The pack fits the target role without pretending to know private rounds.",
+            "Every gap has a mitigation, confirmation question, or explicit acceptance."
+          ]
+        }
+      ],
+      "exit_evidence": [
+        "A source-bounded role brief and D/A/E/G matrix",
+        "One role artifact, one blind score, and one documented repair cycle"
+      ],
+      "limits": [
+        "The campaign prepares for observable capability, not leaked company questions.",
+        "Public job descriptions may be incomplete or stale and require confirmation.",
+        "Role fit cannot be reduced to a mechanical percentage."
+      ]
+    },
+    {
+      "id": "field-ready-30-days",
+      "title": "30-day field-ready foundation",
+      "title_zh": "三十天现场交付基础训练",
+      "audience": "A learner who wants interview readiness and a reusable field-delivery operating system rather than a short cram plan.",
+      "time_budget_days": 30,
+      "entry_evidence": [
+        "At least five hours per week for deliberate practice",
+        "Permission to create synthetic or public portfolio artifacts without exposing confidential work"
+      ],
+      "sessions": [
+        {
+          "order": 1,
+          "title": "Baseline the FIELD operating model",
+          "goal": "Diagnose current strength across framing, inspection, engineering, launch, and distillation.",
+          "inputs": [
+            "docs/zh-CN/00-start-here.md",
+            "interview-kits/rubrics/master-scorecard.md"
+          ],
+          "output": "A baseline score with evidence confidence and a thirty-day risk backlog.",
+          "completion_checks": [
+            "Scores cite existing evidence or explicitly say none.",
+            "The backlog prioritizes no more than three dimensions."
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Map one customer workflow",
+          "goal": "Understand actors, handoffs, decisions, and current failure cost.",
+          "inputs": [
+            "docs/zh-CN/03-discovery.md",
+            "interview-kits/worksheets/field-delivery-pack.md"
+          ],
+          "output": "A workflow map, stakeholder map, baseline, and discovery decision log.",
+          "completion_checks": [
+            "The map includes human workarounds and ownership.",
+            "At least one assumption is converted into a verification action."
+          ]
+        },
+        {
+          "order": 3,
+          "title": "Ship a thin technical slice",
+          "goal": "Demonstrate coding, data, interface, and failure-handling fundamentals.",
+          "inputs": [
+            "docs/zh-CN/04-coding-data-delivery.md",
+            "docs/zh-CN/05-system-design.md"
+          ],
+          "output": "A runnable thin slice with tests, interface contract, failure cases, and a short decision record.",
+          "completion_checks": [
+            "Another person can run the artifact from documented steps.",
+            "At least one failure path and one recovery path are tested."
+          ]
+        },
+        {
+          "order": 4,
+          "title": "Build the production AI evidence loop",
+          "goal": "Version inputs and evaluate system behavior by risk slice.",
+          "inputs": [
+            "docs/zh-CN/06-production-ai.md",
+            "docs/zh-CN/calibration/02-quality-data.md"
+          ],
+          "output": "A version matrix, sliced evaluation set, release gates, observability plan, and rollback rule.",
+          "completion_checks": [
+            "Aggregate quality cannot hide the highest-risk slice.",
+            "A regression can be replayed with fixed dependencies."
+          ]
+        },
+        {
+          "order": 5,
+          "title": "Control tool authority and long-running state",
+          "goal": "Design identity, authorization, idempotency, progress, cancellation, and recovery.",
+          "inputs": [
+            "docs/zh-CN/calibration/03-agent-systems.md",
+            "interview-kits/role-playbooks/ai-agent-fde.md"
+          ],
+          "output": "A tool execution state machine and a durable task recovery contract.",
+          "completion_checks": [
+            "Client disconnect is separated from job cancellation.",
+            "Irreversible actions have authorization, idempotency, and audit boundaries."
+          ]
+        },
+        {
+          "order": 6,
+          "title": "Run a data lifecycle review",
+          "goal": "Define identity, upsert, deletion, permission, replay, and reconciliation semantics.",
+          "inputs": [
+            "interview-kits/role-playbooks/data-platform-fde.md",
+            "interview-kits/cases/data-platform-migration/README.md"
+          ],
+          "output": "A data lifecycle contract and reconciliation design with failure examples.",
+          "completion_checks": [
+            "Content deletion and permission revocation have distinct timing rules.",
+            "An incomplete snapshot cannot silently become a mass delete."
+          ]
+        },
+        {
+          "order": 7,
+          "title": "Threat-model a regulated workflow",
+          "goal": "Connect trust boundaries, human responsibility, evidence, and staged authority.",
+          "inputs": [
+            "interview-kits/role-playbooks/regulated-ai-fde.md",
+            "interview-kits/cases/air-gapped-ai-deployment/README.md"
+          ],
+          "output": "A threat model, responsibility matrix, evidence-retention boundary, and staged authority plan.",
+          "completion_checks": [
+            "Human review specifies timing, information, authority, and escalation.",
+            "Prompt-only controls are not used for identity or authorization."
+          ]
+        },
+        {
+          "order": 8,
+          "title": "Lead a production incident",
+          "goal": "Protect users, preserve evidence, localize cause, and prevent recurrence.",
+          "inputs": [
+            "interview-kits/cases/production-incident/README.md",
+            "docs/zh-CN/13-field-operating-playbook.md"
+          ],
+          "output": "An incident timeline, containment decision, TRACE diagnosis, recovery proof, and prevention backlog.",
+          "completion_checks": [
+            "Containment is separated from root-cause claims.",
+            "Recovery is proven with user and system evidence."
+          ]
+        },
+        {
+          "order": 9,
+          "title": "Design adoption and handoff",
+          "goal": "Move from technical correctness to trusted operation by the customer team.",
+          "inputs": [
+            "docs/zh-CN/13-field-operating-playbook.md",
+            "interview-kits/worksheets/field-delivery-pack.md"
+          ],
+          "output": "An adoption ladder, operating handoff, recovery rehearsal, and ownership matrix.",
+          "completion_checks": [
+            "Adoption is measured by user action, not training attendance.",
+            "The operating team can detect and recover one failure without the builder."
+          ]
+        },
+        {
+          "order": 10,
+          "title": "Distill field learning into product leverage",
+          "goal": "Decide what belongs in product, extension, template, or retained customization.",
+          "inputs": [
+            "docs/zh-CN/13-field-operating-playbook.md",
+            "docs/zh-CN/calibration/04-field-leadership.md"
+          ],
+          "output": "A field-to-product memo with repeated signal, abstraction boundary, owner, non-goals, and second-use test.",
+          "completion_checks": [
+            "Reuse is defined by a second context, not copied code.",
+            "Maintenance ownership and migration cost are explicit."
+          ]
+        },
+        {
+          "order": 11,
+          "title": "Run two blind cases",
+          "goal": "Observe decision quality across a planned case and an incident case.",
+          "inputs": [
+            "interview-kits/cases/README.md",
+            "interview-kits/cases/facilitation-standard.md"
+          ],
+          "output": "Two recordings, two independent score sheets, and a cross-case behavior comparison.",
+          "completion_checks": [
+            "The facilitator releases evidence only after valid questions or scheduled injection.",
+            "Cross-case comparison uses behavior anchors rather than total score alone."
+          ]
+        },
+        {
+          "order": 12,
+          "title": "Publish the truthful evidence portfolio",
+          "goal": "Assemble a reviewable body of work and a next-cycle plan.",
+          "inputs": [
+            "docs/zh-CN/11-portfolio.md",
+            "interview-kits/worksheets/practice-journal.md"
+          ],
+          "output": "A portfolio index, claim-to-artifact map, final mock, retrospective, and next thirty-day plan.",
+          "completion_checks": [
+            "Every claim points to an inspectable artifact or an explicit evidence gap.",
+            "The retrospective names what did not improve and the next experiment."
+          ]
+        }
+      ],
+      "exit_evidence": [
+        "A runnable thin slice and production operating contracts",
+        "Two blind cases, one final mock, and a claim-to-artifact portfolio map"
+      ],
+      "limits": [
+        "The plan establishes foundations; it cannot substitute for repeated field ownership.",
+        "Synthetic artifacts must remain clearly labeled.",
+        "Independent operation and scoring require real reviewers when available."
+      ]
+    }
+  ]
+}

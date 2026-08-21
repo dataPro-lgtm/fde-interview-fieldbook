@@ -12,6 +12,7 @@ The English path covers the highest-use decisions. It is not yet a translation o
 | My resume lists tools but not outcomes | [Portfolio evidence](portfolio-evidence.md) | Three rewritten bullets and a ten-slide project spine |
 | I need current agent-production depth | [Production AI](production-ai-2026.md) | One governed workflow design with failure boundaries |
 | I have one live job description | [Job targeting](job-targeting.md) | A role brief, evidence matrix, and ten-session campaign |
+| I keep reading without producing evidence | [Guided practice](guided-practice.md) | One 7-, 14-, or 30-day route with scored artifacts |
 | I need to start from zero | [Start here](start-here.md) | A three-item practice backlog |
 
 ## Choose by time
@@ -31,7 +32,7 @@ Output: a one-page preparation plan, not a list of pages read.
 
 ### One week
 
-Use the English chapters for structure and the Chinese practice materials for depth:
+Use the machine-checked [7-day guided path](guided-practice.md) rather than assembling a new reading list:
 
 - Day 1: role map and master scorecard;
 - Day 2: project story and discovery practice;
@@ -50,5 +51,6 @@ Use the English chapters for structure and the Chinese practice materials for de
 5. [Production AI for FDE interviews](production-ai-2026.md)
 6. [Resume, portfolio, and project evidence](portfolio-evidence.md)
 7. [Turn one job description into an evidence-based campaign](job-targeting.md)
+8. [Turn reading into guided practice](guided-practice.md)
 
 The full Chinese path remains available through the [Chinese learning map](../zh-CN/reading-map.md).

@@ -18,6 +18,7 @@ What can a reader do or understand better after this change?
 - [ ] Case changes pass `python3 scripts/validate_case_packs.py`.
 - [ ] Role-radar or baseline changes pass `python3 scripts/validate_research_data.py`.
 - [ ] Role-playbook changes pass `python3 scripts/validate_role_playbooks.py`.
+- [ ] Guided-practice changes pass `python3 scripts/validate_learning_paths.py`.
 - [ ] Changed Mermaid diagrams render with `python3 scripts/validate_mermaid.py --files <paths>`.
 - [ ] Diagrams, tables, links, and translations preserve an accessible text path.
 - [ ] Material changes are noted in `CHANGELOG.md`.

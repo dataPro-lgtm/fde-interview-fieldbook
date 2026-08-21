@@ -28,6 +28,8 @@ jobs:
         run: python3 scripts/validate_research_data.py
       - name: Validate role-targeting playbooks and practice assets
         run: python3 scripts/validate_role_playbooks.py
+      - name: Validate guided-practice paths and completion evidence
+        run: python3 scripts/validate_learning_paths.py
       - name: Lint Markdown with repository-specific rules
         run: npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"
       - name: Render Mermaid diagrams in changed Markdown

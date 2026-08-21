@@ -91,6 +91,7 @@
 | 项目很多但讲不出个人价值 | [行为面](09-behavioral.md)与[作品集](11-portfolio.md) | 重写一个失败故事和一个产品化故事 |
 | 回答听起来正确但没有层次 | [答案校准](12-answer-calibration.md) | 对照 2/3/4 分答案录制第二版 |
 | 已有具体 JD 但仍在平均补课 | [岗位定向](14-job-targeting.md) | 一页岗位简报、证据矩阵和十次训练 |
+| 一直在读但不知道今天做什么 | [引导式训练](15-guided-practice.md) | 选择一条路径并锁定前三个 session |
 | 不知道自己准备得够不够 | [总评分表](../../interview-kits/rubrics/master-scorecard.md) | 让同伴只按原话证据评分 |
 
 ## 一次完整学习循环
@@ -127,4 +128,4 @@ flowchart LR
 
 ---
 
-[开始第一章：FDE 到底负责什么 →](01-role-map.md)
+[选择 7、14 或 30 天训练路径 →](15-guided-practice.md)
