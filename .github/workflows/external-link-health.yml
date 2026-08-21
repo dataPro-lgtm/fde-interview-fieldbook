@@ -1,0 +1,103 @@
+name: External link health
+
+on:
+  schedule:
+    - cron: "43 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Check public HTTPS links
+        id: links
+        continue-on-error: true
+        run: python3 scripts/check_external_links.py > link-health.md
+      - name: Show link-health report
+        if: always()
+        run: sed -n '1,240p' link-health.md
+      - name: Open, update, or close the maintenance issue
+        if: always()
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          CHECK_OUTCOME: ${{ steps.links.outcome }}
+        with:
+          script: |
+            const fs = require('fs');
+            const title = 'External link repair required';
+            const body = fs.existsSync('link-health.md')
+              ? fs.readFileSync('link-health.md', 'utf8')
+              : 'The external-link audit failed before producing a report. Inspect the workflow logs.';
+            const requiredLabels = [
+              { name: 'link-health', color: 'b60205', description: 'A public documentation link needs review' },
+              { name: 'maintenance', color: 'fef2c0', description: 'Repository maintenance' }
+            ];
+            for (const label of requiredLabels) {
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: label.name
+                });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ...label
+                });
+              }
+            }
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'link-health'
+            });
+            const existing = issues.find((issue) => issue.title === title);
+            if (process.env.CHECK_OUTCOME === 'failure') {
+              if (existing) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existing.number,
+                  body
+                });
+              } else {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title,
+                  body,
+                  labels: ['link-health', 'maintenance']
+                });
+              }
+            } else if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: 'The scheduled audit no longer finds a hard link failure. Closing this maintenance issue.'
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                state: 'closed',
+                state_reason: 'completed'
+              });
+            }
+      - name: Mark the run failed when hard links remain
+        if: steps.links.outcome == 'failure'
+        run: exit 1

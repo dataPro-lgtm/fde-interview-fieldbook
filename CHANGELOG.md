@@ -9,12 +9,14 @@ All notable changes to the fieldbook are recorded here.
 - Three facilitator-ready Field Case Lab packs covering data-platform migration, air-gapped AI deployment, and a multi-cause production incident
 - Role-separated candidate and interviewer briefs, staged synthetic artifacts, case-specific rubrics, and reference debriefs
 - A facilitation standard plus a machine-readable case manifest and dependency-free validator
+- Changed-file Mermaid rendering, maintenance-script boundary tests, and a weekly external-link health audit with SSRF-safe target checks
 
 ### Changed
 
 - Chinese and English entry points now distinguish worked examples from blind, staged practice
 - Content-quality CI now validates case-package structure, JSON/CSV artifacts, and spoiler boundaries
 - Markdown linting is pinned in CI with narrow rules for long prose, sibling headings, and the repository's GitHub-native HTML
+- External network failures no longer affect ordinary pull requests; scheduled audits distinguish confirmed dead links from transient or access-controlled responses
 
 ## [0.2.0] - 2026-08-21
 

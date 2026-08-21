@@ -106,7 +106,7 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 
 ## Living-project contract
 
-Time-sensitive claims carry a source and `last_checked` date. A monthly workflow checks source freshness and opens a maintenance issue when the evidence ages out. Contributors can propose a role update using the structured issue form. Material changes are recorded in the changelog.
+Time-sensitive claims carry a source and `last_checked` date. Monthly source-freshness and weekly public-link audits open maintenance issues when evidence ages out or a URL is confirmed dead. Changed Mermaid diagrams are rendered in CI instead of being accepted as unchecked text. Contributors can propose a role update using the structured issue form. Material changes are recorded in the changelog.
 
 The project follows three confidence labels:
 

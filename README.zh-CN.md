@@ -90,7 +90,7 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 
 ## 项目如何保持更新
 
-所有时效性事实都进入 [`data/sources.json`](data/sources.json)，记录来源类型和最近核验日期。项目按月检查来源新鲜度；岗位要求、协议规范或安全基线发生变化时，通过结构化 Issue 更新。重要变化写入 [CHANGELOG](CHANGELOG.md)，后续计划放在 [ROADMAP](ROADMAP.md)。
+所有时效性事实都进入 [`data/sources.json`](data/sources.json)，记录来源类型和最近核验日期。项目按月检查来源新鲜度、按周检查公开链接健康；变更过的 Mermaid 会在 CI 中实际渲染。岗位要求、协议规范或安全基线发生变化时，通过结构化 Issue 更新。重要变化写入 [CHANGELOG](CHANGELOG.md)，后续计划放在 [ROADMAP](ROADMAP.md)。
 
 本次素材审计、代码样例反向验收和发布验收均有公开记录：[素材审计](docs/research/corpus-audit.md) · [v0.1 验证记录](docs/research/release-validation-0.1.md)。
 

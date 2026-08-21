@@ -13,6 +13,33 @@ GitHub Actions 每月检查 `data/sources.json` 的 `last_checked`。每个来�
 5. 更新 `last_checked` 和 `CHANGELOG.md`；
 6. 运行 `python3 scripts/validate_repo.py`。
 
+## 每周外链巡检
+
+定时工作流每周检查正文链接和 `data/sources.json` 中登记的来源。它与来源时效检查解决不同问题：时效检查判断“多久没有人工复核”，外链检查判断“地址现在是否还能到达”。
+
+检查结果分两级：
+
+- **硬失败**：GET 再确认后的 404/410，或者指向非 HTTPS、localhost、私网 IP、非标准端口和不安全重定向；工作流失败并创建或更新 `External link repair required` Issue。
+- **软失败**：403、限流、DNS、TLS、超时或服务端错误；报告会保留这些结果，但不会自动判定内容失效，也不会阻塞普通 PR。
+
+处理硬失败时，先确认来源是否迁址。岗位页面下线不等于岗位永久消失，应保留快照时间和历史语境，再决定替换链接、降低结论强度或标记为历史来源。修复后可手工触发工作流；没有硬失败时，已有维护 Issue 会自动关闭。
+
+本地可运行：
+
+```bash
+python3 scripts/check_external_links.py
+```
+
+## 图表校验
+
+内容 CI 只渲染当前提交相对于目标分支发生变化的 Markdown 中的 Mermaid，避免每次重复处理全仓图表；如果校验器或工作流本身变化，则自动回归全仓。新增或修改图表时，本地指定文件运行：
+
+```bash
+python3 scripts/validate_mermaid.py --files docs/zh-CN/06-production-ai.md
+```
+
+校验使用固定版本的 Mermaid CLI，既检查语法，也要求实际生成非空 SVG。只有文字变化、没有 Mermaid 的页面会快速通过。
+
 ## 季度岗位雷达
 
 每季度新增一个快照文件，不覆盖旧文件。快照至少包含：

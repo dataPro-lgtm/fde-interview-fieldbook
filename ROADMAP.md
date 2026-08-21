@@ -43,8 +43,8 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 
 - [x] Run case-contract and artifact validation in CI
 - [x] Pin and run Markdown linting in CI
-- [ ] Validate Mermaid syntax or rendering on changed diagrams
-- [ ] Run external-link checks on a scheduled workflow without blocking pull requests
+- [x] Validate Mermaid syntax or rendering on changed diagrams
+- [x] Run external-link checks on a scheduled workflow without blocking pull requests
 
 ## v0.4 — Role radar and accessibility
 
