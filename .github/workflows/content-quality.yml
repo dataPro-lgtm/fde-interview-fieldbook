@@ -29,7 +29,7 @@ jobs:
       - name: Render Mermaid diagrams in changed Markdown
         env:
           MERMAID_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: python3 scripts/validate_mermaid.py --base "$MERMAID_BASE"
+        run: python3 scripts/validate_mermaid.py --base "$MERMAID_BASE" --no-browser-sandbox
       - name: Test maintenance-script boundaries
         run: python3 -m unittest discover -s tests -v
       - name: Compile maintenance scripts

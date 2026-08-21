@@ -36,6 +36,11 @@ def parse_args() -> argparse.Namespace:
     selection.add_argument("--base", help="validate Markdown changed between this Git ref and HEAD")
     selection.add_argument("--files", nargs="+", help="validate the listed repository-relative Markdown files")
     parser.add_argument("--timeout", type=int, default=60, help="seconds allowed per diagram")
+    parser.add_argument(
+        "--no-browser-sandbox",
+        action="store_true",
+        help="disable the Chromium sandbox in an already isolated CI runner",
+    )
     return parser.parse_args()
 
 
@@ -102,12 +107,7 @@ def extract_blocks(path: Path) -> list[MermaidBlock]:
     return blocks
 
 
-def render_block(block: MermaidBlock, workdir: Path, index: int, timeout: int) -> str | None:
-    source_label = block.source.relative_to(ROOT).as_posix()
-    stem = re.sub(r"[^a-zA-Z0-9_-]+", "-", source_label).strip("-")
-    input_path = workdir / f"{stem}-{index}.mmd"
-    output_path = workdir / f"{stem}-{index}.svg"
-    input_path.write_text(block.content, encoding="utf-8")
+def renderer_command(input_path: Path, output_path: Path, puppeteer_config: Path | None = None) -> list[str]:
     command = [
         "npx",
         "--yes",
@@ -119,6 +119,24 @@ def render_block(block: MermaidBlock, workdir: Path, index: int, timeout: int) -
         "-b",
         "transparent",
     ]
+    if puppeteer_config is not None:
+        command.extend(["-p", str(puppeteer_config)])
+    return command
+
+
+def render_block(
+    block: MermaidBlock,
+    workdir: Path,
+    index: int,
+    timeout: int,
+    puppeteer_config: Path | None = None,
+) -> str | None:
+    source_label = block.source.relative_to(ROOT).as_posix()
+    stem = re.sub(r"[^a-zA-Z0-9_-]+", "-", source_label).strip("-")
+    input_path = workdir / f"{stem}-{index}.mmd"
+    output_path = workdir / f"{stem}-{index}.svg"
+    input_path.write_text(block.content, encoding="utf-8")
+    command = renderer_command(input_path, output_path, puppeteer_config)
     try:
         result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=timeout, check=False)
     except subprocess.TimeoutExpired:
@@ -147,8 +165,12 @@ def main() -> int:
     failures: list[str] = []
     with tempfile.TemporaryDirectory(prefix="fde-mermaid-") as temporary:
         workdir = Path(temporary)
+        puppeteer_config: Path | None = None
+        if args.no_browser_sandbox:
+            puppeteer_config = workdir / "puppeteer-ci.json"
+            puppeteer_config.write_text('{"args":["--no-sandbox"]}\n', encoding="utf-8")
         for index, block in enumerate(blocks, start=1):
-            failure = render_block(block, workdir, index, args.timeout)
+            failure = render_block(block, workdir, index, args.timeout, puppeteer_config)
             if failure:
                 failures.append(failure)
 

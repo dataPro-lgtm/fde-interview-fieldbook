@@ -71,6 +71,14 @@ class MermaidExtractionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unterminated Mermaid block"):
             validate_mermaid.extract_blocks(fixture)
 
+    def test_browser_sandbox_override_requires_an_explicit_config(self) -> None:
+        input_path = Path("diagram.mmd")
+        output_path = Path("diagram.svg")
+        default_command = validate_mermaid.renderer_command(input_path, output_path)
+        ci_command = validate_mermaid.renderer_command(input_path, output_path, Path("puppeteer-ci.json"))
+        self.assertNotIn("-p", default_command)
+        self.assertEqual(ci_command[-2:], ["-p", "puppeteer-ci.json"])
+
     @patch.object(validate_mermaid.subprocess, "run")
     def test_validator_change_selects_all_markdown(self, run: Mock) -> None:
         run.return_value = Mock(
