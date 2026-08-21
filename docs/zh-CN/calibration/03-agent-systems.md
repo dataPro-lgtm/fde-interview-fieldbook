@@ -38,11 +38,20 @@
 
 ### 白板上至少画出四条线
 
-```text
-Client -> API: create run, receive run_id
-API -> Queue/Workflow: durable execution request
-Worker -> Event Store: state and output events with sequence
-Client -> Any API Pod: resume(run_id, last_event_id)
+```mermaid
+sequenceDiagram
+    participant C as 客户端
+    participant A as 任意 API Pod
+    participant W as 持久工作流
+    participant E as 事件存储
+    C->>A: 创建任务
+    A->>W: 提交持久执行
+    A-->>C: run_id
+    W->>E: 状态与带序号的输出事件
+    C->>A: resume(run_id, last_event_id)
+    A->>E: 鉴权并从游标回放
+    E-->>A: 缺失事件与实时尾流
+    A-->>C: 继续输出
 ```
 
 再单独画工具副作用：`run_id + step_id + attempt` 如何生成幂等键，工具成功但确认丢失时怎样查询和恢复。
