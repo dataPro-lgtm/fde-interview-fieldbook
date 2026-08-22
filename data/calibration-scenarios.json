@@ -1,0 +1,485 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-08-21",
+  "scope_note": "All transcripts are synthetic teaching material. Expected ratings calibrate this repository's observable evidence anchors and do not represent employer scoring or real candidate outcomes.",
+  "scenarios": [
+    {
+      "id": "premature-agent-solution",
+      "title": "需求未界定就选择 Agent",
+      "synthetic": true,
+      "target_dimensions": [
+        "discovery"
+      ],
+      "prompt": "客户说要一个能自动处理全部退款工单的 Agent，你怎样推进？",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "我会用多 Agent，一个负责理解意图，一个负责查政策，一个负责执行退款。"
+        },
+        {
+          "speaker": "interviewer",
+          "text": "你会先确认哪些业务事实？"
+        },
+        {
+          "speaker": "candidate",
+          "text": "主要是接口是否支持。业务既然已经决定全自动，我会先把架构搭起来再优化。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "discovery",
+          "rating": "1",
+          "confidence": "high",
+          "evidence_quotes": [
+            "业务既然已经决定全自动",
+            "先把架构搭起来再优化"
+          ],
+          "rationale": "The candidate converts a surface request into architecture without framing workflow, authority, risk, or baseline.",
+          "next_probe": "Ask who can authorize a refund and what happens when execution is irreversible."
+        }
+      ],
+      "veto": true,
+      "adjudication": {
+        "disagreement_types": [
+          "term-density",
+          "risk-underweight"
+        ],
+        "common_misread": "Naming multiple agents and tools can sound technical but does not establish discovery or safe scope.",
+        "questions": [
+          "Did the candidate identify a user action, baseline, or non-goal?",
+          "Did the candidate challenge or safely bound the irreversible request?"
+        ],
+        "do_not_infer": "Do not infer discovery ability from architecture vocabulary."
+      },
+      "practice_assets": [
+        "interview-kits/cases/agent-tool-side-effect/candidate-brief.md",
+        "interview-kits/rubrics/discovery-scorecard.md"
+      ]
+    },
+    {
+      "id": "agent-terms-without-state",
+      "title": "术语完整但没有执行状态",
+      "synthetic": true,
+      "target_dimensions": [
+        "ai-engineering",
+        "security-governance"
+      ],
+      "prompt": "设计一个能调用工单和邮件工具的生产 Agent。",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "我会用 LangGraph、MCP、memory、reflection 和 guardrail，工具都定义 JSON schema。"
+        },
+        {
+          "speaker": "interviewer",
+          "text": "邮件接口超时，但实际已经发送，恢复时怎么办？"
+        },
+        {
+          "speaker": "candidate",
+          "text": "可以指数退避重试，失败三次就让模型换一个工具。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "ai-engineering",
+          "rating": "2",
+          "confidence": "high",
+          "evidence_quotes": [
+            "工具都定义 JSON schema",
+            "指数退避重试"
+          ],
+          "rationale": "The candidate knows agent components but cannot reason about unknown final state or controlled recovery.",
+          "next_probe": "Ask for the operation identity, state machine, and result-query contract."
+        },
+        {
+          "dimension": "security-governance",
+          "rating": "1",
+          "confidence": "high",
+          "evidence_quotes": [
+            "失败三次就让模型换一个工具"
+          ],
+          "rationale": "The recovery proposal can duplicate external side effects and delegates authority to the model without policy evidence.",
+          "next_probe": "Ask who authorizes the email and how duplicate sends are prevented."
+        }
+      ],
+      "veto": true,
+      "adjudication": {
+        "disagreement_types": [
+          "term-density",
+          "risk-underweight"
+        ],
+        "common_misread": "A complete agent vocabulary can cause reviewers to overlook missing execution semantics.",
+        "questions": [
+          "What production state or authority did the candidate actually define?",
+          "Would the proposed retry be safe after a partial success?"
+        ],
+        "do_not_infer": "Do not convert framework familiarity into a score for side-effect safety."
+      },
+      "practice_assets": [
+        "interview-kits/cases/durable-agent-streaming/candidate-brief.md",
+        "interview-kits/cases/agent-tool-side-effect/rubric.md"
+      ]
+    },
+    {
+      "id": "bounded-thin-slice",
+      "title": "从模糊目标收敛到可验证薄切片",
+      "synthetic": true,
+      "target_dimensions": [
+        "discovery",
+        "value-adoption"
+      ],
+      "prompt": "六周内做一个客服 AI，降低处理时间。",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "我先确认哪类客服、哪段动作和当前处理时间，也要查错误升级与越权代价。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "第一阶段只做英语退款政策建议，不自动发送；目标是把首响中位数从 16 分钟降到 9 分钟，同时任何跨租户召回都阻断发布。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "先 shadow，再给 20 名资深客服使用，记录采纳、改写、绕过和升级；如果时间下降来自风险上升就停止。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "discovery",
+          "rating": "3",
+          "confidence": "high",
+          "evidence_quotes": [
+            "确认哪类客服、哪段动作和当前处理时间",
+            "第一阶段只做英语退款政策建议"
+          ],
+          "rationale": "The candidate frames user, workflow, baseline, risk, non-goal, and a true end-to-end thin slice.",
+          "next_probe": "Ask what evidence would justify expanding beyond the first queue."
+        },
+        {
+          "dimension": "value-adoption",
+          "rating": "3",
+          "confidence": "high",
+          "evidence_quotes": [
+            "记录采纳、改写、绕过和升级",
+            "如果时间下降来自风险上升就停止"
+          ],
+          "rationale": "The candidate connects workflow outcome, adoption evidence, risk, and a stop rule.",
+          "next_probe": "Ask how the team will distinguish novelty usage from sustained workflow value."
+        }
+      ],
+      "veto": false,
+      "adjudication": {
+        "disagreement_types": [
+          "product-leverage-overreach",
+          "role-level"
+        ],
+        "common_misread": "A complete independent-delivery answer is a strong 3, not automatically a 4.",
+        "questions": [
+          "Did the candidate show reusable organizational or product leverage?",
+          "Is the score based on current evidence or imagined follow-up depth?"
+        ],
+        "do_not_infer": "Do not award 4 for completeness or fluency without leverage evidence."
+      },
+      "practice_assets": [
+        "docs/zh-CN/03-discovery.md",
+        "interview-kits/rubrics/master-scorecard.md"
+      ]
+    },
+    {
+      "id": "field-to-product-leverage",
+      "title": "从单次交付形成产品杠杆",
+      "synthetic": true,
+      "target_dimensions": [
+        "communication-productization"
+      ],
+      "prompt": "你怎样判断客户定制应该进入产品？",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "我不会按客户数量直接产品化，先把重复问题拆成稳定核心和变化维度。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "第一个客户只形成假设；我用第二个协议和权限模型不同的客户验证接口，发现删除语义不能统一，就保留源适配。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "最后进入平台的是游标、重放、状态和观测契约，字段映射留给配置；平台团队接 owner，并给旧连接器定义迁移和退出日期。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "communication-productization",
+          "rating": "4",
+          "confidence": "high",
+          "evidence_quotes": [
+            "用第二个协议和权限模型不同的客户验证接口",
+            "平台团队接 owner，并给旧连接器定义迁移和退出日期"
+          ],
+          "rationale": "The answer demonstrates cross-customer validation, explicit abstraction limits, ownership, migration, and durable product leverage.",
+          "next_probe": "Ask what evidence would cause the team to reverse the abstraction."
+        }
+      ],
+      "veto": false,
+      "adjudication": {
+        "disagreement_types": [
+          "evidence-inference",
+          "role-level"
+        ],
+        "common_misread": "Reviewers may either cap all hypothetical answers at 3 or award 4 without checking that leverage is actually evidenced.",
+        "questions": [
+          "Does the transcript explicitly show a second-context validation?",
+          "Are ownership, migration, and non-goals present rather than inferred?"
+        ],
+        "do_not_infer": "Do not assume the described result was production experience; score the synthetic answer while preserving its evidence label."
+      },
+      "practice_assets": [
+        "interview-kits/cases/connector-productization/debrief.md",
+        "docs/zh-CN/calibration/04-field-leadership.md"
+      ]
+    },
+    {
+      "id": "coding-not-observed",
+      "title": "没有观察到不等于危险",
+      "synthetic": true,
+      "target_dimensions": [
+        "coding-delivery"
+      ],
+      "prompt": "请用三分钟解释你会怎样开展客户发现。",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "我会先还原角色、触发、决策和当前动作，再确认基线、风险和非目标。"
+        },
+        {
+          "speaker": "interviewer",
+          "text": "如果客户只给你两周呢？"
+        },
+        {
+          "speaker": "candidate",
+          "text": "我会选择一条端到端薄切片，用第一周验证数据与流程，第二周只扩大已经通过门禁的范围。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "coding-delivery",
+          "rating": "N/O",
+          "confidence": "high",
+          "evidence_quotes": [],
+          "rationale": "The prompt and transcript do not expose implementation, testing, debugging, or delivery-code behavior.",
+          "next_probe": "Use a separate coding or debugging task before assigning a numeric rating."
+        }
+      ],
+      "veto": false,
+      "adjudication": {
+        "disagreement_types": [
+          "no-observation-as-low"
+        ],
+        "common_misread": "A reviewer may assign 1 or 2 because no code appeared in a discovery-only prompt.",
+        "questions": [
+          "Did the task create an opportunity to observe code or tests?",
+          "Did the candidate make an explicit unsafe coding decision?"
+        ],
+        "do_not_infer": "Do not infer coding strength or weakness from a discovery answer."
+      },
+      "practice_assets": [
+        "interview-kits/rubrics/reviewer-calibration.md",
+        "interview-kits/rubrics/master-scorecard.md"
+      ]
+    },
+    {
+      "id": "fixed-version-regression",
+      "title": "固定版本定位评测回归",
+      "synthetic": true,
+      "target_dimensions": [
+        "evaluation-operations",
+        "data-system"
+      ],
+      "prompt": "意图识别准确率从 90% 降到 28%，你怎么排查？",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "先把账户安全请求切回人工并冻结当前请求、标签、prompt、模型解析 ID、工具和评测版本。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "我先验证 28% 的分母、标签解析和切片，再用同一批请求从旧全链开始，一次替换一个变量，找第一处偏离。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "恢复时先看高风险切片和人工修正，不因为总准确率回来就全量放开。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "evaluation-operations",
+          "rating": "3",
+          "confidence": "high",
+          "evidence_quotes": [
+            "验证 28% 的分母、标签解析和切片",
+            "不因为总准确率回来就全量放开"
+          ],
+          "rationale": "The candidate protects risk, validates measurement, fixes versions, and uses sliced recovery gates.",
+          "next_probe": "Ask how the incident changes the release manifest and future regression set."
+        },
+        {
+          "dimension": "data-system",
+          "rating": "3",
+          "confidence": "medium",
+          "evidence_quotes": [
+            "冻结当前请求、标签、prompt、模型解析 ID、工具和评测版本",
+            "一次替换一个变量，找第一处偏离"
+          ],
+          "rationale": "The answer demonstrates versioned replay and diagnosis, but does not expose broader architecture or data lifecycle depth.",
+          "next_probe": "Ask how source batches, label schema, and replay data are retained and reconciled."
+        }
+      ],
+      "veto": false,
+      "adjudication": {
+        "disagreement_types": [
+          "evidence-inference",
+          "role-level"
+        ],
+        "common_misread": "Reviewers may over-score the entire data-system dimension from a strong but narrow incident answer.",
+        "questions": [
+          "Which system behaviors are directly visible in the transcript?",
+          "Should unobserved lifecycle depth reduce confidence rather than the numeric score?"
+        ],
+        "do_not_infer": "Do not infer distributed scale, schema migration, or consumer operations that were not discussed."
+      },
+      "practice_assets": [
+        "interview-kits/cases/evaluation-regression/candidate-brief.md",
+        "docs/zh-CN/calibration/02-quality-data.md"
+      ]
+    },
+    {
+      "id": "unsafe-refund-retry",
+      "title": "恢复方案会重复财务动作",
+      "synthetic": true,
+      "target_dimensions": [
+        "security-governance",
+        "data-system"
+      ],
+      "prompt": "退款接口超时，Agent 应该怎样恢复？",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "退款金额很低，所以超时以后重试三次问题不大。"
+        },
+        {
+          "speaker": "interviewer",
+          "text": "接口可能已经成功，只是响应丢了。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "那就先查日志，如果没看到成功日志再换一个 Pod 重试，客户多收到一次退款可以后续追回。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "security-governance",
+          "rating": "1",
+          "confidence": "high",
+          "evidence_quotes": [
+            "重试三次问题不大",
+            "客户多收到一次退款可以后续追回"
+          ],
+          "rationale": "The candidate accepts an irreversible duplicate side effect without authorization, idempotency, or verified final state.",
+          "next_probe": "Ask for a stable business operation ID and who accepts residual financial risk."
+        },
+        {
+          "dimension": "data-system",
+          "rating": "1",
+          "confidence": "high",
+          "evidence_quotes": [
+            "如果没看到成功日志再换一个 Pod 重试"
+          ],
+          "rationale": "Absence of an application log is incorrectly treated as proof of business failure, and a new worker is used to repeat the operation.",
+          "next_probe": "Ask how final state is queried and reconciled after timeout."
+        }
+      ],
+      "veto": true,
+      "adjudication": {
+        "disagreement_types": [
+          "risk-underweight",
+          "evidence-inference"
+        ],
+        "common_misread": "A reviewer may give 2 because the candidate mentions logs and recovery, while missing the unsafe final-state assumption.",
+        "questions": [
+          "Does the proposal prove the first operation failed?",
+          "Who authorized accepting a duplicate financial outcome?"
+        ],
+        "do_not_infer": "Do not assume low amount makes uncontrolled duplication acceptable."
+      },
+      "practice_assets": [
+        "interview-kits/cases/agent-tool-side-effect/rubric.md",
+        "interview-kits/cases/agent-tool-side-effect/debrief.md"
+      ]
+    },
+    {
+      "id": "adoption-experiment-boundary",
+      "title": "采用实验与产品边界",
+      "synthetic": true,
+      "target_dimensions": [
+        "value-adoption",
+        "communication-productization"
+      ],
+      "prompt": "离线质量 92%，但周活从 142 降到 39，你怎么处理？",
+      "transcript": [
+        {
+          "speaker": "candidate",
+          "text": "我不会先做强制培训，先按角色和工单复杂度拆打开、生成、等待、编辑、采用和最终结果。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "如果复杂工单 14 秒延迟和复制步骤是主要流失点，我会用一个队列做内嵌和延迟实验，同时看修改量、处理时间和风险事件。"
+        },
+        {
+          "speaker": "candidate",
+          "text": "工作流嵌入和编辑反馈如果在第二个客户也成立才进入产品；客户特定绩效规则不进入核心，避免制造虚假采用。"
+        }
+      ],
+      "expected_ratings": [
+        {
+          "dimension": "value-adoption",
+          "rating": "4",
+          "confidence": "high",
+          "evidence_quotes": [
+            "按角色和工单复杂度拆打开、生成、等待、编辑、采用和最终结果",
+            "同时看修改量、处理时间和风险事件"
+          ],
+          "rationale": "The candidate links segmented behavior, workflow friction, experiment design, value, and risk rather than optimizing feature opens.",
+          "next_probe": "Ask for the stop condition and how novelty effects are separated."
+        },
+        {
+          "dimension": "communication-productization",
+          "rating": "4",
+          "confidence": "medium",
+          "evidence_quotes": [
+            "在第二个客户也成立才进入产品",
+            "客户特定绩效规则不进入核心"
+          ],
+          "rationale": "The answer explicitly tests reuse across contexts and keeps harmful customer-specific incentives out of the core product.",
+          "next_probe": "Ask who owns the product capability and how existing customers migrate."
+        }
+      ],
+      "veto": false,
+      "adjudication": {
+        "disagreement_types": [
+          "product-leverage-overreach",
+          "evidence-inference"
+        ],
+        "common_misread": "A 4 is justified by explicit cross-context product leverage, but confidence should remain lower where ownership and migration are not observed.",
+        "questions": [
+          "Which leverage behavior is explicit rather than implied?",
+          "Should missing ownership reduce confidence or the score?"
+        ],
+        "do_not_infer": "Do not infer that the experiment was actually run; the transcript is a synthetic design response."
+      },
+      "practice_assets": [
+        "interview-kits/cases/adoption-rescue/candidate-brief.md",
+        "interview-kits/cases/adoption-rescue/rubric.md"
+      ]
+    }
+  ]
+}

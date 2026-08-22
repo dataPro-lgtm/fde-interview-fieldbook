@@ -88,6 +88,9 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 - [90 分钟 AI FDE 模拟面试](interview-kits/mock-loops/ai-fde-90-minute.md)
 - [60 分钟经典 FDE 模拟面试](interview-kits/mock-loops/classic-fde-60-minute.md)
 - [评审者校准指南](interview-kits/rubrics/reviewer-calibration.md)
+- [盲评、裁决与复评分离协议](interview-kits/rubrics/calibration-protocol.md)
+- [跨岗位证据锚点库](interview-kits/rubrics/evidence-anchor-library.md)
+- [双评审校准记录模板](interview-kits/worksheets/reviewer-calibration-record.md)
 - [FDE 现场交付模板包](interview-kits/worksheets/field-delivery-pack.md)
 - [AI、数据平台与受监管部署岗位作战包](interview-kits/role-playbooks/README.md)
 - [岗位定向工作包](interview-kits/worksheets/job-targeting-pack.md)
@@ -100,7 +103,7 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 
 所有时效性事实都进入 [`data/sources.json`](data/sources.json)，记录来源类型和最近核验日期。季度岗位雷达只新增、不覆盖；MCP、A2A、OpenTelemetry GenAI 和 Agent 安全使用带日期的[技术基线账本](docs/research/technology-baseline-changelog.md)。岗位作战包将一手信号、训练假设和练习资产分开登记；引导式路径将 session 顺序、学员产物和完成证据单独登记。两类结构都由机器检查。项目按月检查来源新鲜度、按周检查公开链接健康；变更过的 Mermaid 会实际渲染。对事实范围有异议时，使用[争议评审流程](docs/research/claim-review-process.md)，而不是把社区经验直接改成官方结论。
 
-研究和维护入口：[岗位雷达档案](docs/research/role-radar/README.md) · [来源政策](docs/research/source-policy.md) · [素材审计](docs/research/corpus-audit.md) · [站点评估](docs/research/documentation-site-evaluation.md) · [无障碍说明](ACCESSIBILITY.md) · [v0.1 验证记录](docs/research/release-validation-0.1.md) · [v0.5 验收记录](docs/research/release-validation-0.5.md) · [v0.6 验收记录](docs/research/release-validation-0.6.md)。
+研究和维护入口：[岗位雷达档案](docs/research/role-radar/README.md) · [来源政策](docs/research/source-policy.md) · [素材审计](docs/research/corpus-audit.md) · [站点评估](docs/research/documentation-site-evaluation.md) · [无障碍说明](ACCESSIBILITY.md) · [v0.1 验证记录](docs/research/release-validation-0.1.md) · [v0.5 验收记录](docs/research/release-validation-0.5.md) · [v0.6 验收记录](docs/research/release-validation-0.6.md) · [v0.7 验收记录](docs/research/release-validation-0.7.md) · [v0.8 验收记录](docs/research/release-validation-0.8.md)。
 
 ## 许可与声明
 

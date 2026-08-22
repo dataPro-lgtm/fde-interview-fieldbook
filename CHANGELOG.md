@@ -6,6 +6,9 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- Eight machine-readable, synthetic calibration scenarios with exact transcript evidence and explicit `N/O` handling
+- A blind-score, adjudication, and re-score protocol plus cross-role evidence anchors and a privacy-safe reviewer record
+- Calibration validation, boundary tests, a disagreement summarizer, CI integration, and a v0.8 validation record
 - Seven production Field Case Labs covering agent side effects, knowledge lifecycle, durable streaming, evaluation regression, cross-border AI, adoption rescue, and connector productization
 - Case-portfolio metadata for difficulty, risk domains, FIELD skills, release gates, and honest independent-facilitator status
 - Case-manifest v2 validation, ten risk-domain coverage, dedicated boundary tests, and a v0.7 validation record
@@ -31,6 +34,8 @@ All notable changes to the fieldbook are recorded here.
 
 ### Changed
 
+- Calibration now separates score from evidence confidence, forbids averaging away disagreement, and keeps automated readiness distinct from independent-review evidence
+- Historical calibration-pilot roadmap items are open until privacy-safe evidence from real learners and independent reviewers exists
 - Field Case Lab navigation now routes readers across ten plan, incident, adoption, governance, and productization scenarios
 - Case validation now requires ten complete packs and keeps automated readiness separate from human facilitation evidence
 - Entry points now route readers from time and role constraints to explicit artifacts and completion evidence

@@ -25,8 +25,8 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 - [x] Explain observable scoring evidence, follow-up probes, and answer boundaries
 - [x] Add a reviewer calibration protocol and sample scoring records
 - [x] Add an enterprise field operating playbook and reusable delivery worksheets
-- [x] Pilot the calibration pack with at least five learners
-- [x] Revise examples where independent reviewers differ by more than one level
+- [ ] Pilot the calibration pack with at least five learners; no privacy-safe evidence is recorded yet
+- [ ] Revise examples where independent reviewers differ by more than one level after a real pilot
 
 ## v0.3 — Field case packs
 
@@ -86,11 +86,11 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 
 ## v0.8 — Reviewer calibration and evidence quality
 
-- [ ] Publish cross-role scoring anchors and adjudication examples
-- [ ] Add machine-readable calibration scenarios and validator coverage
-- [ ] Provide a blind first-score, adjudication, and second-score protocol
-- [ ] Measure reviewer disagreement without fabricating external pilot results
-- [ ] Publish a v0.8 validation record separating internal calibration from independent review
+- [x] Publish cross-role scoring anchors and adjudication examples
+- [x] Add machine-readable calibration scenarios and validator coverage
+- [x] Provide a blind first-score, adjudication, and second-score protocol
+- [x] Provide a privacy-safe disagreement summarizer without fabricating external pilot results
+- [x] Publish a v0.8 validation record separating internal calibration from independent review
 
 ## v0.9 — Bilingual core parity and archival maintenance
 

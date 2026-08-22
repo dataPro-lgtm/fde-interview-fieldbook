@@ -23,6 +23,8 @@ For time-sensitive claims, add or update an entry in `data/sources.json` with `l
 
 Guided-practice routes belong in `data/learning-paths.json`. Every session must name existing repository inputs, an inspectable learner output, and at least two observable completion checks. Reading a page, spending time, or self-reporting confidence is not sufficient completion evidence.
 
+Calibration scenarios belong in `data/calibration-scenarios.json`. They must be synthetic or privacy-safe, target only dimensions the prompt can actually expose, quote exact transcript evidence for every numeric rating, and use `N/O` when the skill was not observed. Agreement metrics describe reviewers, not candidates, and may not be reported as external validation without two genuinely independent reviewers and an auditable, privacy-safe record.
+
 If credible sources conflict, do not silently choose one. Follow the [claim-review process](docs/research/claim-review-process.md), preserve the disputed scope, and state what evidence would resolve it.
 
 ## Content rules
@@ -49,6 +51,7 @@ If credible sources conflict, do not silently choose one. Follow the [claim-revi
 - [ ] `python3 scripts/validate_research_data.py` passes when role-radar or baseline data changes.
 - [ ] `python3 scripts/validate_role_playbooks.py` passes when role-targeting assets change.
 - [ ] `python3 scripts/validate_learning_paths.py` passes when guided-practice assets change.
+- [ ] `python3 scripts/validate_calibration.py` passes when calibration scenarios, anchors, or records change.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 - [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 
