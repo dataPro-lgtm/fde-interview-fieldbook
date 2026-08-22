@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-08-22",
+  "parity_definition": "full means equivalent learner outcomes, practice boundary, and completion route; it does not mean sentence-by-sentence translation",
+  "allowed_statuses": ["full", "condensed", "planned"],
+  "core_pairs": [
+    {
+      "id": "start-here",
+      "zh_path": "docs/zh-CN/00-start-here.md",
+      "en_path": "docs/en/start-here.md",
+      "status": "full",
+      "scope_note": "Both paths establish target role, baseline, evidence gaps, and a bounded first backlog.",
+      "learner_outcomes": ["state a target role", "separate evidence from gaps", "choose no more than three repair priorities"],
+      "practice_assets": ["interview-kits/rubrics/master-scorecard.md"]
+    },
+    {
+      "id": "role-map",
+      "zh_path": "docs/zh-CN/01-role-map.md",
+      "en_path": "docs/en/role-map.md",
+      "status": "full",
+      "scope_note": "Both paths distinguish FDE archetypes, ownership boundaries, and the field-to-product loop.",
+      "learner_outcomes": ["distinguish role archetypes", "define end-to-end ownership", "explain field-to-product leverage"],
+      "practice_assets": ["interview-kits/role-playbooks/README.md"]
+    },
+    {
+      "id": "interview-loop",
+      "zh_path": "docs/zh-CN/02-interview-loop.md",
+      "en_path": "docs/en/interview-loop.md",
+      "status": "full",
+      "scope_note": "Both paths map interview surfaces to observable evidence without claiming employer-internal policy.",
+      "learner_outcomes": ["map rounds to evidence", "identify veto risks", "build an evidence-based preparation loop"],
+      "practice_assets": ["interview-kits/mock-loops/ai-fde-90-minute.md"]
+    },
+    {
+      "id": "discovery",
+      "zh_path": "docs/zh-CN/03-discovery.md",
+      "en_path": "docs/en/discovery.md",
+      "status": "full",
+      "scope_note": "Both paths reconstruct current workflow, label uncertainty, and define a measurable thin slice.",
+      "learner_outcomes": ["map a current workflow", "write a bounded mission", "select an uncertainty-reducing thin slice"],
+      "practice_assets": ["interview-kits/rubrics/discovery-scorecard.md"]
+    },
+    {
+      "id": "coding-data-delivery",
+      "zh_path": "docs/zh-CN/04-coding-data-delivery.md",
+      "en_path": "docs/en/coding-data-delivery.md",
+      "status": "full",
+      "scope_note": "Both paths cover live-coding behavior, production data semantics, testing, and TRACE debugging.",
+      "learner_outcomes": ["execute a stable coding loop", "reason about identity order delete and retry", "produce a TRACE incident record"],
+      "practice_assets": ["interview-kits/cases/production-incident/README.md"]
+    },
+    {
+      "id": "system-design",
+      "zh_path": "docs/zh-CN/05-system-design.md",
+      "en_path": "docs/en/system-design.md",
+      "status": "full",
+      "scope_note": "Both paths derive data, control, state, and evidence flows from workflow constraints.",
+      "learner_outcomes": ["derive architecture from constraints", "draw three operational flows", "define rollout recovery and ownership"],
+      "practice_assets": ["interview-kits/rubrics/system-design-scorecard.md"]
+    },
+    {
+      "id": "production-ai",
+      "zh_path": "docs/zh-CN/06-production-ai.md",
+      "en_path": "docs/en/production-ai-2026.md",
+      "status": "full",
+      "scope_note": "Both paths cover production RAG, agents, context, protocols, evaluation, durability, security, and cost boundaries.",
+      "learner_outcomes": ["choose an AI workflow by risk", "diagnose versioned AI behavior", "govern tools state and recovery"],
+      "practice_assets": ["interview-kits/mock-loops/ai-fde-90-minute.md"]
+    },
+    {
+      "id": "case-practice",
+      "zh_path": "docs/zh-CN/07-casebook.md",
+      "en_path": "docs/en/field-case-lab.md",
+      "status": "full",
+      "scope_note": "Chinese includes worked examples; English reaches the same FIELD outcomes through the ten blind case packages and explicit facilitation route.",
+      "learner_outcomes": ["apply FIELD end to end", "update decisions after staged evidence", "debrief with case-specific evidence"],
+      "practice_assets": ["interview-kits/cases/README.md", "interview-kits/cases/facilitation-standard.md"]
+    },
+    {
+      "id": "question-bank",
+      "zh_path": "docs/zh-CN/08-question-bank.md",
+      "en_path": "docs/en/question-bank.md",
+      "status": "full",
+      "scope_note": "The English set is smaller but preserves every high-use decision domain and follow-up method rather than literal question count.",
+      "learner_outcomes": ["answer with boundary mechanism decision and evidence", "survive a second-layer follow-up", "state a condition that changes the answer"],
+      "practice_assets": ["interview-kits/rubrics/master-scorecard.md"]
+    },
+    {
+      "id": "behavioral-field-leadership",
+      "zh_path": "docs/zh-CN/09-behavioral.md",
+      "en_path": "docs/en/behavioral-field-leadership.md",
+      "status": "full",
+      "scope_note": "Both paths make personal decisions, stakeholder rationality, failure, and mechanism change auditable.",
+      "learner_outcomes": ["build evidence-bearing STAR-L stories", "handle pressure with bounded options", "recover a demo without deception"],
+      "practice_assets": ["interview-kits/worksheets/practice-journal.md"]
+    },
+    {
+      "id": "study-plans",
+      "zh_path": "docs/zh-CN/10-study-plans.md",
+      "en_path": "docs/en/study-plans.md",
+      "status": "full",
+      "scope_note": "Both paths provide seven-day and thirty-day evidence-producing plans with exit conditions.",
+      "learner_outcomes": ["schedule inspectable outputs", "run repair and replay cycles", "prioritize veto risks"],
+      "practice_assets": ["data/learning-paths.json", "interview-kits/worksheets/practice-journal.md"]
+    },
+    {
+      "id": "portfolio-evidence",
+      "zh_path": "docs/zh-CN/11-portfolio.md",
+      "en_path": "docs/en/portfolio-evidence.md",
+      "status": "full",
+      "scope_note": "Both paths replace tool inventories with verifiable role-relevant project evidence.",
+      "learner_outcomes": ["separate personal and team contribution", "present decisions and bounded outcomes", "prepare layered project depth"],
+      "practice_assets": ["interview-kits/worksheets/job-targeting-pack.md"]
+    },
+    {
+      "id": "answer-calibration",
+      "zh_path": "docs/zh-CN/12-answer-calibration.md",
+      "en_path": "docs/en/answer-calibration.md",
+      "status": "full",
+      "scope_note": "Both paths distinguish developing, independent, and leverage-creating evidence while preserving N/O and external-validation boundaries.",
+      "learner_outcomes": ["score exact evidence", "classify reviewer disagreement", "repair two observable behaviors"],
+      "practice_assets": ["data/calibration-scenarios.json", "interview-kits/rubrics/calibration-protocol.md"]
+    },
+    {
+      "id": "field-operating-playbook",
+      "zh_path": "docs/zh-CN/13-field-operating-playbook.md",
+      "en_path": "docs/en/field-operating-playbook.md",
+      "status": "full",
+      "scope_note": "Both paths cover entry, evidence, mission, build, evaluation, launch, incident, adoption, handoff, and productization.",
+      "learner_outcomes": ["operate a field engagement with explicit ownership", "define release and recovery gates", "prove handoff and second-consumer leverage"],
+      "practice_assets": ["interview-kits/worksheets/field-delivery-pack.md"]
+    },
+    {
+      "id": "job-targeting",
+      "zh_path": "docs/zh-CN/14-job-targeting.md",
+      "en_path": "docs/en/job-targeting.md",
+      "status": "full",
+      "scope_note": "Both paths convert one public role into bounded signals, evidence mapping, and targeted practice.",
+      "learner_outcomes": ["extract sourced role signals", "separate evidence exercise and gap", "run a role-specific campaign"],
+      "practice_assets": ["interview-kits/role-playbooks/README.md"]
+    },
+    {
+      "id": "guided-practice",
+      "zh_path": "docs/zh-CN/15-guided-practice.md",
+      "en_path": "docs/en/guided-practice.md",
+      "status": "full",
+      "scope_note": "Both paths select and execute the same machine-checked 7-day, 14-day, and 30-day routes.",
+      "learner_outcomes": ["choose a route by constraints", "produce ordered completion evidence", "run repair before advancing"],
+      "practice_assets": ["data/learning-paths.json", "interview-kits/worksheets/practice-journal.md"]
+    }
+  ]
+}

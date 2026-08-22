@@ -1,0 +1,7 @@
+slice,sample_count,previous_accuracy,current_accuracy,label_parse_errors,online_manual_escalation_rate
+account_security,80,0.91,0.18,42,0.37
+billing,180,0.89,0.61,51,0.12
+how_to_faq,420,0.93,0.87,9,0.04
+order_status,260,0.88,0.82,14,0.06
+multi_intent,110,0.76,0.09,83,0.29
+single_intent,830,0.92,0.79,33,0.08

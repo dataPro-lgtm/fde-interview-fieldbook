@@ -1,10 +1,32 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "cases": [
     {
       "id": "data-platform-migration",
       "title": "经典数据平台迁移",
       "duration_minutes": 75,
+      "difficulty": "intermediate",
+      "risk_domains": [
+        "migration",
+        "data-lifecycle",
+        "adoption"
+      ],
+      "field_skills": [
+        "Frame",
+        "Inspect",
+        "Engineer",
+        "Launch",
+        "Distill"
+      ],
+      "release_gates": [
+        "Source and target reconciliation passes by tenant and object class.",
+        "Cutover and rollback are rehearsed with the operating team."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Independent facilitator evidence has not been collected."
+      },
       "candidate_brief": "interview-kits/cases/data-platform-migration/candidate-brief.md",
       "interviewer_brief": "interview-kits/cases/data-platform-migration/interviewer-brief.md",
       "rubric": "interview-kits/cases/data-platform-migration/rubric.md",
@@ -32,6 +54,27 @@
       "id": "air-gapped-ai-deployment",
       "title": "隔离环境 AI 部署",
       "duration_minutes": 75,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "security",
+        "evaluation",
+        "adoption"
+      ],
+      "field_skills": [
+        "Frame",
+        "Inspect",
+        "Engineer",
+        "Launch"
+      ],
+      "release_gates": [
+        "The approved environment can reproduce evaluation and dependency evidence.",
+        "Security controls and operating recovery are exercised before expansion."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Independent facilitator evidence has not been collected."
+      },
       "candidate_brief": "interview-kits/cases/air-gapped-ai-deployment/candidate-brief.md",
       "interviewer_brief": "interview-kits/cases/air-gapped-ai-deployment/interviewer-brief.md",
       "rubric": "interview-kits/cases/air-gapped-ai-deployment/rubric.md",
@@ -55,6 +98,27 @@
       "id": "production-incident",
       "title": "生产事故指挥",
       "duration_minutes": 60,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "incident-response",
+        "evaluation",
+        "data-lifecycle"
+      ],
+      "field_skills": [
+        "Inspect",
+        "Engineer",
+        "Launch",
+        "Distill"
+      ],
+      "release_gates": [
+        "Containment and recovery are supported by preserved request and version evidence.",
+        "The regression and operational mechanism are changed before normal rollout resumes."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Independent facilitator evidence has not been collected."
+      },
       "candidate_brief": "interview-kits/cases/production-incident/candidate-brief.md",
       "interviewer_brief": "interview-kits/cases/production-incident/interviewer-brief.md",
       "rubric": "interview-kits/cases/production-incident/rubric.md",
@@ -75,6 +139,315 @@
         {
           "round": 3,
           "path": "interview-kits/cases/production-incident/artifacts/round-3-change-log.md"
+        }
+      ]
+    },
+    {
+      "id": "agent-tool-side-effect",
+      "title": "Agent 工具副作用失控",
+      "duration_minutes": 75,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "agent-side-effects",
+        "incident-response",
+        "security"
+      ],
+      "field_skills": [
+        "Frame",
+        "Inspect",
+        "Engineer",
+        "Launch"
+      ],
+      "release_gates": [
+        "Irreversible actions have stable business identity, authorization, idempotency, and final-state reconciliation.",
+        "Authority expands only after safety and business evidence pass their separate gates."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Synthetic case; independent facilitator evidence has not been collected."
+      },
+      "candidate_brief": "interview-kits/cases/agent-tool-side-effect/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/agent-tool-side-effect/interviewer-brief.md",
+      "rubric": "interview-kits/cases/agent-tool-side-effect/rubric.md",
+      "debrief": "interview-kits/cases/agent-tool-side-effect/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/agent-tool-side-effect/artifacts/round-1-workflow.md"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/agent-tool-side-effect/artifacts/round-2-execution-log.json"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/agent-tool-side-effect/artifacts/round-3-pressure-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "knowledge-sync-lifecycle",
+      "title": "知识库同步与删除边界",
+      "duration_minutes": 75,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "data-lifecycle",
+        "security",
+        "incident-response"
+      ],
+      "field_skills": [
+        "Inspect",
+        "Engineer",
+        "Launch",
+        "Distill"
+      ],
+      "release_gates": [
+        "Deletion requires a reliable tombstone or completed-snapshot evidence rather than one missing observation.",
+        "Permission revocation protects retrieval, cache, citation, and export paths within the approved window."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Synthetic case; independent facilitator evidence has not been collected."
+      },
+      "candidate_brief": "interview-kits/cases/knowledge-sync-lifecycle/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/knowledge-sync-lifecycle/interviewer-brief.md",
+      "rubric": "interview-kits/cases/knowledge-sync-lifecycle/rubric.md",
+      "debrief": "interview-kits/cases/knowledge-sync-lifecycle/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/knowledge-sync-lifecycle/artifacts/round-1-source-contract.md"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/knowledge-sync-lifecycle/artifacts/round-2-sync-sample.csv"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/knowledge-sync-lifecycle/artifacts/round-3-pressure-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "durable-agent-streaming",
+      "title": "多 Pod 长任务与断点续传",
+      "duration_minutes": 75,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "durable-execution",
+        "agent-side-effects",
+        "incident-response"
+      ],
+      "field_skills": [
+        "Inspect",
+        "Engineer",
+        "Launch",
+        "Distill"
+      ],
+      "release_gates": [
+        "Task truth, step checkpoints, and replayable events survive connection and worker loss.",
+        "Lease fencing and tool idempotency prevent duplicate progress and side effects during recovery."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Synthetic case; independent facilitator evidence has not been collected."
+      },
+      "candidate_brief": "interview-kits/cases/durable-agent-streaming/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/durable-agent-streaming/interviewer-brief.md",
+      "rubric": "interview-kits/cases/durable-agent-streaming/rubric.md",
+      "debrief": "interview-kits/cases/durable-agent-streaming/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/durable-agent-streaming/artifacts/round-1-current-topology.md"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/durable-agent-streaming/artifacts/round-2-event-timeline.csv"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/durable-agent-streaming/artifacts/round-3-failure-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-regression",
+      "title": "AI 评测指标断崖式回归",
+      "duration_minutes": 75,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "evaluation",
+        "incident-response",
+        "security"
+      ],
+      "field_skills": [
+        "Inspect",
+        "Engineer",
+        "Launch",
+        "Distill"
+      ],
+      "release_gates": [
+        "Risk traffic is protected while metric, label, and online behavior are independently verified.",
+        "A fixed request and version matrix identifies the first divergent layer before causal claims."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Synthetic case; independent facilitator evidence has not been collected."
+      },
+      "candidate_brief": "interview-kits/cases/evaluation-regression/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/evaluation-regression/interviewer-brief.md",
+      "rubric": "interview-kits/cases/evaluation-regression/rubric.md",
+      "debrief": "interview-kits/cases/evaluation-regression/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/evaluation-regression/artifacts/round-1-version-matrix.csv"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/evaluation-regression/artifacts/round-2-sliced-evaluation.csv"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/evaluation-regression/artifacts/round-3-pressure-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "cross-border-ai-deployment",
+      "title": "跨境企业 AI 部署",
+      "duration_minutes": 90,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "cross-border",
+        "security",
+        "adoption"
+      ],
+      "field_skills": [
+        "Frame",
+        "Inspect",
+        "Engineer",
+        "Launch"
+      ],
+      "release_gates": [
+        "Customer owners confirm data purpose, region, access, retention, and vendor boundaries before scope expands.",
+        "Regional data paths and minimized central telemetry are tested with approved data classes."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Synthetic engineering exercise, not legal advice; independent facilitator evidence has not been collected."
+      },
+      "candidate_brief": "interview-kits/cases/cross-border-ai-deployment/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/cross-border-ai-deployment/interviewer-brief.md",
+      "rubric": "interview-kits/cases/cross-border-ai-deployment/rubric.md",
+      "debrief": "interview-kits/cases/cross-border-ai-deployment/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/cross-border-ai-deployment/artifacts/round-1-data-flow.md"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/cross-border-ai-deployment/artifacts/round-2-control-matrix.csv"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/cross-border-ai-deployment/artifacts/round-3-pressure-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "adoption-rescue",
+      "title": "技术正确但没人使用",
+      "duration_minutes": 75,
+      "difficulty": "intermediate",
+      "risk_domains": [
+        "adoption",
+        "evaluation",
+        "productization"
+      ],
+      "field_skills": [
+        "Frame",
+        "Inspect",
+        "Launch",
+        "Distill"
+      ],
+      "release_gates": [
+        "Adoption experiments measure user action and workflow outcome rather than forced feature opens.",
+        "Product changes are prioritized from segmented evidence with explicit stop conditions."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Synthetic case; independent facilitator evidence has not been collected."
+      },
+      "candidate_brief": "interview-kits/cases/adoption-rescue/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/adoption-rescue/interviewer-brief.md",
+      "rubric": "interview-kits/cases/adoption-rescue/rubric.md",
+      "debrief": "interview-kits/cases/adoption-rescue/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/adoption-rescue/artifacts/round-1-workflow.md"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/adoption-rescue/artifacts/round-2-adoption-funnel.csv"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/adoption-rescue/artifacts/round-3-pressure-injection.md"
+        }
+      ]
+    },
+    {
+      "id": "connector-productization",
+      "title": "连接器从定制走向产品能力",
+      "duration_minutes": 75,
+      "difficulty": "advanced",
+      "risk_domains": [
+        "productization",
+        "data-lifecycle",
+        "migration"
+      ],
+      "field_skills": [
+        "Frame",
+        "Inspect",
+        "Engineer",
+        "Launch",
+        "Distill"
+      ],
+      "release_gates": [
+        "A second materially different source validates the lifecycle contract before it is called platform capability.",
+        "Existing customers migrate through dual-run reconciliation and a tested rollback path."
+      ],
+      "human_validation": {
+        "status": "not-run",
+        "independent_runs": 0,
+        "note": "Synthetic case; independent facilitator evidence has not been collected."
+      },
+      "candidate_brief": "interview-kits/cases/connector-productization/candidate-brief.md",
+      "interviewer_brief": "interview-kits/cases/connector-productization/interviewer-brief.md",
+      "rubric": "interview-kits/cases/connector-productization/rubric.md",
+      "debrief": "interview-kits/cases/connector-productization/debrief.md",
+      "artifacts": [
+        {
+          "round": 1,
+          "path": "interview-kits/cases/connector-productization/artifacts/round-1-connector-inventory.csv"
+        },
+        {
+          "round": 2,
+          "path": "interview-kits/cases/connector-productization/artifacts/round-2-upgrade-incident.md"
+        },
+        {
+          "round": 3,
+          "path": "interview-kits/cases/connector-productization/artifacts/round-3-pressure-injection.md"
         }
       ]
     }

@@ -2,7 +2,9 @@
 
 > A source-backed, production-first field guide for Forward Deployed Engineer interviews.
 
-[简体中文](README.zh-CN.md) · [English reading map](docs/en/reading-map.md) · [Job targeting](docs/en/job-targeting.md) · [Start here](docs/en/start-here.md) · [Role playbooks (Chinese)](interview-kits/role-playbooks/README.md) · [Field Case Lab (Chinese)](interview-kits/cases/README.md) · [Contributing](CONTRIBUTING.md)
+**Current release:** `1.0.0-rc.1` — the content and automation contracts are reproducible at A1; stable promotion remains closed until the independent reader, facilitator, reviewer, and bilingual-use gates have real evidence.
+
+[简体中文](README.zh-CN.md) · [English reading map](docs/en/reading-map.md) · [Guided practice](docs/en/guided-practice.md) · [Job targeting](docs/en/job-targeting.md) · [Start here](docs/en/start-here.md) · [Role playbooks (Chinese)](interview-kits/role-playbooks/README.md) · [Field Case Lab (Chinese)](interview-kits/cases/README.md) · [Contributing](CONTRIBUTING.md)
 
 FDE interviews do not only ask whether you can write code. They test whether you can enter an ambiguous customer environment, find the real workflow, ship a thin but valuable system, keep it reliable in production, and turn field learning into reusable product capability.
 
@@ -55,8 +57,9 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 | 30 days | Follow the [30-day plan](docs/zh-CN/10-study-plans.md#三十天计划), run three mock loops, and build a portfolio narrative | Interview-ready evidence across all dimensions |
 | Already interviewing | Use the [question bank](docs/zh-CN/08-question-bank.md), [worked cases](docs/zh-CN/07-casebook.md), and [blind case labs](interview-kits/cases/README.md) | Targeted practice, not broad rereading |
 | One target role | Turn its public JD into an [evidence-based campaign](docs/en/job-targeting.md), then select one [role playbook](interview-kits/role-playbooks/README.md) | A role brief, evidence matrix, and ten scored sessions |
+| I keep reading but do not practise | Choose one [guided 7-, 14-, or 30-day path](docs/en/guided-practice.md) | Ordered artifacts, completion evidence, and a repair cycle |
 
-English-first readers can use the [English reading map](docs/en/reading-map.md) for the translated high-use path. The project labels untranslated depth instead of implying full parity.
+English-first readers can use the [English reading map](docs/en/reading-map.md) for the complete core learner-outcome path. `Full` parity means equivalent outcomes, evidence boundaries, practice routes, and completion logic—not sentence-by-sentence translation; the machine-readable contract is in [`data/content-parity.json`](data/content-parity.json).
 
 ## Handbook map
 
@@ -79,21 +82,30 @@ English-first readers can use the [English reading map](docs/en/reading-map.md) 
 | [Answer calibration pack](docs/zh-CN/12-answer-calibration.md)                   | Compare weak, independent, and leverage-creating answers using evidence                    |
 | [Enterprise field operating playbook](docs/zh-CN/13-field-operating-playbook.md) | Carry interview reasoning into discovery, launch, incidents, handoff, and product feedback |
 
-The Chinese core path continues with [job targeting and role-specific interview campaigns](docs/zh-CN/14-job-targeting.md).
+The Chinese core path continues with [job targeting](docs/zh-CN/14-job-targeting.md) and the [guided-practice system](docs/zh-CN/15-guided-practice.md).
 
-### English high-use path
+### English core path
 
 - [Start here](docs/en/start-here.md)
 - [FDE role map](docs/en/role-map.md)
 - [Interview loop and scoring](docs/en/interview-loop.md)
+- [Discovery and mission framing](docs/en/discovery.md)
+- [Coding, data, and delivery](docs/en/coding-data-delivery.md)
 - [Workflow-first system design](docs/en/system-design.md)
 - [Production AI in 2026](docs/en/production-ai-2026.md)
+- [Field Case Lab](docs/en/field-case-lab.md)
+- [High-signal question bank](docs/en/question-bank.md)
+- [Behavioral interviews and field leadership](docs/en/behavioral-field-leadership.md)
+- [Evidence-first study plans](docs/en/study-plans.md)
 - [Resume, portfolio, and project evidence](docs/en/portfolio-evidence.md)
+- [Answer calibration](docs/en/answer-calibration.md)
+- [Field operating playbook](docs/en/field-operating-playbook.md)
 - [Turn one job description into an evidence-based campaign](docs/en/job-targeting.md)
+- [Turn reading into guided, evidence-producing practice](docs/en/guided-practice.md)
 
 ### Practice kits
 
-- [Field Case Lab: three facilitator-ready case packs](interview-kits/cases/README.md)
+- [Field Case Lab: ten production case packs with staged evidence](interview-kits/cases/README.md)
 - [Case facilitation standard](interview-kits/cases/facilitation-standard.md)
 - [Master scorecard](interview-kits/rubrics/master-scorecard.md)
 - [Customer discovery scorecard](interview-kits/rubrics/discovery-scorecard.md)
@@ -101,10 +113,13 @@ The Chinese core path continues with [job targeting and role-specific interview 
 - [90-minute AI FDE mock loop](interview-kits/mock-loops/ai-fde-90-minute.md)
 - [60-minute classic FDE mock loop](interview-kits/mock-loops/classic-fde-60-minute.md)
 - [Reviewer calibration guide](interview-kits/rubrics/reviewer-calibration.md)
+- [Blind scoring, adjudication, and re-score protocol](interview-kits/rubrics/calibration-protocol.md)
+- [Cross-role evidence anchor library](interview-kits/rubrics/evidence-anchor-library.md)
 - [Field delivery worksheet pack](interview-kits/worksheets/field-delivery-pack.md)
 - [Role-targeting playbooks for AI, data-platform, and regulated deployment FDEs](interview-kits/role-playbooks/README.md)
 - [Job-targeting worksheet pack](interview-kits/worksheets/job-targeting-pack.md)
 - [Three role-targeted blind mock loops and pilot protocol](interview-kits/mock-loops/role-targeted/README.md)
+- [Practice journal for first attempt, evidence, score, repair, and retry](interview-kits/worksheets/practice-journal.md)
 
 ### Research and maintenance
 
@@ -116,6 +131,14 @@ The Chinese core path continues with [job targeting and role-specific interview 
 - [Documentation-site evaluation](docs/research/documentation-site-evaluation.md)
 - [v0.1 validation record](docs/research/release-validation-0.1.md)
 - [v0.5 role-targeting validation record](docs/research/release-validation-0.5.md)
+- [v0.6 guided-practice validation record](docs/research/release-validation-0.6.md)
+- [v0.7 production-case validation record](docs/research/release-validation-0.7.md)
+- [v0.8 reviewer-calibration validation record](docs/research/release-validation-0.8.md)
+- [v0.9 bilingual-parity and archive validation record](docs/research/release-validation-0.9.md)
+- [v1.0 release-candidate validation and completion audit](docs/research/release-validation-1.0.md)
+- [Machine-readable release manifest](data/release-manifest.json)
+- [Bilingual maintenance and source-archive contract](docs/research/bilingual-maintenance.md)
+- [v0.6-to-v1.0 execution plan](docs/research/version-plan-0.6-to-1.0.md)
 - [Roadmap](ROADMAP.md)
 - [Accessibility](ACCESSIBILITY.md)
 
@@ -129,13 +152,15 @@ The Chinese core path continues with [job targeting and role-specific interview 
 
 ## Living-project contract
 
-Time-sensitive claims carry a source and `last_checked` date. Quarterly role snapshots are immutable additions, while protocol and security baselines keep a dated change log. Role playbooks separately register first-party signals, interview hypotheses, evidence boundaries, and practice assets. Monthly source-freshness and weekly public-link audits open maintenance issues when evidence ages out or a URL is confirmed dead. Changed Mermaid diagrams are rendered in CI, and versioned research and practice data is machine-checked. Contributors can propose a role update or dispute an overbroad claim using structured forms. Material changes are recorded in the changelog.
+Time-sensitive claims carry a source and `last_checked` date. Quarterly role snapshots are immutable additions, while protocol and security baselines keep a dated change log. Role playbooks separately register first-party signals, interview hypotheses, evidence boundaries, and practice assets. Guided paths separately register ordered sessions, learner outputs, and completion evidence. Monthly source-freshness and weekly public-link audits open maintenance issues when evidence ages out or a URL is confirmed dead. Changed Mermaid diagrams are rendered in CI, and versioned research and practice data is machine-checked. Contributors can propose a role update or dispute an overbroad claim using structured forms. Material changes are recorded in the changelog.
 
 The project follows three confidence labels:
 
 - **Official**: employer posting, protocol specification, standards body, or vendor documentation.
 - **Corroborated**: multiple credible sources agree, but the employer has not published the detail.
 - **Community**: useful practitioner experience; never presented as official policy.
+
+For a reproducible local audit, run `python3 scripts/verify_release.py --full --network`. Add `--require-clean` when checking a committed release candidate. Network-dependent lint package resolution, Mermaid CLI resolution, and public-link health remain separate from dependency-free content contracts.
 
 ## Contributing
 

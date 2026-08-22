@@ -152,6 +152,10 @@ MCP、A2A、durable execution 和 evals 全部出现，也可能只是名词陈�
 
 ## 配套材料
 
+- [盲评、分歧裁决与复评分离协议](calibration-protocol.md)
+- [八个核心维度的证据锚点库](evidence-anchor-library.md)
+- [可复制的评审者校准记录](../worksheets/reviewer-calibration-record.md)
+- [机器可读合成校准场景](../../data/calibration-scenarios.json)
 - [十二道核心题的答案校准](../../docs/zh-CN/12-answer-calibration.md)
 - [总评分表](master-scorecard.md)
 - [两段带评分的模拟记录](../mock-loops/calibration-samples.md)

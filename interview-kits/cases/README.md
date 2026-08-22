@@ -9,6 +9,13 @@
 | [经典数据平台迁移](data-platform-migration/README.md) | 数据语义、CDC、对账、切换与回滚 | 75 分钟 | 数据 FDE、平台 FDE、解决方案工程师 |
 | [隔离环境 AI 部署](air-gapped-ai-deployment/README.md) | 约束发现、供应链、安全、离线评测与运维 | 75 分钟 | AI FDE、政企交付、安全解决方案 |
 | [生产事故指挥](production-incident/README.md) | 止血、分层归因、幂等、指标可信度与复盘 | 60 分钟 | AI FDE、生产工程、技术负责人 |
+| [Agent 工具副作用失控](agent-tool-side-effect/README.md) | 不可逆动作、权限、幂等、未知结果与财务事故 | 75 分钟 | Agent FDE、应用工程、平台工程 |
+| [知识库同步与删除边界](knowledge-sync-lifecycle/README.md) | 稳定身份、权限撤回、软删除、快照与对账 | 75 分钟 | 数据 FDE、RAG 平台、搜索工程 |
+| [多 Pod 长任务与断点续传](durable-agent-streaming/README.md) | 持久任务、租约、事件游标、恢复与取消 | 75 分钟 | Agent FDE、分布式系统、平台工程 |
+| [AI 评测指标断崖式回归](evaluation-regression/README.md) | 指标可信度、版本矩阵、切片保护与归因实验 | 75 分钟 | AI FDE、评测平台、生产工程 |
+| [跨境企业 AI 部署](cross-border-ai-deployment/README.md) | 数据分类、区域边界、供应商控制与阶段交付 | 90 分钟 | 行业 FDE、安全方案、跨境交付 |
+| [技术正确但没人使用](adoption-rescue/README.md) | 工作流采用、信任、分群实验与产品反馈 | 75 分钟 | 全类型 FDE、产品工程、解决方案 |
+| [连接器从定制走向产品能力](connector-productization/README.md) | 契约、适配、版本、运营、迁移与复用边界 | 75 分钟 | 数据 FDE、平台 FDE、技术负责人 |
 
 第一次训练只打开案例目录里的 `candidate-brief.md`。面试官材料、证据文件和复盘都包含剧透，应由主持人按轮次释放。
 
@@ -28,6 +35,18 @@ flowchart TD
 推荐由一名候选人、一名主持人和一名可选观察员完成。观察员只记录原话、决策和时间，不中途提示。双方必须在阅读参考复盘前独立评分，否则评分会被答案锚定。
 
 完整主持规则见[案例包运行标准](facilitation-standard.md)。案例文件契约记录在 [`data/case-packs.json`](../../data/case-packs.json)，并由 `python3 scripts/validate_case_packs.py` 自动检查。
+
+## 十套案例怎样组合
+
+不要按目录顺序刷完。先选一套与你目标岗位最接近的计划型案例，再选一套会打断原计划的事故或压力案例：
+
+- **AI / Agent 主线：** Agent 工具副作用 + 评测回归或长任务恢复；
+- **数据平台主线：** 数据迁移 + 知识生命周期或连接器产品化；
+- **受监管与行业交付：** 隔离部署 + 跨境部署或生产事故；
+- **资深 FDE 主线：** 采用恢复 + 连接器产品化，再补一套事故；
+- **综合基线：** 数据迁移 + 生产事故，覆盖计划与响应两类判断。
+
+`data/case-packs.json` 还记录难度、风险域、FIELD 能力、案例特有发布门禁和真实主持状态。当前十套案例均已通过 A1 自动化契约，但 `human_validation.status` 仍是 `not-run`：这表示内容结构已经可检查，不表示已经由独立主持人验证。
 
 ## 三种练法
 

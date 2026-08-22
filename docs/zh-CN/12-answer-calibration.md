@@ -64,7 +64,9 @@ flowchart TD
 4. 面对第二层追问仍然能回到任务、事实和风险；
 5. 两位评审对大部分回答的评分差距不超过一个等级。
 
-评审方法见[评审者校准指南](../../interview-kits/rubrics/reviewer-calibration.md)。如果分差较大，不要简单取平均，先判断是题目没有暴露某项能力、评分锚点不清，还是评审把表达流畅误当成了判断质量。
+评审入口见[评审者校准指南](../../interview-kits/rubrics/reviewer-calibration.md)。两人训练时，应进一步使用[盲评、裁决与复评分离协议](../../interview-kits/rubrics/calibration-protocol.md)、[证据锚点库](../../interview-kits/rubrics/evidence-anchor-library.md)和[双评审记录模板](../../interview-kits/worksheets/reviewer-calibration-record.md)。如果分差较大，不要简单取平均，先判断是题目没有暴露某项能力、评分锚点不清，还是评审把表达流畅误当成了判断质量。
+
+仓库还提供八个[机器可检验的合成校准场景](../../data/calibration-scenarios.json)。它们用于练习证据引用、`N/O`、一票否决和分歧分类，不是学员效果数据。真实双评审记录可以在移除身份、公司和真实题目后，用 `python3 scripts/summarize_calibration.py <ratings.json>` 汇总分歧；百分比必须和分母一起解释。
 
 ---
 

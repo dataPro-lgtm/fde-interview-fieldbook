@@ -21,6 +21,14 @@ Classify external claims as one of:
 
 For time-sensitive claims, add or update an entry in `data/sources.json` with `last_checked`. Quarterly role observations belong in `data/role-radar/<year>-Q<quarter>.json`; MCP, A2A, observability, and agent-security changes belong in `data/technology-baselines.json`. Role-playbook signals belong in `data/role-playbooks.json` and must point to registered sources; interview surfaces remain labeled hypotheses until first-party confirmation. Do not turn a single community interview report into a company-wide statement.
 
+Guided-practice routes belong in `data/learning-paths.json`. Every session must name existing repository inputs, an inspectable learner output, and at least two observable completion checks. Reading a page, spending time, or self-reporting confidence is not sufficient completion evidence.
+
+Calibration scenarios belong in `data/calibration-scenarios.json`. They must be synthetic or privacy-safe, target only dimensions the prompt can actually expose, quote exact transcript evidence for every numeric rating, and use `N/O` when the skill was not observed. Agreement metrics describe reviewers, not candidates, and may not be reported as external validation without two genuinely independent reviewers and an auditable, privacy-safe record.
+
+Core Chinese and English paths are paired in `data/content-parity.json`. `full` means the same learner outcome, evidence boundary, practice route, and completion logic—not sentence-by-sentence translation or identical length. When a core chapter changes materially, update both paths or downgrade the pair honestly. Annual source archives preserve public metadata and the source-ledger digest only; never archive page bodies, access-controlled content, credentials, paid material, or interview questions.
+
+Every release-bound change alters the deterministic content root in `data/release-manifest.json`. The manifest covers every indexed file except itself, using path, byte length, and SHA-256 grouped by repository area. Regenerate it only after all intended files are staged and stable; review the diff, then run `python3 scripts/validate_release_manifest.py --check`. Do not change an external gate from `not-run` without a real privacy-safe record that satisfies its stated evidence requirement.
+
 If credible sources conflict, do not silently choose one. Follow the [claim-review process](docs/research/claim-review-process.md), preserve the disputed scope, and state what evidence would resolve it.
 
 ## Content rules
@@ -39,12 +47,17 @@ If credible sources conflict, do not silently choose one. Follow the [claim-revi
 - [ ] Official facts and personal experience are labeled separately.
 - [ ] Internal links work.
 - [ ] Case-pack files and staged artifacts are registered in `data/case-packs.json`.
+- [ ] Case metadata names difficulty, risk domains, FIELD skills, release gates, and honest human-validation status.
 - [ ] Role-targeted mocks keep candidate briefs separate from interviewer evidence and follow the anonymous pilot protocol.
 - [ ] The change adds no proprietary material or personal data.
 - [ ] `python3 scripts/validate_repo.py` passes.
 - [ ] `python3 scripts/validate_case_packs.py` passes when cases change.
 - [ ] `python3 scripts/validate_research_data.py` passes when role-radar or baseline data changes.
 - [ ] `python3 scripts/validate_role_playbooks.py` passes when role-targeting assets change.
+- [ ] `python3 scripts/validate_learning_paths.py` passes when guided-practice assets change.
+- [ ] `python3 scripts/validate_calibration.py` passes when calibration scenarios, anchors, or records change.
+- [ ] `python3 scripts/validate_parity_archive.py` passes when core translations or source metadata change.
+- [ ] `python3 scripts/validate_release_manifest.py --check` passes after any release-bound change.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 - [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 
@@ -63,11 +76,11 @@ Use a diagram or table only when it makes a relationship faster to understand th
 
 Changed Mermaid blocks are rendered in CI with a pinned CLI. Public links are checked separately on a weekly schedule so transient network failures do not block ordinary pull requests. Only public HTTPS links are accepted; localhost, private-network targets, and non-standard ports are rejected before a request is sent.
 
-The complete accessibility baseline is in [ACCESSIBILITY.md](ACCESSIBILITY.md). Translation changes must preserve certainty, warnings, and scope rather than optimizing only for fluent wording.
+The complete accessibility baseline is in [ACCESSIBILITY.md](ACCESSIBILITY.md). Translation changes must preserve certainty, warnings, and scope rather than optimizing only for fluent wording. Use the [bilingual maintenance contract](docs/research/bilingual-maintenance.md) for parity status, glossary decisions, and source-archive handling.
 
 ## Good first contributions
 
-See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. New case packs must follow the [facilitation standard](interview-kits/cases/facilitation-standard.md); a good pull request does not need to add a whole chapter.
+See [ROADMAP.md](ROADMAP.md) for open translation, case, and source-refresh tasks. New case packs must follow the [facilitation standard](interview-kits/cases/facilitation-standard.md); a good pull request does not need to add a whole chapter. Do not mark a case independently run without a real non-author facilitator and a privacy-safe evidence record.
 
 ## Practice feedback
 

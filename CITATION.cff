@@ -2,8 +2,8 @@ cff-version: 1.2.0
 title: FDE Interview Fieldbook
 message: If this fieldbook helps your work, please cite the repository and the release you used.
 type: dataset
-version: 0.1.0
-date-released: 2026-08-21
+version: 1.0.0-rc.1
+date-released: 2026-08-22
 authors:
   - name: FDE Interview Fieldbook Contributors
 abstract: A source-backed, production-first field guide for Forward Deployed Engineer interviews.

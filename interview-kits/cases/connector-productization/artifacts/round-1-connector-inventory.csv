@@ -1,0 +1,6 @@
+connector,protocol,auth,cursor,delete_semantics,permission_semantics,schema_change,operator_surface
+crm-a,REST,oauth_refresh,updated_at,explicit_tombstone,record_acl,versioned_fields,logs_only
+docs-b,REST,service_token,page_token,recycle_bin,space_acl,revision_api,manual_script
+tickets-c,webhook_plus_REST,hmac_and_token,event_offset,delete_event,team_acl,event_version,dashboard
+objects-d,S3_compatible,access_key,listing_marker,listing_absence,bucket_policy,etag_and_metadata,logs_only
+legacy-e,SFTP,ssh_key,file_timestamp,manifest_missing,folder_mapping,CSV_header,email_alert

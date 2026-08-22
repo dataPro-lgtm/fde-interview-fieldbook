@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "year": 2026,
+  "captured_at": "2026-08-22",
+  "snapshot_path": "data/sources.json",
+  "ledger_sha256": "11d5016ee8aeaf726eed338611d5099e8abbc1022996ef42b069589d18bb5ef0",
+  "record_count": 17,
+  "scope": "Public source metadata used by the fieldbook; no page body, restricted content, credentials, or interview material is archived.",
+  "excluded_fields": ["page_body", "html", "quoted_passage", "access_tokens"],
+  "entries": [
+    {"id": "openai-fde-seattle-2026", "publisher": "OpenAI", "title": "Forward Deployed Engineer (FDE) - Seattle", "url": "https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/", "source_kind": "official_job_posting", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "openai-fde-search-2026", "publisher": "OpenAI", "title": "OpenAI careers search: forward deployed", "url": "https://openai.com/careers/search/?q=forward+deployed", "source_kind": "official_job_index", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "openai-fde-tokyo-2026", "publisher": "OpenAI", "title": "Forward Deployed Engineer - Tokyo", "url": "https://openai.com/careers/forward-deployed-engineer-tokyo-tokyo-japan/", "source_kind": "official_job_posting", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "anthropic-fde-2026", "publisher": "Anthropic", "title": "Forward Deployed Engineer", "url": "https://job-boards.greenhouse.io/anthropic/jobs/5302966008", "source_kind": "official_job_posting", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "scale-genai-fde-2026", "publisher": "Scale AI", "title": "Forward Deployed Engineer, GenAI", "url": "https://scale.com/careers/4593571005", "source_kind": "official_job_posting", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "vercel-fde-2026", "publisher": "Vercel", "title": "Forward-Deployed Engineer", "url": "https://job-boards.greenhouse.io/vercel/jobs/5752684004", "source_kind": "official_job_posting", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "diligent-fde-2026", "publisher": "Diligent", "title": "Forward Deployed Engineer", "url": "https://job-boards.greenhouse.io/diligentcorporation/jobs/5829752004", "source_kind": "official_job_posting", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "palantir-architecture-fde-2026", "publisher": "Palantir", "title": "Architecture center overview", "url": "https://www.palantir.com/docs/foundry/architecture-center/overview", "source_kind": "official_documentation", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "palantir-ai-fde-2026", "publisher": "Palantir", "title": "AI FDE overview", "url": "https://www.palantir.com/docs/foundry/ai-fde/overview", "source_kind": "official_documentation", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "mcp-spec-2026-07-28", "publisher": "Model Context Protocol", "title": "The 2026-07-28 Specification", "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/", "source_kind": "official_specification_release", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "a2a-spec-1-0", "publisher": "A2A Protocol Project", "title": "Agent2Agent Protocol 1.0", "url": "https://a2a-protocol.org/v1.0.0/", "source_kind": "official_specification", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "anthropic-context-engineering", "publisher": "Anthropic", "title": "Effective context engineering for AI agents", "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents", "source_kind": "official_engineering_article", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "anthropic-agent-skills", "publisher": "Anthropic", "title": "Equipping agents for the real world with Agent Skills", "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills", "source_kind": "official_engineering_article", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "otel-genai-semconv-2026", "publisher": "OpenTelemetry", "title": "OpenTelemetry GenAI Semantic Conventions", "url": "https://github.com/open-telemetry/semantic-conventions-genai", "source_kind": "official_specification_repository", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "owasp-agentic-top10-2026", "publisher": "OWASP GenAI Security Project", "title": "OWASP Top 10 for Agentic Applications", "url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/", "source_kind": "official_security_guidance", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "nist-ai-600-1", "publisher": "NIST", "title": "AI Risk Management Framework: Generative AI Profile", "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence", "source_kind": "official_standard_guidance", "authority": "official", "last_checked": "2026-08-21"},
+    {"id": "temporal-durable-execution-2026", "publisher": "Temporal", "title": "Durable Execution Solutions", "url": "https://temporal.io/", "source_kind": "official_product_documentation", "authority": "official", "last_checked": "2026-08-21"}
+  ]
+}

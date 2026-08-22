@@ -1,0 +1,9 @@
+timestamp,job_id,worker,lease_epoch,event,tool_operation_id,result
+10:00:00,job-77,worker-3,41,lease_acquired,,ok
+10:02:14,job-77,worker-3,41,tool_submit,email-op-991,accepted
+10:02:22,job-77,worker-3,41,checkpoint_write,,timeout
+10:02:30,job-77,worker-3,41,heartbeat,,timeout
+10:03:05,job-77,worker-8,42,lease_acquired,,ok
+10:03:11,job-77,worker-8,42,tool_submit,email-op-204,accepted
+10:03:14,job-77,worker-3,41,checkpoint_write,,late_success
+10:03:20,job-77,worker-8,42,step_complete,,ok
