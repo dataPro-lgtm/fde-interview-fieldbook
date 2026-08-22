@@ -27,6 +27,8 @@ Calibration scenarios belong in `data/calibration-scenarios.json`. They must be 
 
 Core Chinese and English paths are paired in `data/content-parity.json`. `full` means the same learner outcome, evidence boundary, practice route, and completion logic—not sentence-by-sentence translation or identical length. When a core chapter changes materially, update both paths or downgrade the pair honestly. Annual source archives preserve public metadata and the source-ledger digest only; never archive page bodies, access-controlled content, credentials, paid material, or interview questions.
 
+Every release-bound change alters the deterministic content root in `data/release-manifest.json`. The manifest covers every indexed file except itself, using path, byte length, and SHA-256 grouped by repository area. Regenerate it only after all intended files are staged and stable; review the diff, then run `python3 scripts/validate_release_manifest.py --check`. Do not change an external gate from `not-run` without a real privacy-safe record that satisfies its stated evidence requirement.
+
 If credible sources conflict, do not silently choose one. Follow the [claim-review process](docs/research/claim-review-process.md), preserve the disputed scope, and state what evidence would resolve it.
 
 ## Content rules
@@ -55,6 +57,7 @@ If credible sources conflict, do not silently choose one. Follow the [claim-revi
 - [ ] `python3 scripts/validate_learning_paths.py` passes when guided-practice assets change.
 - [ ] `python3 scripts/validate_calibration.py` passes when calibration scenarios, anchors, or records change.
 - [ ] `python3 scripts/validate_parity_archive.py` passes when core translations or source metadata change.
+- [ ] `python3 scripts/validate_release_manifest.py --check` passes after any release-bound change.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 - [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 

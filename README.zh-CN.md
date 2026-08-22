@@ -2,6 +2,8 @@
 
 > 一部有来源、重生产、可持续更新的 Forward Deployed Engineer 面试指南。
 
+**当前版本：** `1.0.0-rc.1`。内容与自动化契约已达到可重现的 A1；真实读者、非作者主持、双评审和双语独立使用尚无外部证据，因此不冒充稳定版。
+
 [English](README.md) · [学习地图](docs/zh-CN/reading-map.md) · [引导式训练](docs/zh-CN/15-guided-practice.md) · [从这里开始](docs/zh-CN/00-start-here.md) · [岗位定向作战包](interview-kits/role-playbooks/README.md) · [岗位雷达](docs/research/role-radar/README.md) · [Field Case Lab](interview-kits/cases/README.md) · [参与共建](CONTRIBUTING.md)
 
 FDE 面试真正难的地方，不是“既考代码又考沟通”这么简单。它要确认一件更现实的事：当客户只给你一个模糊目标、混乱数据、复杂权限和紧迫时间时，你能否找准问题，亲手把最小闭环做出来，让它稳定进入生产，并把一次项目经验沉淀成下一次可以复用的产品能力。
@@ -103,7 +105,9 @@ FIELD 不是为了制造缩写，而是防止候选人一听到需求就开始�
 
 所有时效性事实都进入 [`data/sources.json`](data/sources.json)，记录来源类型和最近核验日期。季度岗位雷达只新增、不覆盖；MCP、A2A、OpenTelemetry GenAI 和 Agent 安全使用带日期的[技术基线账本](docs/research/technology-baseline-changelog.md)。岗位作战包将一手信号、训练假设和练习资产分开登记；引导式路径将 session 顺序、学员产物和完成证据单独登记。两类结构都由机器检查。项目按月检查来源新鲜度、按周检查公开链接健康；变更过的 Mermaid 会实际渲染。对事实范围有异议时，使用[争议评审流程](docs/research/claim-review-process.md)，而不是把社区经验直接改成官方结论。
 
-研究和维护入口：[岗位雷达档案](docs/research/role-radar/README.md) · [来源政策](docs/research/source-policy.md) · [双语维护契约](docs/research/bilingual-maintenance.md) · [素材审计](docs/research/corpus-audit.md) · [站点评估](docs/research/documentation-site-evaluation.md) · [无障碍说明](ACCESSIBILITY.md) · [v0.1 验证记录](docs/research/release-validation-0.1.md) · [v0.5 验收记录](docs/research/release-validation-0.5.md) · [v0.6 验收记录](docs/research/release-validation-0.6.md) · [v0.7 验收记录](docs/research/release-validation-0.7.md) · [v0.8 验收记录](docs/research/release-validation-0.8.md) · [v0.9 验收记录](docs/research/release-validation-0.9.md)。
+研究和维护入口：[岗位雷达档案](docs/research/role-radar/README.md) · [来源政策](docs/research/source-policy.md) · [双语维护契约](docs/research/bilingual-maintenance.md) · [发布清单](data/release-manifest.json) · [素材审计](docs/research/corpus-audit.md) · [站点评估](docs/research/documentation-site-evaluation.md) · [无障碍说明](ACCESSIBILITY.md) · [v0.1 验证记录](docs/research/release-validation-0.1.md) · [v0.5 验收记录](docs/research/release-validation-0.5.md) · [v0.6 验收记录](docs/research/release-validation-0.6.md) · [v0.7 验收记录](docs/research/release-validation-0.7.md) · [v0.8 验收记录](docs/research/release-validation-0.8.md) · [v0.9 验收记录](docs/research/release-validation-0.9.md) · [v1.0 RC 验收审计](docs/research/release-validation-1.0.md)。
+
+要在本地重现整套验收，运行 `python3 scripts/verify_release.py --full --network`；检查已提交候选时再加 `--require-clean`。需要网络下载或访问的 Markdown lint、Mermaid CLI 和公开链接健康检查，与无网络依赖的内容契约分开报告。
 
 ## 许可与声明
 

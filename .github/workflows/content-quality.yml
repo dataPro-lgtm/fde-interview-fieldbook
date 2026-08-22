@@ -34,6 +34,8 @@ jobs:
         run: python3 scripts/validate_calibration.py
       - name: Validate bilingual parity and source archive integrity
         run: python3 scripts/validate_parity_archive.py
+      - name: Validate release-candidate content root and gate ledger
+        run: python3 scripts/validate_release_manifest.py --check
       - name: Lint Markdown with repository-specific rules
         run: npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"
       - name: Render Mermaid diagrams in changed Markdown

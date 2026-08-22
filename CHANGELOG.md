@@ -4,8 +4,13 @@ All notable changes to the fieldbook are recorded here.
 
 ## [Unreleased]
 
+## [1.0.0-rc.1] - 2026-08-22
+
 ### Added
 
+- A versioned release-candidate manifest covering every indexed repository file through deterministic group and content-root digests
+- A one-command release verifier, release-manifest boundary tests, and an explicit external human-gate ledger
+- A v1.0 release-candidate audit that keeps stable-release promotion closed until real independent evidence exists
 - Eight English high-use chapters completing sixteen Chinese-English learner-outcome pairs across discovery, coding, cases, questions, field leadership, study, calibration, and field operations
 - A machine-readable bilingual parity manifest, bilingual maintenance contract, and 2026 public-source metadata archive
 - Parity and archive-integrity validation, ten boundary tests, CI integration, and a v0.9 validation record

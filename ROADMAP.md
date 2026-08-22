@@ -102,10 +102,10 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 
 ## v1.0 — Mature fieldbook
 
-- [ ] Publish a versioned v1.0 release candidate with a reproducible validation manifest
-- [ ] Maintain at least ten complete case packs; identify independent-review status per case
-- [ ] Provide stable learning, facilitation, scoring, source, and contribution contracts
-- [ ] Pass the full repository, content, case, research, practice, parity, and release test suite
+- [x] Publish a versioned v1.0 release candidate with a reproducible validation manifest
+- [x] Maintain at least ten complete case packs; identify independent-review status per case
+- [x] Provide stable learning, facilitation, scoring, source, and contribution contracts
+- [x] Pass the full repository, content, case, research, practice, parity, and release test suite
 - [ ] Promote the release candidate only after all externally dependent gates are evidenced
 
 The detailed contract from v0.6 through v1.0 is maintained in the

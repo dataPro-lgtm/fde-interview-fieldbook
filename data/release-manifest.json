@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "version": "1.0.0-rc.1",
+  "release_date": "2026-08-22",
+  "status": "release-candidate",
+  "evidence_level": "A1",
+  "promote_allowed": false,
+  "scope": "Reproducible content and automation candidate; external human-effect and independent-use gates remain open.",
+  "content_contract": {
+    "selection": "Every file in the Git index except data/release-manifest.json itself.",
+    "excluded_paths": [
+      "data/release-manifest.json"
+    ],
+    "tracked_file_count": 219,
+    "total_bytes": 1062750,
+    "content_root_sha256": "8e3bcef87535f94b6d440eb9bab41baf0c365e111090c6888ce481616eff5da5",
+    "groups": [
+      {
+        "name": ".github",
+        "file_count": 9,
+        "byte_count": 17457,
+        "sha256": "b9830cf49f394d70ecba874178b397d17bc60ec00e85862b4e5f3f75aafa9d44"
+      },
+      {
+        "name": "data",
+        "file_count": 9,
+        "byte_count": 117113,
+        "sha256": "2100f25fe638e9caa021e49a806e6426291e1d3a1c18779aa9bf38f7ad8fe3e4"
+      },
+      {
+        "name": "docs",
+        "file_count": 56,
+        "byte_count": 433964,
+        "sha256": "d6c4d24b71dae855edba86d3e16fd7708def11e2fd1a8ce9303111dbfb9d6ac2"
+      },
+      {
+        "name": "interview-kits",
+        "file_count": 111,
+        "byte_count": 286615,
+        "sha256": "207cfd77e9c9dcac11aefa19b2bc4b34b4a493a1fef50dd9ce3764dd36053573"
+      },
+      {
+        "name": "root",
+        "file_count": 13,
+        "byte_count": 51564,
+        "sha256": "314ea8ef732b090eda95d0dacf9ef04f877f6761aaf6c3cdeb997a699c1aa3de"
+      },
+      {
+        "name": "scripts",
+        "file_count": 13,
+        "byte_count": 119598,
+        "sha256": "360de5f8fbf0c35fb94467d3d4084795a3fc4768b705fcedddb2396c4536deca"
+      },
+      {
+        "name": "tests",
+        "file_count": 8,
+        "byte_count": 36439,
+        "sha256": "0185c6937719df7aa9d4ec16acba033ae4ee460b178283a4dc103e8fe6ed0c1d"
+      }
+    ]
+  },
+  "inventory": {
+    "tracked_files_excluding_manifest": 219,
+    "markdown_files": 163,
+    "registered_sources": 17,
+    "archived_source_records": 17,
+    "field_cases": 10,
+    "registered_case_files": 72,
+    "role_playbooks": 3,
+    "learning_paths": 3,
+    "learning_sessions": 29,
+    "calibration_scenarios": 8,
+    "calibration_dimension_ratings": 13,
+    "bilingual_core_pairs": 16
+  },
+  "validators": [
+    {
+      "id": "repository",
+      "command": "python3 scripts/validate_repo.py",
+      "network": false
+    },
+    {
+      "id": "cases",
+      "command": "python3 scripts/validate_case_packs.py",
+      "network": false
+    },
+    {
+      "id": "research",
+      "command": "python3 scripts/validate_research_data.py",
+      "network": false
+    },
+    {
+      "id": "roles",
+      "command": "python3 scripts/validate_role_playbooks.py",
+      "network": false
+    },
+    {
+      "id": "learning",
+      "command": "python3 scripts/validate_learning_paths.py",
+      "network": false
+    },
+    {
+      "id": "calibration",
+      "command": "python3 scripts/validate_calibration.py",
+      "network": false
+    },
+    {
+      "id": "parity-archive",
+      "command": "python3 scripts/validate_parity_archive.py",
+      "network": false
+    },
+    {
+      "id": "unit-tests",
+      "command": "python3 -m unittest discover -s tests -v",
+      "network": false
+    },
+    {
+      "id": "python-compile",
+      "command": "python3 -m py_compile scripts/*.py tests/*.py",
+      "network": false
+    },
+    {
+      "id": "markdownlint-pinned",
+      "command": "npx --yes markdownlint-cli2@0.18.1 \"**/*.md\" \"#node_modules\"",
+      "network": true
+    },
+    {
+      "id": "markdownlint-current",
+      "command": "npx --yes markdownlint-cli2@0.23.2 \"**/*.md\" \"#node_modules\"",
+      "network": true
+    },
+    {
+      "id": "mermaid-render",
+      "command": "python3 scripts/validate_mermaid.py --all --no-browser-sandbox",
+      "network": true
+    },
+    {
+      "id": "external-links",
+      "command": "python3 scripts/check_external_links.py --timeout 12 --workers 6",
+      "network": true
+    },
+    {
+      "id": "diff-whitespace",
+      "command": "git diff --check",
+      "network": false
+    }
+  ],
+  "external_gates": [
+    {
+      "id": "independent-guided-path",
+      "status": "not-run",
+      "evidence_required": "A non-author reader completes one registered path without author repair and leaves a privacy-safe artifact record."
+    },
+    {
+      "id": "independent-case-facilitation",
+      "status": "not-run",
+      "evidence_required": "A non-author facilitator runs every promoted case and records blocking instructions or evidence-release ambiguity."
+    },
+    {
+      "id": "independent-reviewer-calibration",
+      "status": "not-run",
+      "evidence_required": "Two independent reviewers blind-score the same answers, adjudicate disagreement, and record resulting material changes."
+    },
+    {
+      "id": "bilingual-independent-use",
+      "status": "not-run",
+      "evidence_required": "Chinese-first and English-first non-author readers independently locate and complete equivalent core practice routes."
+    }
+  ],
+  "claim_boundaries": [
+    "A1 proves repository contracts and regression checks, not learner effectiveness.",
+    "Synthetic cases and calibration scenarios are not production experience or external review.",
+    "No interview pass rate, employment outcome, salary gain, or employer-internal process is claimed.",
+    "Stable release promotion remains closed while any external gate is not-run."
+  ]
+}

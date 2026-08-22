@@ -2,6 +2,8 @@
 
 > A source-backed, production-first field guide for Forward Deployed Engineer interviews.
 
+**Current release:** `1.0.0-rc.1` — the content and automation contracts are reproducible at A1; stable promotion remains closed until the independent reader, facilitator, reviewer, and bilingual-use gates have real evidence.
+
 [简体中文](README.zh-CN.md) · [English reading map](docs/en/reading-map.md) · [Guided practice](docs/en/guided-practice.md) · [Job targeting](docs/en/job-targeting.md) · [Start here](docs/en/start-here.md) · [Role playbooks (Chinese)](interview-kits/role-playbooks/README.md) · [Field Case Lab (Chinese)](interview-kits/cases/README.md) · [Contributing](CONTRIBUTING.md)
 
 FDE interviews do not only ask whether you can write code. They test whether you can enter an ambiguous customer environment, find the real workflow, ship a thin but valuable system, keep it reliable in production, and turn field learning into reusable product capability.
@@ -133,6 +135,8 @@ The Chinese core path continues with [job targeting](docs/zh-CN/14-job-targeting
 - [v0.7 production-case validation record](docs/research/release-validation-0.7.md)
 - [v0.8 reviewer-calibration validation record](docs/research/release-validation-0.8.md)
 - [v0.9 bilingual-parity and archive validation record](docs/research/release-validation-0.9.md)
+- [v1.0 release-candidate validation and completion audit](docs/research/release-validation-1.0.md)
+- [Machine-readable release manifest](data/release-manifest.json)
 - [Bilingual maintenance and source-archive contract](docs/research/bilingual-maintenance.md)
 - [v0.6-to-v1.0 execution plan](docs/research/version-plan-0.6-to-1.0.md)
 - [Roadmap](ROADMAP.md)
@@ -155,6 +159,8 @@ The project follows three confidence labels:
 - **Official**: employer posting, protocol specification, standards body, or vendor documentation.
 - **Corroborated**: multiple credible sources agree, but the employer has not published the detail.
 - **Community**: useful practitioner experience; never presented as official policy.
+
+For a reproducible local audit, run `python3 scripts/verify_release.py --full --network`. Add `--require-clean` when checking a committed release candidate. Network-dependent lint package resolution, Mermaid CLI resolution, and public-link health remain separate from dependency-free content contracts.
 
 ## Contributing
 
