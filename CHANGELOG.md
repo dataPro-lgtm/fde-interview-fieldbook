@@ -6,6 +6,9 @@ All notable changes to the fieldbook are recorded here.
 
 ### Added
 
+- Eight English high-use chapters completing sixteen Chinese-English learner-outcome pairs across discovery, coding, cases, questions, field leadership, study, calibration, and field operations
+- A machine-readable bilingual parity manifest, bilingual maintenance contract, and 2026 public-source metadata archive
+- Parity and archive-integrity validation, ten boundary tests, CI integration, and a v0.9 validation record
 - Eight machine-readable, synthetic calibration scenarios with exact transcript evidence and explicit `N/O` handling
 - A blind-score, adjudication, and re-score protocol plus cross-role evidence anchors and a privacy-safe reviewer record
 - Calibration validation, boundary tests, a disagreement summarizer, CI integration, and a v0.8 validation record
@@ -34,6 +37,8 @@ All notable changes to the fieldbook are recorded here.
 
 ### Changed
 
+- English navigation now provides the complete core learner-outcome route while explicitly defining parity as outcome equivalence rather than literal translation
+- Source archival now preserves a verifiable ledger digest and public metadata without copying source-page bodies or restricted material
 - Calibration now separates score from evidence confidence, forbids averaging away disagreement, and keeps automated readiness distinct from independent-review evidence
 - Historical calibration-pilot roadmap items are open until privacy-safe evidence from real learners and independent reviewers exists
 - Field Case Lab navigation now routes readers across ten plan, incident, adoption, governance, and productization scenarios

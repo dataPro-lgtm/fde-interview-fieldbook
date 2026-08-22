@@ -83,4 +83,4 @@ Discover the real workflow
 
 The last step is what creates organizational leverage. A successful bespoke deployment can still be a poor FDE outcome if no knowledge, contract, tool, eval, or platform primitive survives it.
 
-For the current official-source analysis, see the [2026 Q3 role radar (Chinese)](../research/role-radar/2026-Q3.md). Continue with the [interview loop](interview-loop.md) or use the [English reading map](reading-map.md). The full handbook remains Chinese-first; translated depth is labeled explicitly rather than presented as full parity.
+For the current official-source analysis, see the [2026 Q3 role radar (Chinese)](../research/role-radar/2026-Q3.md). Continue with the [interview loop](interview-loop.md) or use the [English reading map](reading-map.md). The sixteen-part English core path has learner-outcome parity with the Chinese core; differences in examples and depth remain explicit in the [parity manifest](../../data/content-parity.json).

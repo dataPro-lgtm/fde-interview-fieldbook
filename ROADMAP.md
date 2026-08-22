@@ -94,11 +94,11 @@ The roadmap favors depth, evidence, and maintenance over raw question count.
 
 ## v0.9 — Bilingual core parity and archival maintenance
 
-- [ ] Align the English and Chinese core outcomes, navigation, cases, and practice paths
-- [ ] Add a parity manifest so missing or intentionally condensed material is explicit
-- [ ] Archive the annual source ledger and release evidence without copying restricted content
-- [ ] Add release-manifest and archive-integrity validation
-- [ ] Complete a documentation-wide accessibility and terminology pass
+- [x] Align the English and Chinese core outcomes, navigation, cases, and practice paths
+- [x] Add a parity manifest so missing or intentionally condensed material is explicit
+- [x] Archive the annual source ledger and release evidence without copying restricted content
+- [x] Add parity and archive-integrity validation
+- [x] Complete a documentation-wide accessibility and terminology pass for the paired core path
 
 ## v1.0 — Mature fieldbook
 

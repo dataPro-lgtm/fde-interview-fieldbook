@@ -57,7 +57,7 @@ It is not a script to memorize. It is a safeguard against the most common FDE fa
 | One target role | Turn its public JD into an [evidence-based campaign](docs/en/job-targeting.md), then select one [role playbook](interview-kits/role-playbooks/README.md) | A role brief, evidence matrix, and ten scored sessions |
 | I keep reading but do not practise | Choose one [guided 7-, 14-, or 30-day path](docs/en/guided-practice.md) | Ordered artifacts, completion evidence, and a repair cycle |
 
-English-first readers can use the [English reading map](docs/en/reading-map.md) for the translated high-use path. The project labels untranslated depth instead of implying full parity.
+English-first readers can use the [English reading map](docs/en/reading-map.md) for the complete core learner-outcome path. `Full` parity means equivalent outcomes, evidence boundaries, practice routes, and completion logic—not sentence-by-sentence translation; the machine-readable contract is in [`data/content-parity.json`](data/content-parity.json).
 
 ## Handbook map
 
@@ -82,14 +82,22 @@ English-first readers can use the [English reading map](docs/en/reading-map.md) 
 
 The Chinese core path continues with [job targeting](docs/zh-CN/14-job-targeting.md) and the [guided-practice system](docs/zh-CN/15-guided-practice.md).
 
-### English high-use path
+### English core path
 
 - [Start here](docs/en/start-here.md)
 - [FDE role map](docs/en/role-map.md)
 - [Interview loop and scoring](docs/en/interview-loop.md)
+- [Discovery and mission framing](docs/en/discovery.md)
+- [Coding, data, and delivery](docs/en/coding-data-delivery.md)
 - [Workflow-first system design](docs/en/system-design.md)
 - [Production AI in 2026](docs/en/production-ai-2026.md)
+- [Field Case Lab](docs/en/field-case-lab.md)
+- [High-signal question bank](docs/en/question-bank.md)
+- [Behavioral interviews and field leadership](docs/en/behavioral-field-leadership.md)
+- [Evidence-first study plans](docs/en/study-plans.md)
 - [Resume, portfolio, and project evidence](docs/en/portfolio-evidence.md)
+- [Answer calibration](docs/en/answer-calibration.md)
+- [Field operating playbook](docs/en/field-operating-playbook.md)
 - [Turn one job description into an evidence-based campaign](docs/en/job-targeting.md)
 - [Turn reading into guided, evidence-producing practice](docs/en/guided-practice.md)
 
@@ -124,6 +132,8 @@ The Chinese core path continues with [job targeting](docs/zh-CN/14-job-targeting
 - [v0.6 guided-practice validation record](docs/research/release-validation-0.6.md)
 - [v0.7 production-case validation record](docs/research/release-validation-0.7.md)
 - [v0.8 reviewer-calibration validation record](docs/research/release-validation-0.8.md)
+- [v0.9 bilingual-parity and archive validation record](docs/research/release-validation-0.9.md)
+- [Bilingual maintenance and source-archive contract](docs/research/bilingual-maintenance.md)
 - [v0.6-to-v1.0 execution plan](docs/research/version-plan-0.6-to-1.0.md)
 - [Roadmap](ROADMAP.md)
 - [Accessibility](ACCESSIBILITY.md)

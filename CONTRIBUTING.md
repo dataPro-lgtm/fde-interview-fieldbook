@@ -25,6 +25,8 @@ Guided-practice routes belong in `data/learning-paths.json`. Every session must 
 
 Calibration scenarios belong in `data/calibration-scenarios.json`. They must be synthetic or privacy-safe, target only dimensions the prompt can actually expose, quote exact transcript evidence for every numeric rating, and use `N/O` when the skill was not observed. Agreement metrics describe reviewers, not candidates, and may not be reported as external validation without two genuinely independent reviewers and an auditable, privacy-safe record.
 
+Core Chinese and English paths are paired in `data/content-parity.json`. `full` means the same learner outcome, evidence boundary, practice route, and completion logic—not sentence-by-sentence translation or identical length. When a core chapter changes materially, update both paths or downgrade the pair honestly. Annual source archives preserve public metadata and the source-ledger digest only; never archive page bodies, access-controlled content, credentials, paid material, or interview questions.
+
 If credible sources conflict, do not silently choose one. Follow the [claim-review process](docs/research/claim-review-process.md), preserve the disputed scope, and state what evidence would resolve it.
 
 ## Content rules
@@ -52,6 +54,7 @@ If credible sources conflict, do not silently choose one. Follow the [claim-revi
 - [ ] `python3 scripts/validate_role_playbooks.py` passes when role-targeting assets change.
 - [ ] `python3 scripts/validate_learning_paths.py` passes when guided-practice assets change.
 - [ ] `python3 scripts/validate_calibration.py` passes when calibration scenarios, anchors, or records change.
+- [ ] `python3 scripts/validate_parity_archive.py` passes when core translations or source metadata change.
 - [ ] `npx --yes markdownlint-cli2@0.18.1 "**/*.md" "#node_modules"` passes.
 - [ ] `python3 scripts/validate_mermaid.py --files <changed-markdown>` passes when diagrams change.
 
@@ -70,7 +73,7 @@ Use a diagram or table only when it makes a relationship faster to understand th
 
 Changed Mermaid blocks are rendered in CI with a pinned CLI. Public links are checked separately on a weekly schedule so transient network failures do not block ordinary pull requests. Only public HTTPS links are accepted; localhost, private-network targets, and non-standard ports are rejected before a request is sent.
 
-The complete accessibility baseline is in [ACCESSIBILITY.md](ACCESSIBILITY.md). Translation changes must preserve certainty, warnings, and scope rather than optimizing only for fluent wording.
+The complete accessibility baseline is in [ACCESSIBILITY.md](ACCESSIBILITY.md). Translation changes must preserve certainty, warnings, and scope rather than optimizing only for fluent wording. Use the [bilingual maintenance contract](docs/research/bilingual-maintenance.md) for parity status, glossary decisions, and source-archive handling.
 
 ## Good first contributions
 
