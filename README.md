@@ -120,6 +120,7 @@ The Chinese core path continues with [job targeting](docs/zh-CN/14-job-targeting
 - [Job-targeting worksheet pack](interview-kits/worksheets/job-targeting-pack.md)
 - [Three role-targeted blind mock loops and pilot protocol](interview-kits/mock-loops/role-targeted/README.md)
 - [Practice journal for first attempt, evidence, score, repair, and retry](interview-kits/worksheets/practice-journal.md)
+- [External: free 60-minute FDE deployment case with a graded six-dimension review (A10X Case-Study Arena)](https://a10x.dev/arena)
 
 ### Research and maintenance
 
